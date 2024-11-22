@@ -10,10 +10,13 @@ namespace FuneralManagementSystem
     {
         /// <summary>
         /// The main entry point for the application.
+        /// 
+        /// 
         /// </summary>
         [STAThread]
         static void Main()
         {
+            //Jianne
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogIn());
