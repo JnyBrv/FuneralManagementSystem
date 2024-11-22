@@ -16,7 +16,7 @@ namespace FuneralManagementSystem
         [STAThread]
         static void Main()
         {
-            //Jianne
+            //JianneFerryll
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogIn());
