@@ -53,7 +53,7 @@
             this.SlidingPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SlidingPanel.Location = new System.Drawing.Point(32, 0);
             this.SlidingPanel.Name = "SlidingPanel";
-            this.SlidingPanel.Size = new System.Drawing.Size(284, 681);
+            this.SlidingPanel.Size = new System.Drawing.Size(114, 681);
             this.SlidingPanel.TabIndex = 1;
             // 
             // timer1
@@ -73,6 +73,7 @@
             // 
             // btnExit
             // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.Location = new System.Drawing.Point(1040, 12);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
