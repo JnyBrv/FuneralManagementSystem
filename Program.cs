@@ -22,7 +22,7 @@ namespace FuneralManagementSystem
          
             Application.Run(new frmLogIn());
 
-               
+               //ff
         }
     }
 }
