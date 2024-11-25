@@ -24,23 +24,23 @@ namespace FuneralManagementSystem
         {
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
-            PW = SlidingPanel.Width;
+            PW = PanelMenu.Width;
             hided = false;
 
         }
 
         private void btnSlideHide_Click(object sender, EventArgs e)
         {
-            if (hided) btnSlideHide.Text = ">>";
-            else btnSlideHide.Text = "<<";
+            //if (hided) btnSlideHide.Text = ">>";
+            //else btnSlideHide.Text = "<<";
             timer1.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (hided) {
-                SlidingPanel.Width = SlidingPanel.Width + 20;
-                if(SlidingPanel.Width >= PW)
+                PanelMenu.Width = PanelMenu.Width + 20;
+                if(PanelMenu.Width >= PW)
                 {
                     timer1.Stop();
                     hided = false;
@@ -49,8 +49,8 @@ namespace FuneralManagementSystem
             }
             else
             {
-                SlidingPanel.Width = SlidingPanel.Width - 20;
-                if (SlidingPanel.Width <= 0)
+                PanelMenu.Width = PanelMenu.Width - 20;
+                if (PanelMenu.Width <= 0)
                 {
                     timer1.Stop();
                     hided = true;
@@ -63,6 +63,21 @@ namespace FuneralManagementSystem
         private void btnExit_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void pbLogo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSlide_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
