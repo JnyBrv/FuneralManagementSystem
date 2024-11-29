@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,16 +9,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
+
+
 namespace FuneralManagementSystem
 {
     public partial class System_Arragement : Form
     {
-        int PW;
-        bool hided;
-
+        private IconButton currentBtn;
+        private Panel leftBorderbtn;
+        private Form currentChildForm;
+       
+        
         public System_Arragement()
         {
             InitializeComponent();
+            leftBorderbtn = new Panel();
+            leftBorderbtn.Size = new Size(7, 60);
+            PanelMenu.Controls.Add(leftBorderbtn);
         }
 
         private void System_Arragement_Load(object sender, EventArgs e)
@@ -29,33 +39,29 @@ namespace FuneralManagementSystem
 
         private void btnSlideHide_Click(object sender, EventArgs e)
         {
-            //if (hided) btnSlideHide.Text = ">>";
-            //else btnSlideHide.Text = "<<";
-            timer1.Start();
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (hided) {
-                PanelMenu.Width = PanelMenu.Width + 20;
-                if(PanelMenu.Width >= PW)
-                {
-                    timer1.Stop();
-                    hided = false;
-                    this.Refresh();
-                }
-            }
-            else
-            {
-                PanelMenu.Width = PanelMenu.Width - 20;
-                if (PanelMenu.Width <= 0)
-                {
-                    timer1.Stop();
-                    hided = true;
-                    this.Refresh();
-                }
-            }
+            
 
+        }
+
+        private void OpenChildForm(Form childForm) {
+            //if (titleIcnPackage != null) {
+            //    currentChildForm.Close();
+            //}
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            PanelMainMenu.Controls.Add(childForm);
+            PanelMainMenu.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            
+            
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -76,6 +82,67 @@ namespace FuneralManagementSystem
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void ActivateButton(object senderBtn, Color color)
+        {
+            if (senderBtn != null)
+            {
+                DisableButton();
+                currentBtn = (IconButton)senderBtn;
+                currentBtn.BackColor = Color.Green;
+                currentBtn.ForeColor = Color.FromArgb(206, 203, 150);
+                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
+                currentBtn.ForeColor = Color.FromArgb(206, 203, 150);
+                currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
+                currentBtn.ImageAlign = ContentAlignment.MiddleCenter;
+
+                //left border button
+                leftBorderbtn.BackColor = color;
+                leftBorderbtn.Location = new Point(0, currentBtn.Location.Y);
+                leftBorderbtn.Visible = true;
+                leftBorderbtn.BringToFront();
+
+                //icon CurrentChild Icon
+                titleIcnPackage.IconChar = currentBtn.IconChar;
+                titleIcnPackage.IconColor = color;
+            }
+        }
+
+        private void DisableButton() {
+
+            if (currentBtn != null)
+            {
+                currentBtn.BackColor = Color.FromArgb(16,16,16);
+                currentBtn.ForeColor = Color.FromArgb(206, 203, 150);
+                currentBtn.TextAlign = ContentAlignment.MiddleLeft;
+                currentBtn.IconColor = Color.FromArgb(206, 203, 150);
+                currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+                currentBtn.ImageAlign = ContentAlignment.MiddleCenter;
+
+            }
+        }
+
+        private void btnPackages_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, Color.Green);
+            OpenChildForm(new FrmPackages());
+        }
+
+        private void btnClients_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, Color.Green);
+            OpenChildForm(new FrmClients());
+        }
+
+        private void btnEmployees_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, Color.Green);
+        }
+
+        private void PanelMainMenu_Paint(object sender, PaintEventArgs e)
+        {
+          
         }
     }
 }

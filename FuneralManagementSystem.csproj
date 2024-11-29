@@ -56,11 +56,23 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clients.Designer.cs">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLogIn.Designer.cs">
       <DependentUpon>FrmLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPackages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPackages.Designer.cs">
+      <DependentUpon>FrmPackages.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSearchBox.cs">
       <SubType>UserControl</SubType>
@@ -76,8 +88,14 @@
     <Compile Include="System Arragement.Designer.cs">
       <DependentUpon>System Arragement.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Clients.resx">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogIn.resx">
       <DependentUpon>FrmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPackages.resx">
+      <DependentUpon>FrmPackages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSearchBox.resx">
       <DependentUpon>FrmSearchBox.cs</DependentUpon>

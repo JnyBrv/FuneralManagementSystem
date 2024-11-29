@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(System_Arragement));
             this.PanelMenu = new System.Windows.Forms.Panel();
+            this.btnPanelControler = new FontAwesome.Sharp.IconButton();
             this.btnEmployees = new FontAwesome.Sharp.IconButton();
             this.btnClients = new FontAwesome.Sharp.IconButton();
             this.btnPackages = new FontAwesome.Sharp.IconButton();
@@ -40,10 +41,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.TopPanel = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.titleIcnPackage = new FontAwesome.Sharp.IconButton();
             this.btnExit = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.PanelMainMenu = new System.Windows.Forms.Panel();
-            this.btnPanelControler = new FontAwesome.Sharp.IconButton();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.PanelMenu.SuspendLayout();
@@ -67,8 +68,25 @@
             this.PanelMenu.Size = new System.Drawing.Size(230, 578);
             this.PanelMenu.TabIndex = 1;
             // 
+            // btnPanelControler
+            // 
+            this.btnPanelControler.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPanelControler.FlatAppearance.BorderSize = 0;
+            this.btnPanelControler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPanelControler.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnPanelControler.IconChar = FontAwesome.Sharp.IconChar.Bars;
+            this.btnPanelControler.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(203)))), ((int)(((byte)(150)))));
+            this.btnPanelControler.IconSize = 20;
+            this.btnPanelControler.Location = new System.Drawing.Point(0, 165);
+            this.btnPanelControler.Name = "btnPanelControler";
+            this.btnPanelControler.Rotation = 0D;
+            this.btnPanelControler.Size = new System.Drawing.Size(230, 29);
+            this.btnPanelControler.TabIndex = 4;
+            this.btnPanelControler.UseVisualStyleBackColor = true;
+            // 
             // btnEmployees
             // 
+            this.btnEmployees.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnEmployees.FlatAppearance.BorderSize = 0;
             this.btnEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmployees.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
@@ -77,18 +95,20 @@
             this.btnEmployees.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
             this.btnEmployees.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(203)))), ((int)(((byte)(150)))));
             this.btnEmployees.IconSize = 25;
-            this.btnEmployees.Location = new System.Drawing.Point(25, 394);
+            this.btnEmployees.Location = new System.Drawing.Point(0, 394);
             this.btnEmployees.Name = "btnEmployees";
             this.btnEmployees.Rotation = 0D;
-            this.btnEmployees.Size = new System.Drawing.Size(178, 61);
+            this.btnEmployees.Size = new System.Drawing.Size(227, 61);
             this.btnEmployees.TabIndex = 3;
             this.btnEmployees.Text = "Employees";
             this.btnEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEmployees.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEmployees.UseVisualStyleBackColor = true;
+            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
             // 
             // btnClients
             // 
+            this.btnClients.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnClients.FlatAppearance.BorderSize = 0;
             this.btnClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClients.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
@@ -97,15 +117,16 @@
             this.btnClients.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
             this.btnClients.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(203)))), ((int)(((byte)(150)))));
             this.btnClients.IconSize = 25;
-            this.btnClients.Location = new System.Drawing.Point(25, 310);
+            this.btnClients.Location = new System.Drawing.Point(0, 310);
             this.btnClients.Name = "btnClients";
             this.btnClients.Rotation = 0D;
-            this.btnClients.Size = new System.Drawing.Size(178, 61);
+            this.btnClients.Size = new System.Drawing.Size(230, 61);
             this.btnClients.TabIndex = 3;
             this.btnClients.Text = "Clients";
             this.btnClients.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClients.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClients.UseVisualStyleBackColor = true;
+            this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
             // 
             // btnPackages
             // 
@@ -117,15 +138,16 @@
             this.btnPackages.IconChar = FontAwesome.Sharp.IconChar.Box;
             this.btnPackages.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(203)))), ((int)(((byte)(150)))));
             this.btnPackages.IconSize = 25;
-            this.btnPackages.Location = new System.Drawing.Point(25, 234);
+            this.btnPackages.Location = new System.Drawing.Point(0, 234);
             this.btnPackages.Name = "btnPackages";
             this.btnPackages.Rotation = 0D;
-            this.btnPackages.Size = new System.Drawing.Size(178, 50);
+            this.btnPackages.Size = new System.Drawing.Size(230, 50);
             this.btnPackages.TabIndex = 3;
             this.btnPackages.Text = "Packages";
             this.btnPackages.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPackages.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPackages.UseVisualStyleBackColor = true;
+            this.btnPackages.Click += new System.EventHandler(this.btnPackages_Click);
             // 
             // panelLogo
             // 
@@ -183,33 +205,34 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(203)))), ((int)(((byte)(150)))));
             this.TopPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TopPanel.BackgroundImage")));
-            this.TopPanel.Controls.Add(this.iconButton1);
+            this.TopPanel.Controls.Add(this.titleIcnPackage);
             this.TopPanel.Controls.Add(this.btnExit);
+            this.TopPanel.Controls.Add(this.panel1);
             this.TopPanel.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.TopPanel.Location = new System.Drawing.Point(0, 0);
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.Size = new System.Drawing.Size(1128, 85);
             this.TopPanel.TabIndex = 3;
             // 
-            // iconButton1
+            // titleIcnPackage
             // 
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Box;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
-            this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(262, 26);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(135, 36);
-            this.iconButton1.TabIndex = 3;
-            this.iconButton1.Text = "Packages";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.titleIcnPackage.FlatAppearance.BorderSize = 0;
+            this.titleIcnPackage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.titleIcnPackage.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.titleIcnPackage.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleIcnPackage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            this.titleIcnPackage.IconChar = FontAwesome.Sharp.IconChar.Box;
+            this.titleIcnPackage.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            this.titleIcnPackage.IconSize = 25;
+            this.titleIcnPackage.Location = new System.Drawing.Point(262, 26);
+            this.titleIcnPackage.Name = "titleIcnPackage";
+            this.titleIcnPackage.Rotation = 0D;
+            this.titleIcnPackage.Size = new System.Drawing.Size(135, 36);
+            this.titleIcnPackage.TabIndex = 3;
+            this.titleIcnPackage.Text = "Packages";
+            this.titleIcnPackage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.titleIcnPackage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.titleIcnPackage.UseVisualStyleBackColor = true;
             // 
             // btnExit
             // 
@@ -222,30 +245,21 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(795, 394);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(333, 184);
+            this.panel1.TabIndex = 0;
+            // 
             // PanelMainMenu
             // 
             this.PanelMainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.PanelMainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelMainMenu.Location = new System.Drawing.Point(0, 0);
+            this.PanelMainMenu.Location = new System.Drawing.Point(224, 83);
             this.PanelMainMenu.Name = "PanelMainMenu";
-            this.PanelMainMenu.Size = new System.Drawing.Size(1127, 578);
+            this.PanelMainMenu.Size = new System.Drawing.Size(903, 495);
             this.PanelMainMenu.TabIndex = 4;
-            // 
-            // btnPanelControler
-            // 
-            this.btnPanelControler.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPanelControler.FlatAppearance.BorderSize = 0;
-            this.btnPanelControler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPanelControler.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnPanelControler.IconChar = FontAwesome.Sharp.IconChar.Bars;
-            this.btnPanelControler.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(203)))), ((int)(((byte)(150)))));
-            this.btnPanelControler.IconSize = 20;
-            this.btnPanelControler.Location = new System.Drawing.Point(0, 165);
-            this.btnPanelControler.Name = "btnPanelControler";
-            this.btnPanelControler.Rotation = 0D;
-            this.btnPanelControler.Size = new System.Drawing.Size(230, 29);
-            this.btnPanelControler.TabIndex = 4;
-            this.btnPanelControler.UseVisualStyleBackColor = true;
+            this.PanelMainMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelMainMenu_Paint);
             // 
             // notifyIcon1
             // 
@@ -287,7 +301,8 @@
         private FontAwesome.Sharp.IconButton btnPackages;
         private FontAwesome.Sharp.IconButton btnClients;
         private FontAwesome.Sharp.IconButton btnEmployees;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton titleIcnPackage;
         private FontAwesome.Sharp.IconButton btnPanelControler;
+        private System.Windows.Forms.Panel panel1;
     }
 }
