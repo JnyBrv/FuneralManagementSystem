@@ -24,8 +24,6 @@ namespace FuneralManagementSystem
         {
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
-            PW = PanelMenu.Width;
-            hided = false;
 
         }
 
