@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace FuneralManagementSystem
 {
-    public partial class frmContractForm1 : Form
+    public partial class frmContractSummary : Form
     {
-        public frmContractForm1()
+        public frmContractSummary()
         {
             InitializeComponent();
+        }
+
+        private void frmContractSummary_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

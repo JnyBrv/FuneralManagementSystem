@@ -68,6 +68,12 @@
     <Compile Include="frmContractForm.Designer.cs">
       <DependentUpon>frmContractForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmContractSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmContractSummary.Designer.cs">
+      <DependentUpon>frmContractSummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDeceasedForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmContractForm.resx">
       <DependentUpon>frmContractForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmContractSummary.resx">
+      <DependentUpon>frmContractSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDeceasedForm.resx">
       <DependentUpon>frmDeceasedForm.cs</DependentUpon>
