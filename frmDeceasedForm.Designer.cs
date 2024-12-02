@@ -28,297 +28,280 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtProvince = new System.Windows.Forms.TextBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.txtBrgy = new System.Windows.Forms.TextBox();
+            this.txtHouseStreet = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.datepickDateofDeath = new System.Windows.Forms.DateTimePicker();
+            this.txtTimeofDeath = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtMiddlename = new System.Windows.Forms.TextBox();
+            this.txtFirstname = new System.Windows.Forms.TextBox();
+            this.txtLastname = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmbSex = new System.Windows.Forms.ComboBox();
+            this.datepickDateofInternment = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // txtProvince
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(40, 169);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(196, 20);
-            this.dateTimePicker1.TabIndex = 27;
+            this.txtProvince.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProvince.Location = new System.Drawing.Point(913, 398);
+            this.txtProvince.Name = "txtProvince";
+            this.txtProvince.Size = new System.Drawing.Size(260, 29);
+            this.txtProvince.TabIndex = 49;
             // 
-            // comboBox3
+            // txtCity
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(368, 167);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(144, 21);
-            this.comboBox3.TabIndex = 26;
+            this.txtCity.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCity.Location = new System.Drawing.Point(631, 398);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(260, 29);
+            this.txtCity.TabIndex = 48;
             // 
-            // label20
+            // txtBrgy
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(414, 93);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(65, 13);
-            this.label20.TabIndex = 24;
-            this.label20.Text = "Middle Initial";
+            this.txtBrgy.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBrgy.Location = new System.Drawing.Point(348, 398);
+            this.txtBrgy.Name = "txtBrgy";
+            this.txtBrgy.Size = new System.Drawing.Size(260, 29);
+            this.txtBrgy.TabIndex = 47;
             // 
-            // label19
+            // txtHouseStreet
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(228, 93);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(57, 13);
-            this.label19.TabIndex = 23;
-            this.label19.Text = "First Name";
+            this.txtHouseStreet.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHouseStreet.Location = new System.Drawing.Point(61, 398);
+            this.txtHouseStreet.Name = "txtHouseStreet";
+            this.txtHouseStreet.Size = new System.Drawing.Size(260, 29);
+            this.txtHouseStreet.TabIndex = 46;
             // 
-            // label29
+            // label4
             // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(40, 311);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(35, 13);
-            this.label29.TabIndex = 21;
-            this.label29.Text = "Street";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Georgia", 15F);
+            this.label4.Location = new System.Drawing.Point(909, 371);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 24);
+            this.label4.TabIndex = 45;
+            this.label4.Text = "Province";
             // 
-            // label28
+            // label5
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(40, 259);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(49, 13);
-            this.label28.TabIndex = 20;
-            this.label28.Text = "Province";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Georgia", 15F);
+            this.label5.Location = new System.Drawing.Point(627, 371);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(169, 24);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "City/Municipality";
             // 
-            // label27
+            // label6
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(291, 311);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(58, 13);
-            this.label27.TabIndex = 19;
-            this.label27.Text = "House No.";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Georgia", 15F);
+            this.label6.Location = new System.Drawing.Point(344, 371);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(93, 24);
+            this.label6.TabIndex = 43;
+            this.label6.Text = "Barangay";
             // 
-            // label23
+            // label7
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(195, 259);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(87, 13);
-            this.label23.TabIndex = 18;
-            this.label23.Text = "City/Municipality ";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Georgia", 15F);
+            this.label7.Location = new System.Drawing.Point(57, 371);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(243, 24);
+            this.label7.TabIndex = 42;
+            this.label7.Text = "House Number and Street";
             // 
-            // label18
+            // label8
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(382, 259);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(52, 13);
-            this.label18.TabIndex = 17;
-            this.label18.Text = "Barangay";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Georgia", 15F);
+            this.label8.Location = new System.Drawing.Point(57, 336);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(189, 24);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "Place of Internment";
             // 
-            // label15
+            // datepickDateofDeath
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(363, 153);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(25, 13);
-            this.label15.TabIndex = 25;
-            this.label15.Text = "Sex";
+            this.datepickDateofDeath.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datepickDateofDeath.Location = new System.Drawing.Point(63, 284);
+            this.datepickDateofDeath.Name = "datepickDateofDeath";
+            this.datepickDateofDeath.Size = new System.Drawing.Size(344, 29);
+            this.datepickDateofDeath.TabIndex = 40;
             // 
-            // label17
+            // txtTimeofDeath
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(37, 153);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(74, 13);
-            this.label17.TabIndex = 16;
-            this.label17.Text = "Date of Death";
+            this.txtTimeofDeath.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimeofDeath.Location = new System.Drawing.Point(445, 284);
+            this.txtTimeofDeath.Name = "txtTimeofDeath";
+            this.txtTimeofDeath.Size = new System.Drawing.Size(344, 29);
+            this.txtTimeofDeath.TabIndex = 39;
             // 
-            // label14
+            // label16
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(242, 153);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(74, 13);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "Time of Death";
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Georgia", 15F);
+            this.label16.Location = new System.Drawing.Point(59, 256);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(134, 24);
+            this.label16.TabIndex = 37;
+            this.label16.Text = "Date of Death";
             // 
-            // label13
+            // label10
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(34, 32);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(137, 31);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "Deceased";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Georgia", 15F);
+            this.label10.Location = new System.Drawing.Point(441, 257);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(142, 24);
+            this.label10.TabIndex = 35;
+            this.label10.Text = "Time Of Death";
             // 
-            // label12
+            // txtMiddlename
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(40, 93);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 13);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "Last Name";
+            this.txtMiddlename.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMiddlename.Location = new System.Drawing.Point(829, 204);
+            this.txtMiddlename.Name = "txtMiddlename";
+            this.txtMiddlename.Size = new System.Drawing.Size(344, 29);
+            this.txtMiddlename.TabIndex = 34;
             // 
-            // textBox10
+            // txtFirstname
             // 
-            this.textBox10.Location = new System.Drawing.Point(414, 112);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 11;
+            this.txtFirstname.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstname.Location = new System.Drawing.Point(445, 204);
+            this.txtFirstname.Name = "txtFirstname";
+            this.txtFirstname.Size = new System.Drawing.Size(344, 29);
+            this.txtFirstname.TabIndex = 33;
             // 
-            // textBox7
+            // txtLastname
             // 
-            this.textBox7.Location = new System.Drawing.Point(245, 169);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(101, 20);
-            this.textBox7.TabIndex = 10;
+            this.txtLastname.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastname.Location = new System.Drawing.Point(61, 204);
+            this.txtLastname.Name = "txtLastname";
+            this.txtLastname.Size = new System.Drawing.Size(344, 29);
+            this.txtLastname.TabIndex = 32;
             // 
-            // textBox9
+            // label11
             // 
-            this.textBox9.Location = new System.Drawing.Point(228, 112);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(175, 20);
-            this.textBox9.TabIndex = 9;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Georgia", 15F);
+            this.label11.Location = new System.Drawing.Point(825, 177);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(131, 24);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "Middle Name";
             // 
-            // textBox18
+            // label21
             // 
-            this.textBox18.Location = new System.Drawing.Point(40, 327);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(242, 20);
-            this.textBox18.TabIndex = 8;
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Georgia", 15F);
+            this.label21.Location = new System.Drawing.Point(441, 177);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(110, 24);
+            this.label21.TabIndex = 30;
+            this.label21.Text = "First Name";
             // 
-            // textBox17
+            // label22
             // 
-            this.textBox17.Location = new System.Drawing.Point(40, 275);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(155, 20);
-            this.textBox17.TabIndex = 7;
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Georgia", 15F);
+            this.label22.Location = new System.Drawing.Point(57, 177);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(106, 24);
+            this.label22.TabIndex = 29;
+            this.label22.Text = "Last Name";
             // 
-            // textBox16
+            // label24
             // 
-            this.textBox16.Location = new System.Drawing.Point(294, 327);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(179, 20);
-            this.textBox16.TabIndex = 6;
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Georgia", 25F);
+            this.label24.Location = new System.Drawing.Point(56, 101);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(157, 39);
+            this.label24.TabIndex = 28;
+            this.label24.Text = "Deceased";
             // 
-            // textBox13
+            // label9
             // 
-            this.textBox13.Location = new System.Drawing.Point(201, 275);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(161, 20);
-            this.textBox13.TabIndex = 5;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Georgia", 15F);
+            this.label9.Location = new System.Drawing.Point(825, 257);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 24);
+            this.label9.TabIndex = 50;
+            this.label9.Text = "Sex";
             // 
-            // textBox8
+            // cmbSex
             // 
-            this.textBox8.Location = new System.Drawing.Point(368, 275);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(146, 20);
-            this.textBox8.TabIndex = 12;
+            this.cmbSex.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSex.FormattingEnabled = true;
+            this.cmbSex.Location = new System.Drawing.Point(828, 285);
+            this.cmbSex.Name = "cmbSex";
+            this.cmbSex.Size = new System.Drawing.Size(345, 31);
+            this.cmbSex.TabIndex = 51;
             // 
-            // textBox6
+            // datepickDateofInternment
             // 
-            this.textBox6.Location = new System.Drawing.Point(40, 112);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(175, 20);
-            this.textBox6.TabIndex = 4;
+            this.datepickDateofInternment.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datepickDateofInternment.Location = new System.Drawing.Point(61, 479);
+            this.datepickDateofInternment.Name = "datepickDateofInternment";
+            this.datepickDateofInternment.Size = new System.Drawing.Size(344, 29);
+            this.datepickDateofInternment.TabIndex = 53;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 234);
+            this.label1.Font = new System.Drawing.Font("Georgia", 15F);
+            this.label1.Location = new System.Drawing.Point(57, 451);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Place of Increment";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(258, 371);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 13);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "time of Increment";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 371);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 13);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Date of Increment";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(40, 387);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(196, 20);
-            this.dateTimePicker2.TabIndex = 27;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(258, 390);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(134, 20);
-            this.textBox1.TabIndex = 8;
+            this.label1.Size = new System.Drawing.Size(184, 24);
+            this.label1.TabIndex = 52;
+            this.label1.Text = "Date of Internment";
             // 
             // frmDeceasedForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(597, 507);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label29);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(1278, 795);
+            this.Controls.Add(this.datepickDateofInternment);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label28);
-            this.Controls.Add(this.label27);
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox18);
-            this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.textBox16);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.cmbSex);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtProvince);
+            this.Controls.Add(this.txtCity);
+            this.Controls.Add(this.txtBrgy);
+            this.Controls.Add(this.txtHouseStreet);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.datepickDateofDeath);
+            this.Controls.Add(this.txtTimeofDeath);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.txtMiddlename);
+            this.Controls.Add(this.txtFirstname);
+            this.Controls.Add(this.txtLastname);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.label24);
             this.Name = "frmDeceasedForm";
             this.Text = "frmDeceasedForm";
             this.Load += new System.EventHandler(this.frmDeceasedForm_Load);
@@ -329,33 +312,29 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtProvince;
+        private System.Windows.Forms.TextBox txtCity;
+        private System.Windows.Forms.TextBox txtBrgy;
+        private System.Windows.Forms.TextBox txtHouseStreet;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker datepickDateofDeath;
+        private System.Windows.Forms.TextBox txtTimeofDeath;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtMiddlename;
+        private System.Windows.Forms.TextBox txtFirstname;
+        private System.Windows.Forms.TextBox txtLastname;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cmbSex;
+        private System.Windows.Forms.DateTimePicker datepickDateofInternment;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

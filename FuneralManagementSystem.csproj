@@ -171,5 +171,8 @@
   <ItemGroup>
     <None Include="Resources\curveflip.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cruzlogocircle.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -36,8 +36,8 @@
             this.pnlBrand = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelMainMenu = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnlBrand.SuspendLayout();
             this.panelMainMenu.SuspendLayout();
@@ -55,13 +55,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(230, 636);
+            this.panel1.Size = new System.Drawing.Size(230, 834);
             this.panel1.TabIndex = 0;
             // 
             // button4
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button4.Location = new System.Drawing.Point(33, 590);
+            this.button4.Location = new System.Drawing.Point(33, 788);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(172, 30);
             this.button4.TabIndex = 1;
@@ -125,9 +125,19 @@
             this.panelMainMenu.Controls.Add(this.panelTitleBar);
             this.panelMainMenu.Location = new System.Drawing.Point(230, 0);
             this.panelMainMenu.Name = "panelMainMenu";
-            this.panelMainMenu.Size = new System.Drawing.Size(875, 636);
+            this.panelMainMenu.Size = new System.Drawing.Size(1294, 834);
             this.panelMainMenu.TabIndex = 1;
             this.panelMainMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMainMenu_Paint);
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.IndianRed;
+            this.panelTitleBar.Controls.Add(this.label2);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(1294, 64);
+            this.panelTitleBar.TabIndex = 0;
             // 
             // label2
             // 
@@ -138,25 +148,16 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "main Title";
             // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.IndianRed;
-            this.panelTitleBar.Controls.Add(this.label2);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(875, 64);
-            this.panelTitleBar.TabIndex = 0;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1105, 636);
+            this.ClientSize = new System.Drawing.Size(1524, 834);
             this.Controls.Add(this.panelMainMenu);
             this.Controls.Add(this.panel1);
             this.Name = "frmMain";
             this.Text = "frmMain";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.panel1.ResumeLayout(false);
             this.pnlBrand.ResumeLayout(false);
