@@ -74,6 +74,17 @@ namespace FuneralManagementSystem
         private void panelMainMenu_Paint(object sender, PaintEventArgs e)
         {
             panelTitleBar.Visible = false;
+            
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            //System.Drawing.Rectangle workingRectangle = Screen.PrimaryScreen.WorkingArea;
+
+            //this.Size = new System.Drawing.Size(Convert.ToInt32(0.5 * workingRectangle.Width),
+            //    Convert.ToInt32(0.4 * workingRectangle.Height));
+
+            //this.Location = new System.Drawing.Point(230, 0);
         }
     }
 

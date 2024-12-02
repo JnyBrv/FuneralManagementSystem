@@ -56,6 +56,24 @@
     <Compile Include="Clients.Designer.cs">
       <DependentUpon>Clients.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmClientContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientContractForm.Designer.cs">
+      <DependentUpon>frmClientContractForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmContractForm.Designer.cs">
+      <DependentUpon>frmContractForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeceasedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeceasedForm.Designer.cs">
+      <DependentUpon>frmDeceasedForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +108,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Clients.resx">
       <DependentUpon>Clients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientContractForm.resx">
+      <DependentUpon>frmClientContractForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmContractForm.resx">
+      <DependentUpon>frmContractForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeceasedForm.resx">
+      <DependentUpon>frmDeceasedForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogIn.resx">
       <DependentUpon>FrmLogIn.cs</DependentUpon>

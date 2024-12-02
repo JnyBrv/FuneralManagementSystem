@@ -55,12 +55,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(230, 639);
+            this.panel1.Size = new System.Drawing.Size(230, 636);
             this.panel1.TabIndex = 0;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(33, 597);
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button4.Location = new System.Drawing.Point(33, 590);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(172, 30);
             this.button4.TabIndex = 1;
@@ -117,11 +118,14 @@
             // 
             // panelMainMenu
             // 
+            this.panelMainMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelMainMenu.AutoScroll = true;
             this.panelMainMenu.Controls.Add(this.panelTitleBar);
-            this.panelMainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMainMenu.Location = new System.Drawing.Point(230, 0);
             this.panelMainMenu.Name = "panelMainMenu";
-            this.panelMainMenu.Size = new System.Drawing.Size(912, 639);
+            this.panelMainMenu.Size = new System.Drawing.Size(875, 636);
             this.panelMainMenu.TabIndex = 1;
             this.panelMainMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMainMenu_Paint);
             // 
@@ -141,18 +145,19 @@
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(912, 64);
+            this.panelTitleBar.Size = new System.Drawing.Size(875, 64);
             this.panelTitleBar.TabIndex = 0;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1142, 639);
+            this.ClientSize = new System.Drawing.Size(1105, 636);
             this.Controls.Add(this.panelMainMenu);
             this.Controls.Add(this.panel1);
             this.Name = "frmMain";
             this.Text = "frmMain";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.panel1.ResumeLayout(false);
             this.pnlBrand.ResumeLayout(false);
             this.pnlBrand.PerformLayout();
