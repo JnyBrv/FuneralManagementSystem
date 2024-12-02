@@ -1,4 +1,4 @@
-﻿using FontAwesome.Sharp;
+﻿ using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,9 +49,10 @@ namespace FuneralManagementSystem
         }
 
         private void OpenChildForm(Form childForm) {
-            //if (titleIcnPackage != null) {
-            //    currentChildForm.Close();
-            //}
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
             currentChildForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -60,6 +61,7 @@ namespace FuneralManagementSystem
             PanelMainMenu.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+
             
             
         }
@@ -104,8 +106,7 @@ namespace FuneralManagementSystem
                 leftBorderbtn.BringToFront();
 
                 //icon CurrentChild Icon
-                titleIcnPackage.IconChar = currentBtn.IconChar;
-                titleIcnPackage.IconColor = color;
+                
             }
         }
 
@@ -142,7 +143,7 @@ namespace FuneralManagementSystem
 
         private void PanelMainMenu_Paint(object sender, PaintEventArgs e)
         {
-          
+            //OpenChildForm(new FrmPackages());
         }
     }
 }
