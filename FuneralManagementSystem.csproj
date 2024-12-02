@@ -165,5 +165,11 @@
   <ItemGroup>
     <None Include="Resources\exit.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curveflip.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
