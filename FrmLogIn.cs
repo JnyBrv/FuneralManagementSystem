@@ -28,22 +28,12 @@ namespace FuneralManagementSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            FormBorderStyle = FormBorderStyle.None;
-            WindowState = FormWindowState.Normal;
+            //FormBorderStyle = FormBorderStyle.None;
+            //WindowState = FormWindowState.Normal;
         }
 
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            //Confirmation message dialog
-            DialogResult result = MessageBox.Show("Are you sure you want to close the system? ", 
-                "Exit Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                Close();
-            }
-            
-        }
+       
 
         //Login button
         private void btnLogin_Click(object sender, EventArgs e)
@@ -108,6 +98,17 @@ namespace FuneralManagementSystem
         private void cbShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             txtPassword.PasswordChar = cbShowPassword.Checked ? '\0' : '•';
+        }
+
+        private void pbExit_Click(object sender, EventArgs e)
+        {
+            //Confirmation message dialog
+            DialogResult result = MessageBox.Show("Are you sure you want to close the system? ",
+                "Exit Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Close();
+            }
         }
     }
 }
