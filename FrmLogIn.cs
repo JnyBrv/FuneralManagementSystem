@@ -64,7 +64,7 @@ namespace FuneralManagementSystem
                 if (dt.Rows.Count > 0)
                 {
                     //Open Home form
-                    System_Arragement sysar = new System_Arragement();
+                    frmMain sysar = new frmMain();
                     sysar.Show();
                     this.Hide();
 
