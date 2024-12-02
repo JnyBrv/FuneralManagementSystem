@@ -21,7 +21,7 @@ namespace FuneralManagementSystem
             Application.SetCompatibleTextRenderingDefault(false);
          
             //Application.Run(new frmLogIn());
-            Application.Run(new System_Arragement());
+            Application.Run(new frmMain());
             //ff
         }
     }
