@@ -55,7 +55,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(230, 636);
+            this.panel1.Size = new System.Drawing.Size(230, 834);
             this.panel1.TabIndex = 0;
             // 
             // btnLeave
@@ -123,7 +123,7 @@
             this.panelMainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMainMenu.Location = new System.Drawing.Point(230, 0);
             this.panelMainMenu.Name = "panelMainMenu";
-            this.panelMainMenu.Size = new System.Drawing.Size(875, 636);
+            this.panelMainMenu.Size = new System.Drawing.Size(1294, 834);
             this.panelMainMenu.TabIndex = 1;
             this.panelMainMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMainMenu_Paint);
             // 
@@ -150,11 +150,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1105, 636);
+            this.ClientSize = new System.Drawing.Size(1524, 834);
             this.Controls.Add(this.panelMainMenu);
             this.Controls.Add(this.panel1);
             this.Name = "frmMain";
             this.Text = "frmMain";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.panel1.ResumeLayout(false);
             this.pnlBrand.ResumeLayout(false);

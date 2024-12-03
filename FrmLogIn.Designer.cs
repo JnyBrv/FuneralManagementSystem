@@ -35,12 +35,14 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.pbExit = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // cbShowPassword
@@ -48,7 +50,7 @@
             this.cbShowPassword.AutoSize = true;
             this.cbShowPassword.Font = new System.Drawing.Font("Georgia", 12F);
             this.cbShowPassword.ForeColor = System.Drawing.Color.Gold;
-            this.cbShowPassword.Location = new System.Drawing.Point(815, 537);
+            this.cbShowPassword.Location = new System.Drawing.Point(815, 625);
             this.cbShowPassword.Name = "cbShowPassword";
             this.cbShowPassword.Size = new System.Drawing.Size(137, 22);
             this.cbShowPassword.TabIndex = 14;
@@ -61,7 +63,7 @@
             this.btnLogin.BackColor = System.Drawing.Color.Gold;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(583, 596);
+            this.btnLogin.Location = new System.Drawing.Point(583, 693);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(369, 47);
@@ -75,7 +77,7 @@
             this.lblWarning.AutoSize = true;
             this.lblWarning.Font = new System.Drawing.Font("Century", 12F);
             this.lblWarning.ForeColor = System.Drawing.Color.Red;
-            this.lblWarning.Location = new System.Drawing.Point(587, 562);
+            this.lblWarning.Location = new System.Drawing.Point(587, 659);
             this.lblWarning.Name = "lblWarning";
             this.lblWarning.Size = new System.Drawing.Size(358, 20);
             this.lblWarning.TabIndex = 12;
@@ -84,7 +86,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Georgia", 14F);
-            this.txtPassword.Location = new System.Drawing.Point(583, 483);
+            this.txtPassword.Location = new System.Drawing.Point(583, 580);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(369, 29);
             this.txtPassword.TabIndex = 11;
@@ -93,7 +95,7 @@
             // 
             this.txtUsername.BackColor = System.Drawing.Color.White;
             this.txtUsername.Font = new System.Drawing.Font("Georgia", 14F);
-            this.txtUsername.Location = new System.Drawing.Point(583, 418);
+            this.txtUsername.Location = new System.Drawing.Point(583, 489);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtUsername.Size = new System.Drawing.Size(369, 29);
@@ -104,7 +106,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Georgia", 15F);
             this.label3.ForeColor = System.Drawing.Color.Gold;
-            this.label3.Location = new System.Drawing.Point(448, 486);
+            this.label3.Location = new System.Drawing.Point(579, 543);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 24);
             this.label3.TabIndex = 9;
@@ -115,22 +117,22 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Georgia", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(448, 421);
+            this.label2.Location = new System.Drawing.Point(579, 451);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 24);
             this.label2.TabIndex = 8;
             this.label2.Text = "Username:";
             // 
-            // pictureBox2
+            // pboxLogo
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::FuneralManagementSystem.Properties.Resources.curveflip;
-            this.pictureBox2.Location = new System.Drawing.Point(842, 178);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(698, 695);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
+            this.pboxLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pboxLogo.Image = global::FuneralManagementSystem.Properties.Resources.cruzlogocircle;
+            this.pboxLogo.Location = new System.Drawing.Point(643, 130);
+            this.pboxLogo.Name = "pboxLogo";
+            this.pboxLogo.Size = new System.Drawing.Size(250, 250);
+            this.pboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboxLogo.TabIndex = 18;
+            this.pboxLogo.TabStop = false;
             // 
             // pbExit
             // 
@@ -154,12 +156,24 @@
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::FuneralManagementSystem.Properties.Resources.curveflip;
+            this.pictureBox2.Location = new System.Drawing.Point(842, 178);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(698, 695);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            // 
             // frmLogIn
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1540, 873);
             this.ControlBox = false;
+            this.Controls.Add(this.pboxLogo);
             this.Controls.Add(this.pbExit);
             this.Controls.Add(this.cbShowPassword);
             this.Controls.Add(this.btnLogin);
@@ -177,9 +191,10 @@
             this.Text = "Log in";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,6 +211,7 @@
         private System.Windows.Forms.PictureBox pbExit;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pboxLogo;
     }
 }
 
