@@ -56,6 +56,18 @@
     <Compile Include="Clients.Designer.cs">
       <DependentUpon>Clients.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmActiveClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmActiveClient.Designer.cs">
+      <DependentUpon>frmActiveClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAvail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAvail.Designer.cs">
+      <DependentUpon>frmAvail.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmClientContractForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,12 +79,6 @@
     </Compile>
     <Compile Include="frmContractForm.Designer.cs">
       <DependentUpon>frmContractForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmContractSummary.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmContractSummary.Designer.cs">
-      <DependentUpon>frmContractSummary.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDeceasedForm.cs">
       <SubType>Form</SubType>
@@ -110,19 +116,28 @@
     <Compile Include="FrmSearchBox.Designer.cs">
       <DependentUpon>FrmSearchBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="PaymentCash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentCash.Designer.cs">
+      <DependentUpon>PaymentCash.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Clients.resx">
       <DependentUpon>Clients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmActiveClient.resx">
+      <DependentUpon>frmActiveClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAvail.resx">
+      <DependentUpon>frmAvail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmClientContractForm.resx">
       <DependentUpon>frmClientContractForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmContractForm.resx">
       <DependentUpon>frmContractForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmContractSummary.resx">
-      <DependentUpon>frmContractSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDeceasedForm.resx">
       <DependentUpon>frmDeceasedForm.cs</DependentUpon>
@@ -138,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSearchBox.resx">
       <DependentUpon>FrmSearchBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentCash.resx">
+      <DependentUpon>PaymentCash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

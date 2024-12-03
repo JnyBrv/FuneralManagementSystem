@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace FuneralManagementSystem
 {
-    public partial class frmDeceasedForm : Form
+    public partial class PaymentCash : Form
     {
-        public frmDeceasedForm()
+        public PaymentCash()
         {
             InitializeComponent();
         }
 
-        private void frmDeceasedForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtLastname_TextChanged(object sender, EventArgs e)
+        private void PaymentCash_Load(object sender, EventArgs e)
         {
 
         }

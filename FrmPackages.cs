@@ -26,5 +26,12 @@ namespace FuneralManagementSystem
         {
 
         }
+
+        private void btnAddClient_Click(object sender, EventArgs e)
+        {
+            frmAvail clientContractForm = new frmAvail();
+            
+            clientContractForm.Show();
+        }
     }
 }

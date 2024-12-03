@@ -98,7 +98,7 @@
             this.txtLastname.Location = new System.Drawing.Point(67, 212);
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.Size = new System.Drawing.Size(344, 29);
-            this.txtLastname.TabIndex = 7;
+            this.txtLastname.TabIndex = 1;
             // 
             // txtFirstname
             // 
@@ -106,7 +106,7 @@
             this.txtFirstname.Location = new System.Drawing.Point(451, 212);
             this.txtFirstname.Name = "txtFirstname";
             this.txtFirstname.Size = new System.Drawing.Size(344, 29);
-            this.txtFirstname.TabIndex = 8;
+            this.txtFirstname.TabIndex = 2;
             // 
             // txtMiddlename
             // 
@@ -114,7 +114,7 @@
             this.txtMiddlename.Location = new System.Drawing.Point(835, 212);
             this.txtMiddlename.Name = "txtMiddlename";
             this.txtMiddlename.Size = new System.Drawing.Size(344, 29);
-            this.txtMiddlename.TabIndex = 9;
+            this.txtMiddlename.TabIndex = 3;
             // 
             // label14
             // 
@@ -152,7 +152,7 @@
             this.txtRelation.Location = new System.Drawing.Point(67, 292);
             this.txtRelation.Name = "txtRelation";
             this.txtRelation.Size = new System.Drawing.Size(344, 29);
-            this.txtRelation.TabIndex = 13;
+            this.txtRelation.TabIndex = 4;
             // 
             // txtContactno
             // 
@@ -160,7 +160,7 @@
             this.txtContactno.Location = new System.Drawing.Point(451, 292);
             this.txtContactno.Name = "txtContactno";
             this.txtContactno.Size = new System.Drawing.Size(344, 29);
-            this.txtContactno.TabIndex = 14;
+            this.txtContactno.TabIndex = 5;
             // 
             // datepickClient
             // 
@@ -168,7 +168,7 @@
             this.datepickClient.Location = new System.Drawing.Point(835, 293);
             this.datepickClient.Name = "datepickClient";
             this.datepickClient.Size = new System.Drawing.Size(344, 29);
-            this.datepickClient.TabIndex = 15;
+            this.datepickClient.TabIndex = 6;
             // 
             // label17
             // 
@@ -226,7 +226,7 @@
             this.txtHouseStreet.Location = new System.Drawing.Point(67, 406);
             this.txtHouseStreet.Name = "txtHouseStreet";
             this.txtHouseStreet.Size = new System.Drawing.Size(260, 29);
-            this.txtHouseStreet.TabIndex = 22;
+            this.txtHouseStreet.TabIndex = 7;
             // 
             // txtBrgy
             // 
@@ -234,7 +234,7 @@
             this.txtBrgy.Location = new System.Drawing.Point(354, 406);
             this.txtBrgy.Name = "txtBrgy";
             this.txtBrgy.Size = new System.Drawing.Size(260, 29);
-            this.txtBrgy.TabIndex = 23;
+            this.txtBrgy.TabIndex = 8;
             // 
             // txtCity
             // 
@@ -242,7 +242,7 @@
             this.txtCity.Location = new System.Drawing.Point(637, 406);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(260, 29);
-            this.txtCity.TabIndex = 24;
+            this.txtCity.TabIndex = 9;
             // 
             // txtProvince
             // 
@@ -250,7 +250,7 @@
             this.txtProvince.Location = new System.Drawing.Point(919, 406);
             this.txtProvince.Name = "txtProvince";
             this.txtProvince.Size = new System.Drawing.Size(260, 29);
-            this.txtProvince.TabIndex = 26;
+            this.txtProvince.TabIndex = 10;
             // 
             // frmClientContractForm
             // 
