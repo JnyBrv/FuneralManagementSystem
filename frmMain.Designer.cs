@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnLeave = new System.Windows.Forms.Button();
             this.btnEmployees = new System.Windows.Forms.Button();
             this.btnClients = new System.Windows.Forms.Button();
             this.btnPackages = new System.Windows.Forms.Button();
             this.pnlBrand = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelMainMenu = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnlBrand.SuspendLayout();
             this.panelMainMenu.SuspendLayout();
@@ -47,7 +47,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.OliveDrab;
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btnLeave);
             this.panel1.Controls.Add(this.btnEmployees);
             this.panel1.Controls.Add(this.btnClients);
             this.panel1.Controls.Add(this.btnPackages);
@@ -58,15 +58,15 @@
             this.panel1.Size = new System.Drawing.Size(230, 636);
             this.panel1.TabIndex = 0;
             // 
-            // button4
+            // btnLeave
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button4.Location = new System.Drawing.Point(33, 590);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(172, 30);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "button1";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnLeave.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnLeave.Location = new System.Drawing.Point(33, 590);
+            this.btnLeave.Name = "btnLeave";
+            this.btnLeave.Size = new System.Drawing.Size(172, 30);
+            this.btnLeave.TabIndex = 1;
+            this.btnLeave.Text = "Leave";
+            this.btnLeave.UseVisualStyleBackColor = true;
             // 
             // btnEmployees
             // 
@@ -118,25 +118,14 @@
             // 
             // panelMainMenu
             // 
-            this.panelMainMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMainMenu.AutoScroll = true;
             this.panelMainMenu.Controls.Add(this.panelTitleBar);
+            this.panelMainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMainMenu.Location = new System.Drawing.Point(230, 0);
             this.panelMainMenu.Name = "panelMainMenu";
             this.panelMainMenu.Size = new System.Drawing.Size(875, 636);
             this.panelMainMenu.TabIndex = 1;
             this.panelMainMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMainMenu_Paint);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(76, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "main Title";
             // 
             // panelTitleBar
             // 
@@ -147,6 +136,15 @@
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(875, 64);
             this.panelTitleBar.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(76, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "main Title";
             // 
             // frmMain
             // 
@@ -174,7 +172,7 @@
         private System.Windows.Forms.Panel pnlBrand;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelMainMenu;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnLeave;
         private System.Windows.Forms.Button btnEmployees;
         private System.Windows.Forms.Button btnClients;
         private System.Windows.Forms.Button btnPackages;

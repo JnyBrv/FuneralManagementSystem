@@ -16,5 +16,10 @@ namespace FuneralManagementSystem
         {
             InitializeComponent();
         }
+
+        private void frmContractForm1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

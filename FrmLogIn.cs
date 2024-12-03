@@ -21,6 +21,7 @@ namespace FuneralManagementSystem
             
             lblWarning.Hide(); //Wrong login credentials warning.
             txtPassword.PasswordChar = '•'; //To hide password letters.
+            
         }
 
         //SQL Connection
@@ -30,10 +31,11 @@ namespace FuneralManagementSystem
         {
             //FormBorderStyle = FormBorderStyle.None;
             //WindowState = FormWindowState.Normal;
+
         }
 
 
-       
+
 
         //Login button
         private void btnLogin_Click(object sender, EventArgs e)

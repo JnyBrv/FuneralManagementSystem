@@ -129,9 +129,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(24, 136);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 13);
+            this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Equipments to Deliver";
+            this.label2.Text = "Inclusions";
             // 
             // label3
             // 
@@ -236,6 +236,7 @@
             this.Controls.Add(this.label11);
             this.Name = "frmContractForm1";
             this.Text = "frmContractForm";
+            this.Load += new System.EventHandler(this.frmContractForm1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
