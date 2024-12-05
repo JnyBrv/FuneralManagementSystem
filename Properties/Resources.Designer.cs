@@ -63,6 +63,16 @@ namespace FuneralManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cruzlogo {
+            get {
+                object obj = ResourceManager.GetObject("cruzlogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cruzlogocircle {
             get {
                 object obj = ResourceManager.GetObject("cruzlogocircle", resourceCulture);

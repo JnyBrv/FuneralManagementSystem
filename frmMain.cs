@@ -59,18 +59,42 @@ namespace FuneralManagementSystem
         {
             OpenChildForm(new FrmPackages());
             panelTitleBar.Visible = false;
+
+            //clicked colors
+            btnPackages.BackColor = Color.Gold;
+            btnPackages.ForeColor = Color.Black;
+            btnClients.BackColor = Color.Black;
+            btnClients.ForeColor = Color.Gold;
+            btnEmployees.BackColor = Color.Black;
+            btnEmployees.ForeColor = Color.Gold;
         }
 
         private void btnClients_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmClients());
             panelTitleBar.Visible = false;
+
+            //clicked colors
+            btnPackages.BackColor = Color.Black;
+            btnPackages.ForeColor = Color.Gold;
+            btnClients.BackColor = Color.Gold;
+            btnClients.ForeColor = Color.Black;
+            btnEmployees.BackColor = Color.Black;
+            btnEmployees.ForeColor = Color.Gold;
         }
 
         private void btnEmployees_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmEmployees());
             panelTitleBar.Visible = false;
+
+            //clicked colors
+            btnPackages.BackColor = Color.Black;
+            btnPackages.ForeColor = Color.Gold;
+            btnClients.BackColor = Color.Black;
+            btnClients.ForeColor = Color.Gold;
+            btnEmployees.BackColor = Color.Gold;
+            btnEmployees.ForeColor = Color.Black;
         }
 
         private void panelMainMenu_Paint(object sender, PaintEventArgs e)
@@ -87,6 +111,29 @@ namespace FuneralManagementSystem
             //    Convert.ToInt32(0.4 * workingRectangle.Height));
 
             //this.Location = new System.Drawing.Point(230, 0);
+        }
+
+        private void pbExit_Click(object sender, EventArgs e)
+        {
+            //Confirmation message dialog
+            DialogResult result = MessageBox.Show("Are you sure you want to close the system? ",
+                "Exit Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to logout? ",
+                "Exit Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Hide();
+                frmLogIn login = new frmLogIn();
+                login.Show();
+            }
         }
     }
 
