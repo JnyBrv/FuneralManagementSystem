@@ -13,17 +13,18 @@ namespace FuneralManagementSystem
 
     public partial class frmMain : Form
     {
-        private Form currentChildForm;
+        public Form currentChildForm;
         private Form currentTitleChildForm;
         public frmMain()
         {
             InitializeComponent();
             OpenChildForm(new FrmPackages());
+            btnPackages.BackColor = Color.Gold;
+            btnPackages.ForeColor = Color.Black;
 
-            
         }
 
-        private void OpenChildForm(Form childForm) {
+        public void OpenChildForm(Form childForm) {
             if (currentChildForm != null) { 
                 currentChildForm.Close();
             }
@@ -96,6 +97,8 @@ namespace FuneralManagementSystem
             btnEmployees.BackColor = Color.Gold;
             btnEmployees.ForeColor = Color.Black;
         }
+
+        
 
         private void panelMainMenu_Paint(object sender, PaintEventArgs e)
         {

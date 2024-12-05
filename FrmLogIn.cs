@@ -110,6 +110,8 @@ namespace FuneralManagementSystem
             if (result == DialogResult.Yes)
             {
                 Close();
+                frmMain main = (frmMain)Application.OpenForms["frmMain"];
+                main.Close();
             }
         }
     }

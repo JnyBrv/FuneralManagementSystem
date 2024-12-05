@@ -22,6 +22,8 @@ namespace FuneralManagementSystem
 
         }
 
+        
+
         private void FrmPackages_Load(object sender, EventArgs e)
         {
             
@@ -40,13 +42,10 @@ namespace FuneralManagementSystem
         frmMain main;
         private void btnAddClient_Click(object sender, EventArgs e)
         {
-           
-            frmAvail clientContractForm = new frmAvail();
-            clientContractForm.Show();
-
-
             main = (frmMain)Application.OpenForms["frmMain"];
-            main.Hide();
+            main.OpenChildForm(new frmClientContractForm());
+            main.panelTitleBar.Visible = false;
+
         }
 
         private void pbExit_Click(object sender, EventArgs e)

@@ -12,6 +12,7 @@ namespace FuneralManagementSystem
 {
     public partial class frmInclusions : Form
     {
+        frmMain main;
         public frmInclusions()
         {
             InitializeComponent();
@@ -21,7 +22,6 @@ namespace FuneralManagementSystem
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
             panel1.AutoScroll = true;
-            panel1.VerticalScroll.Value = vScrollBar1.Value;
         }
 
         private void frmInclusions_Load(object sender, EventArgs e)
@@ -52,6 +52,19 @@ namespace FuneralManagementSystem
 
             frmAvail frmAvl = new frmAvail();
             frmAvl.Close();
+        }
+
+        private void pbExit_Click(object sender, EventArgs e)
+        {
+            //Confirmation message dialog
+            DialogResult result = MessageBox.Show("Are you sure you want to close the system? ",
+                "Exit Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                main = (frmMain)Application.OpenForms["frmMain"];
+                main.Close();
+                Close();
+            }
         }
     }
 }

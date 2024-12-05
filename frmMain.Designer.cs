@@ -211,13 +211,13 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlBrand;
-        private System.Windows.Forms.Panel panelMainMenu;
         private System.Windows.Forms.Button btnEmployees;
         private System.Windows.Forms.Button btnClients;
         private System.Windows.Forms.Button btnPackages;
-        private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pbExit;
         private System.Windows.Forms.Button btnLogout;
+        public System.Windows.Forms.Panel panelMainMenu;
+        public System.Windows.Forms.Panel panelTitleBar;
     }
 }
