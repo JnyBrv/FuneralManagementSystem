@@ -45,8 +45,8 @@ namespace FuneralManagementSystem
             clientContractForm.Show();
 
 
-            main = (frmMain)Application.OpenForms["frmMain"];
-            main.Hide();
+            //main = (frmMain)Application.OpenForms["frmMain"];
+            //main.Hide();
         }
 
         private void pbExit_Click(object sender, EventArgs e)
