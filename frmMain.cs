@@ -19,6 +19,8 @@ namespace FuneralManagementSystem
         {
             InitializeComponent();
             OpenChildForm(new FrmPackages());
+
+            
         }
 
         private void OpenChildForm(Form childForm) {

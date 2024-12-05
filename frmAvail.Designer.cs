@@ -29,16 +29,22 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelClientFormContainer = new System.Windows.Forms.Panel();
+            this.btnPreviousForm = new System.Windows.Forms.Button();
+            this.btnNextForm = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.btnNextForm);
+            this.panel1.Controls.Add(this.btnPreviousForm);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button4);
@@ -49,35 +55,25 @@
             this.panel1.Size = new System.Drawing.Size(1140, 64);
             this.panel1.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(339, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 64);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Client";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(485, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 64);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Deceased";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(631, 0);
+            this.button3.Location = new System.Drawing.Point(475, 0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(140, 64);
             this.button3.TabIndex = 0;
             this.button3.Text = "Contract";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(329, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(140, 64);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Deceased";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button4
             // 
@@ -88,13 +84,55 @@
             this.button4.Text = "Back";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(183, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(140, 64);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Client";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // panelClientFormContainer
             // 
+            this.panelClientFormContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelClientFormContainer.Location = new System.Drawing.Point(0, 71);
             this.panelClientFormContainer.Name = "panelClientFormContainer";
             this.panelClientFormContainer.Size = new System.Drawing.Size(1140, 572);
             this.panelClientFormContainer.TabIndex = 1;
             this.panelClientFormContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.panelClientFormContainer_Paint);
+            // 
+            // btnPreviousForm
+            // 
+            this.btnPreviousForm.Location = new System.Drawing.Point(788, 1);
+            this.btnPreviousForm.Name = "btnPreviousForm";
+            this.btnPreviousForm.Size = new System.Drawing.Size(140, 64);
+            this.btnPreviousForm.TabIndex = 0;
+            this.btnPreviousForm.Text = "<";
+            this.btnPreviousForm.UseVisualStyleBackColor = true;
+            this.btnPreviousForm.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btnNextForm
+            // 
+            this.btnNextForm.Location = new System.Drawing.Point(934, 1);
+            this.btnNextForm.Name = "btnNextForm";
+            this.btnNextForm.Size = new System.Drawing.Size(140, 64);
+            this.btnNextForm.TabIndex = 0;
+            this.btnNextForm.Text = ">";
+            this.btnNextForm.UseVisualStyleBackColor = true;
+            this.btnNextForm.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(690, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(13, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "1";
             // 
             // frmAvail
             // 
@@ -106,6 +144,7 @@
             this.Name = "frmAvail";
             this.Text = "frmAvail";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -118,5 +157,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panelClientFormContainer;
+        private System.Windows.Forms.Button btnNextForm;
+        private System.Windows.Forms.Button btnPreviousForm;
+        private System.Windows.Forms.Label label1;
     }
 }

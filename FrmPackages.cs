@@ -12,9 +12,14 @@ namespace FuneralManagementSystem
 {
     public partial class FrmPackages : Form
     {
+        private Form parentForm;
+
         public FrmPackages()
         {
             InitializeComponent();
+
+            
+
         }
 
         private void FrmPackages_Load(object sender, EventArgs e)
@@ -27,13 +32,21 @@ namespace FuneralManagementSystem
 
         }
 
+        public FrmPackages(Form parent)
+        {
+            InitializeComponent();
+            parentForm = parent;
+        }
+
         private void btnAddClient_Click(object sender, EventArgs e)
         {
-            frmMain main = new frmMain();   
-            main.Hide();
+           
             frmAvail clientContractForm = new frmAvail();
-            
             clientContractForm.Show();
+
+
+            frmMain Form = (frmMain)Application.OpenForms["frmMain"];
+            Form.Hide();
         }
     }
 }
