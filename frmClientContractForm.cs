@@ -49,8 +49,18 @@ namespace FuneralManagementSystem
         private void btnNext_Click(object sender, EventArgs e)
         {
             main = (frmMain)Application.OpenForms["frmMain"];
-            main.OpenChildForm(new frmDeceasedForm());
+            main.OpenChildForm(new frmInclusions());
             main.panelTitleBar.Visible = false;
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
