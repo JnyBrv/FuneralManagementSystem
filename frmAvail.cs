@@ -13,16 +13,16 @@ namespace FuneralManagementSystem
     public partial class frmAvail : Form
     {
         private Form currentChildForm;
-        Form[] form = new Form[2];
-        int currentIndex = 0;
+        //Form[] form = new Form[2];
+        //int currentIndex = 0;
 
         public frmAvail()
         {
             InitializeComponent();
 
-            form[0] = new frmClientContractForm();
-            form[1] = new frmDeceasedForm();
-            form[2] = new frmInclusions();
+            //form[0] = new frmClientContractForm();
+            //form[1] = new frmDeceasedForm();
+            //form[2] = new frmInclusions();
 
            
         }
@@ -33,6 +33,7 @@ namespace FuneralManagementSystem
             {
                 currentChildForm.Close();
             }
+
             currentChildForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -44,14 +45,16 @@ namespace FuneralManagementSystem
 
         }
 
-        private void ShowForm(int index)
-        {
+        //private void ShowForm(int index)
+        //{
             
-        }
+        //}
 
         private void panelClientFormContainer_Paint(object sender, PaintEventArgs e)
         {
-            OpenChildForm(new frmClientContractForm());
+            //OpenChildForm(new frmClientContractForm());
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -71,7 +74,7 @@ namespace FuneralManagementSystem
 
         private void btnNextForm_Click(object sender, EventArgs e)
         {
-            int btnClick;
+            //int btnClick;
 
             //for (btnClick = 0; btnClick == 1; btnClick++) { 
             //        if btnCLick == 1            
