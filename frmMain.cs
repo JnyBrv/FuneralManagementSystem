@@ -15,6 +15,9 @@ namespace FuneralManagementSystem
     {
 
         private bool isClientsExpanded = false;
+        private bool isArchiveExpanded = false;
+
+
 
         public Form currentChildForm;
         private Form currentTitleChildForm;
@@ -118,19 +121,19 @@ namespace FuneralManagementSystem
             //ARCHIVE NA TO
 
 
-            if (!isClientsExpanded)
+            if (!isArchiveExpanded)
             {
                 btnEmployees.Visible = true;
                 btnClient.Visible = true;
 
-                isClientsExpanded = true;
+                isArchiveExpanded = true;
             }
             else
             {
                 btnEmployees.Visible = false;
                 btnClient.Visible = false;
 
-                isClientsExpanded = false;
+                isArchiveExpanded = false;
             }
 
 
