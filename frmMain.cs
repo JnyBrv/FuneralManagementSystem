@@ -13,6 +13,9 @@ namespace FuneralManagementSystem
 
     public partial class frmMain : Form
     {
+
+        private bool isClientsExpanded = false;
+
         public Form currentChildForm;
         private Form currentTitleChildForm;
         public frmMain()
@@ -69,16 +72,35 @@ namespace FuneralManagementSystem
             btnPackages.ForeColor = Color.Black;
             btnClients.BackColor = Color.Black;
             btnClients.ForeColor = Color.Gold;
-            btnEmployees.BackColor = Color.Black;
-            btnEmployees.ForeColor = Color.Gold;
+            btnArchive.BackColor = Color.Black;
+            btnArchive.ForeColor = Color.Gold;
 
             //clicked image color
 
 
         }
 
-        private void btnClients_Click(object sender, EventArgs e)
+ 
+
+            private void btnClients_Click(object sender, EventArgs e)
         {
+            //dropdown
+            if (!isClientsExpanded)
+            {
+                //show
+                btnOnService.Visible = true;
+                btnPaying.Visible = true;
+                isClientsExpanded = true;
+            }
+            else
+            {
+                //hide the button
+                btnOnService.Visible = false;
+                btnPaying.Visible = false;
+                isClientsExpanded = false;
+            }
+
+
             OpenChildForm(new FrmClients());
             panelTitleBar.Visible = false;
 
@@ -87,12 +109,35 @@ namespace FuneralManagementSystem
             btnPackages.ForeColor = Color.Gold;
             btnClients.BackColor = Color.Gold;
             btnClients.ForeColor = Color.Black;
-            btnEmployees.BackColor = Color.Black;
-            btnEmployees.ForeColor = Color.Gold;
+            btnArchive.BackColor = Color.Black;
+            btnArchive.ForeColor = Color.Gold;
         }
 
         private void btnEmployees_Click(object sender, EventArgs e)
         {
+            //ARCHIVE NA TO
+
+
+            if (!isClientsExpanded)
+            {
+                btnEmployees.Visible = true;
+                btnClient.Visible = true;
+
+                isClientsExpanded = true;
+            }
+            else
+            {
+                btnEmployees.Visible = false;
+                btnClient.Visible = false;
+
+                isClientsExpanded = false;
+            }
+
+
+
+
+
+
             OpenChildForm(new FrmEmployees());
             panelTitleBar.Visible = false;
 
@@ -101,8 +146,8 @@ namespace FuneralManagementSystem
             btnPackages.ForeColor = Color.Gold;
             btnClients.BackColor = Color.Black;
             btnClients.ForeColor = Color.Gold;
-            btnEmployees.BackColor = Color.Gold;
-            btnEmployees.ForeColor = Color.Black;
+            btnArchive.BackColor = Color.Gold;
+            btnArchive.ForeColor = Color.Black;
         }
 
         
@@ -144,6 +189,11 @@ namespace FuneralManagementSystem
                 frmLogIn login = new frmLogIn();
                 login.Show();
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+           
         }
     }
 
