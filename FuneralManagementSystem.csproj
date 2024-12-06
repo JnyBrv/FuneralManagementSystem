@@ -204,5 +204,35 @@
   <ItemGroup>
     <None Include="Resources\cruzlogo.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employeesIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addBoxIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\packageIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffin package 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffin package 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffin package 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffin package 1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

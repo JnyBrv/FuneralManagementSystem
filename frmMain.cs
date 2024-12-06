@@ -24,6 +24,9 @@ namespace FuneralManagementSystem
 
         }
 
+        Bitmap bmpPackage = Properties.Resources.packageIcon;
+
+
         public void OpenChildForm(Form childForm) {
             if (currentChildForm != null) { 
                 currentChildForm.Close();
@@ -68,6 +71,10 @@ namespace FuneralManagementSystem
             btnClients.ForeColor = Color.Gold;
             btnEmployees.BackColor = Color.Black;
             btnEmployees.ForeColor = Color.Gold;
+
+            //clicked image color
+
+
         }
 
         private void btnClients_Click(object sender, EventArgs e)
