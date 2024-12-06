@@ -17,7 +17,8 @@ namespace FuneralManagementSystem
 
         private bool isClientsExpanded = false;
         private bool isArchiveExpanded = false;
-
+        private bool isClientsIcon = false;
+        private bool isArchiveIcon = false;
 
 
         public Form currentChildForm;
@@ -97,12 +98,31 @@ namespace FuneralManagementSystem
         }
 
 
-     
+        //pang reset ng icon
+        private void clientIconDropdown()
+        {
+            if (isClientsExpanded)
+            {
+                btnOnService.Visible = false;
+                btnPaying.Visible = false;
+                btnClients.Text = "              Clients       ▼"; 
+            }
+            else
+            {
+                
+                btnOnService.Visible = true;
+                btnPaying.Visible = true;
+                btnClients.Text = "              Clients       ▲"; 
+            }
+
+            isClientsIcon = !isClientsIcon;
+        }
+
 
         private void btnClients_Click(object sender, EventArgs e)
         {
             //icon dropdown
-           
+            clientIconDropdown();
 
 
             //clicked image color
@@ -113,10 +133,11 @@ namespace FuneralManagementSystem
             //dropdown
             if (!isClientsExpanded)
             {
-                //show
+
                 btnOnService.Visible = true;
                 btnPaying.Visible = true;
                 isClientsExpanded = true;
+
             }
             else
             {
@@ -139,11 +160,36 @@ namespace FuneralManagementSystem
             btnArchive.ForeColor = Color.Gold;
         }
 
+
+        //
+        private void archiveIconDropdown()
+        {
+            if (isArchiveExpanded)
+            {
+
+                btnClient.Visible = false;
+                btnEmployees.Visible = false;
+                btnArchive.Text = "              Archive      ▼";
+
+            }else
+            {
+
+                btnClient.Visible = true;
+                btnEmployees.Visible = true;
+                btnArchive.Text = "              Archive      ▲";
+            }
+
+            isArchiveIcon = !isArchiveIcon;
+        }
+
         private void btnEmployees_Click(object sender, EventArgs e)
         {
             //ARCHIVE BUTTON NA TOHHHHHH
             //ARCHIVE BUTTON NA TOHHHHHH
             //ARCHIVE BUTTON NA TOHHHHHH
+
+            //dropdown icon
+            archiveIconDropdown();
 
             //clicled image color
             ResetButtonIcons();
