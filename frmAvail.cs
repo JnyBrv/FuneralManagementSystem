@@ -34,13 +34,19 @@ namespace FuneralManagementSystem
             btnPreviousForm.Enabled = false;
             btnNextForm.Enabled = true;
 
+            ShowChildForm(0);
 
         }
 
         private void InitializeChildForms()
         {
-            // Initialize the list of child forms
-           
+            childForms = new List<Form>
+        {
+            new frmClientContractForm(),
+            new frmDeceasedForm(),
+            new frmInclusions()
+        };
+
         }
 
         private void OpenChildForm(Form childForm)
@@ -65,21 +71,30 @@ namespace FuneralManagementSystem
 
         private void ShowChildForm(int index)
         {
-            // Ensure the index is valid
             if (index < 0 || index >= childForms.Count)
+
                 return;
 
-            // Hide the currently active form (if any)
-            if (currentFormIndex >= 0 && currentFormIndex < childForms.Count)
+            // Close the currently active child form (if any)
+            if (currentChildForm != null)
             {
-                childForms[currentFormIndex].Hide();
+                panelClientFormContainer.Controls.Remove(currentChildForm);
+                currentChildForm.Dispose();
             }
 
-            // Show the new form
+            // Set the current index
             currentFormIndex = index;
-            Form currentForm = childForms[currentFormIndex];
-            currentForm.MdiParent = this; // Optional: set parent form as MDI container
-            currentForm.Show();
+            currentChildForm = childForms[currentFormIndex];
+
+            // Configure the new child form
+            currentChildForm.TopLevel = false;
+            currentChildForm.FormBorderStyle = FormBorderStyle.None;
+            currentChildForm.Dock = DockStyle.Fill;
+
+            // Add the child form to the panel and display it
+            panelClientFormContainer.Controls.Add(currentChildForm);
+            currentChildForm.BringToFront();
+            currentChildForm.Show();
 
             // Enable/disable navigation buttons
             btnPreviousForm.Enabled = currentFormIndex > 0;
@@ -104,16 +119,19 @@ namespace FuneralManagementSystem
             //{
             //    OpenChildForm(new frmInclusions());
             //}
-            if(currentFormIndex < childForms.Count - 1)
-            {
-                ShowChildForm(currentFormIndex + 1);
-            }
 
             //else {
             //    OpenChildForm(new frmClientContractForm());
             //}
+
+            if (currentFormIndex < childForms.Count - 1)
+            {
+                ShowChildForm(currentFormIndex + 1);
+            }
         }
         frmAvail avail;
+
+
         private void button4_Click(object sender, EventArgs e)
         {
             avail = (frmAvail)Application.OpenForms["frmAvail"];

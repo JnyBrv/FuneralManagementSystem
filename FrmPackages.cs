@@ -42,9 +42,9 @@ namespace FuneralManagementSystem
         frmMain main;
         private void btnAddClient_Click(object sender, EventArgs e)
         {
-            main = (frmMain)Application.OpenForms["frmMain"];
-            main.OpenChildForm(new frmClientContractForm());
-            main.panelTitleBar.Visible = false;
+            //main = (frmMain)Application.OpenForms["frmMain"];
+            //main.OpenChildForm(new frmClientContractForm());
+            //main.panelTitleBar.Visible = false;
 
         }
 

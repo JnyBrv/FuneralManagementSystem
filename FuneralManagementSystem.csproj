@@ -110,6 +110,12 @@
     <Compile Include="FrmPackages.Designer.cs">
       <DependentUpon>FrmPackages.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPayingClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPayingClients.Designer.cs">
+      <DependentUpon>frmPayingClients.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSearchBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPackages.resx">
       <DependentUpon>FrmPackages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPayingClients.resx">
+      <DependentUpon>frmPayingClients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSearchBox.resx">
       <DependentUpon>FrmSearchBox.cs</DependentUpon>

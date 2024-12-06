@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace FuneralManagementSystem
 {
-    public partial class FrmClients : Form
+    public partial class frmPayingClients : Form
     {
-        public FrmClients()
+        public frmPayingClients()
         {
             InitializeComponent();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
