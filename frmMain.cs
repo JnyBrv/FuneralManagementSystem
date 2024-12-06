@@ -13,6 +13,7 @@ namespace FuneralManagementSystem
 
     public partial class frmMain : Form
     {
+        //private Button selectedButton = null;
 
         private bool isClientsExpanded = false;
         private bool isArchiveExpanded = false;
@@ -65,6 +66,17 @@ namespace FuneralManagementSystem
 
         //}
 
+
+        private void ResetButtonIcons()
+        {
+            //defualt yellow color icon
+            btnPackages.Image = Properties.Resources.packageIcon; 
+            btnClients.Image = Properties.Resources.clientIcon;  
+            btnArchive.Image = Properties.Resources.archive_color;  
+        }
+
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmPackages());
@@ -79,14 +91,25 @@ namespace FuneralManagementSystem
             btnArchive.ForeColor = Color.Gold;
 
             //clicked image color
-
-
+            ResetButtonIcons();
+            btnPackages.Image = Properties.Resources.package_black;
+           
         }
 
- 
 
-            private void btnClients_Click(object sender, EventArgs e)
+     
+
+        private void btnClients_Click(object sender, EventArgs e)
         {
+            //icon dropdown
+           
+
+
+            //clicked image color
+            ResetButtonIcons();
+            btnClients.Image = Properties.Resources.client_black;
+
+
             //dropdown
             if (!isClientsExpanded)
             {
@@ -118,8 +141,13 @@ namespace FuneralManagementSystem
 
         private void btnEmployees_Click(object sender, EventArgs e)
         {
-            //ARCHIVE NA TO
+            //ARCHIVE BUTTON NA TOHHHHHH
+            //ARCHIVE BUTTON NA TOHHHHHH
+            //ARCHIVE BUTTON NA TOHHHHHH
 
+            //clicled image color
+            ResetButtonIcons();
+            btnArchive.Image = Properties.Resources.archive_black;
 
             if (!isArchiveExpanded)
             {
@@ -197,6 +225,11 @@ namespace FuneralManagementSystem
         private void timer1_Tick(object sender, EventArgs e)
         {
            
+        }
+
+        private void btnEmployees_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -234,5 +234,26 @@
   <ItemGroup>
     <None Include="Resources\coffin package 1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archive black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archive color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowDownYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package1Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package2Image.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

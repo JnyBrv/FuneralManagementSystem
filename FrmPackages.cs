@@ -60,5 +60,25 @@ namespace FuneralManagementSystem
                 Close();
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuyPackage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDetailsPackage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbPackage2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

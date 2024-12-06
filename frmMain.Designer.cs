@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEmployees = new System.Windows.Forms.Button();
+            this.btnClient = new System.Windows.Forms.Button();
             this.btnPaying = new System.Windows.Forms.Button();
             this.btnOnService = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -41,8 +43,6 @@
             this.panelMainMenu = new System.Windows.Forms.Panel();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.pbExit = new System.Windows.Forms.PictureBox();
-            this.btnClient = new System.Windows.Forms.Button();
-            this.btnEmployees = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlBrand.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,6 +68,41 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(230, 834);
             this.panel1.TabIndex = 0;
+            // 
+            // btnEmployees
+            // 
+            this.btnEmployees.BackColor = System.Drawing.Color.Black;
+            this.btnEmployees.FlatAppearance.BorderSize = 0;
+            this.btnEmployees.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
+            this.btnEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployees.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployees.ForeColor = System.Drawing.Color.Gold;
+            this.btnEmployees.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmployees.Location = new System.Drawing.Point(0, 548);
+            this.btnEmployees.Name = "btnEmployees";
+            this.btnEmployees.Size = new System.Drawing.Size(230, 39);
+            this.btnEmployees.TabIndex = 6;
+            this.btnEmployees.Text = "Employees";
+            this.btnEmployees.UseVisualStyleBackColor = false;
+            this.btnEmployees.Visible = false;
+            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click_1);
+            // 
+            // btnClient
+            // 
+            this.btnClient.BackColor = System.Drawing.Color.Black;
+            this.btnClient.FlatAppearance.BorderSize = 0;
+            this.btnClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
+            this.btnClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClient.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClient.ForeColor = System.Drawing.Color.Gold;
+            this.btnClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClient.Location = new System.Drawing.Point(0, 503);
+            this.btnClient.Name = "btnClient";
+            this.btnClient.Size = new System.Drawing.Size(230, 39);
+            this.btnClient.TabIndex = 5;
+            this.btnClient.Text = "Clients";
+            this.btnClient.UseVisualStyleBackColor = false;
+            this.btnClient.Visible = false;
             // 
             // btnPaying
             // 
@@ -129,13 +164,14 @@
             this.btnArchive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnArchive.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnArchive.ForeColor = System.Drawing.Color.Gold;
-            this.btnArchive.Image = ((System.Drawing.Image)(resources.GetObject("btnArchive.Image")));
+            this.btnArchive.Image = global::FuneralManagementSystem.Properties.Resources.archive_color;
             this.btnArchive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnArchive.Location = new System.Drawing.Point(-1, 443);
             this.btnArchive.Name = "btnArchive";
             this.btnArchive.Size = new System.Drawing.Size(231, 54);
             this.btnArchive.TabIndex = 1;
-            this.btnArchive.Text = "   Archive";
+            this.btnArchive.Text = "              Archive      ▼";
+            this.btnArchive.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnArchive.UseVisualStyleBackColor = false;
             this.btnArchive.Click += new System.EventHandler(this.btnEmployees_Click);
             // 
@@ -153,7 +189,8 @@
             this.btnClients.Name = "btnClients";
             this.btnClients.Size = new System.Drawing.Size(230, 54);
             this.btnClients.TabIndex = 1;
-            this.btnClients.Text = "Clients";
+            this.btnClients.Text = "              Clients       ▼";
+            this.btnClients.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClients.UseVisualStyleBackColor = false;
             this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
             // 
@@ -228,40 +265,6 @@
             this.pbExit.TabIndex = 16;
             this.pbExit.TabStop = false;
             this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
-            // 
-            // btnClient
-            // 
-            this.btnClient.BackColor = System.Drawing.Color.Black;
-            this.btnClient.FlatAppearance.BorderSize = 0;
-            this.btnClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
-            this.btnClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClient.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClient.ForeColor = System.Drawing.Color.Gold;
-            this.btnClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClient.Location = new System.Drawing.Point(0, 503);
-            this.btnClient.Name = "btnClient";
-            this.btnClient.Size = new System.Drawing.Size(230, 39);
-            this.btnClient.TabIndex = 5;
-            this.btnClient.Text = "Clients";
-            this.btnClient.UseVisualStyleBackColor = false;
-            this.btnClient.Visible = false;
-            // 
-            // btnEmployees
-            // 
-            this.btnEmployees.BackColor = System.Drawing.Color.Black;
-            this.btnEmployees.FlatAppearance.BorderSize = 0;
-            this.btnEmployees.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
-            this.btnEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmployees.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmployees.ForeColor = System.Drawing.Color.Gold;
-            this.btnEmployees.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployees.Location = new System.Drawing.Point(0, 548);
-            this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Size = new System.Drawing.Size(230, 39);
-            this.btnEmployees.TabIndex = 6;
-            this.btnEmployees.Text = "Employees";
-            this.btnEmployees.UseVisualStyleBackColor = false;
-            this.btnEmployees.Visible = false;
             // 
             // frmMain
             // 
