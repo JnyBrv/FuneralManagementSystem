@@ -252,7 +252,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::FuneralManagementSystem.Properties.Resources.packageIcon;
+            this.pictureBox2.Image = global::FuneralManagementSystem.Properties.Resources.clientIcon;
             this.pictureBox2.Location = new System.Drawing.Point(34, 11);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(55, 50);

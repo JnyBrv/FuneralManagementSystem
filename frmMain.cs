@@ -185,6 +185,16 @@ namespace FuneralManagementSystem
             btnClients.ForeColor = Color.Black;
             btnArchive.BackColor = Color.Black;
             btnArchive.ForeColor = Color.Gold;
+
+            btnOnService.BackColor = Color.Black;
+            btnOnService.ForeColor = Color.Gold;
+            btnPaying.BackColor = Color.Black;
+            btnPaying.ForeColor = Color.Gold;
+            btnClient.BackColor = Color.Black;
+            btnClient.ForeColor = Color.Gold;
+            btnEmployees.BackColor = Color.Black;
+            btnEmployees.ForeColor = Color.Gold;
+
         }
 
 
@@ -261,6 +271,16 @@ namespace FuneralManagementSystem
             btnClients.ForeColor = Color.Gold;
             btnArchive.BackColor = Color.Gold;
             btnArchive.ForeColor = Color.Black;
+
+            btnOnService.BackColor = Color.Black;
+            btnOnService.ForeColor = Color.Gold;
+            btnPaying.BackColor = Color.Black;
+            btnPaying.ForeColor = Color.Gold;
+            btnClient.BackColor = Color.Black;
+            btnClient.ForeColor = Color.Gold;
+            btnEmployees.BackColor = Color.Black;
+            btnEmployees.ForeColor = Color.Gold;
+
         }
 
 
@@ -268,6 +288,39 @@ namespace FuneralManagementSystem
         private void panelMainMenu_Paint(object sender, PaintEventArgs e)
         {
             panelTitleBar.Visible = false;
+
+            btnPackages.Image = resizeIcon(Properties.Resources.package_black, 30, 30);
+            btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 40, 40);
+            btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 30, 30);
+
+            btnPackages.ImageAlign = ContentAlignment.MiddleLeft;
+            btnClients.ImageAlign = ContentAlignment.MiddleLeft;
+            btnArchive.ImageAlign = ContentAlignment.MiddleLeft;
+
+            btnPackages.TextAlign = ContentAlignment.MiddleCenter;
+            btnClients.TextAlign = ContentAlignment.MiddleCenter;
+            btnArchive.TextAlign = ContentAlignment.MiddleCenter;
+
+            // Apply initial button styles
+            btnPackages.BackColor = Color.Gold;
+            btnPackages.ForeColor = Color.Black;
+            btnClients.BackColor = Color.Black;
+            btnClients.ForeColor = Color.Gold;
+            btnArchive.BackColor = Color.Black;
+            btnArchive.ForeColor = Color.Gold;
+
+            btnOnService.BackColor = Color.Black;
+            btnOnService.ForeColor = Color.Gold;
+            btnPaying.BackColor = Color.Black;
+            btnPaying.ForeColor = Color.Gold;
+            btnClient.BackColor = Color.Black;
+            btnClient.ForeColor = Color.Gold;
+            btnEmployees.BackColor = Color.Black;
+            btnEmployees.ForeColor = Color.Gold;
+
+
+            fillSpaceForIcon();
+
 
 
             //fillSpaceForIcon();
@@ -317,10 +370,27 @@ namespace FuneralManagementSystem
 
         private void ResetButtonIcons()
         {
-            // Reset all main button icons to yellow
+            //// Reset all main button icons to yellow
+            //btnPackages.Image = resizeIcon(Properties.Resources.packageIcon, 30, 30);
+            //btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 30, 30);
+            //btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 30, 30);
+
+
+
+
             btnPackages.Image = resizeIcon(Properties.Resources.packageIcon, 30, 30);
-            btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 30, 30);
+            btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 40, 40);
             btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 30, 30);
+
+            btnPackages.ImageAlign = ContentAlignment.MiddleLeft;
+            btnClients.ImageAlign = ContentAlignment.MiddleLeft;
+            btnArchive.ImageAlign = ContentAlignment.MiddleLeft;
+
+            btnPackages.TextAlign = ContentAlignment.MiddleCenter;
+            btnClients.TextAlign = ContentAlignment.MiddleCenter;
+            btnArchive.TextAlign = ContentAlignment.MiddleCenter;
+
+            fillSpaceForIcon();
         }
 
 
@@ -365,6 +435,13 @@ namespace FuneralManagementSystem
         private void btnEmployees_Click_1(object sender, EventArgs e)
         {
             OpenChildForm(new FrmEmployees());
+
+
+
+
+
+
+
         }
 
         private void btnOnService_Click(object sender, EventArgs e)
@@ -373,10 +450,10 @@ namespace FuneralManagementSystem
 
             fillSpaceForIcon();
 
-         
+
             // change the color of icon sa dropdown
-           
-          
+
+
             //btnClients.Image = resizeIcon(Properties.Resources.client_black, 40, 40);
             //btnClients.ImageAlign = ContentAlignment.MiddleLeft;
             //btnClients.TextAlign = ContentAlignment.MiddleCenter;
@@ -386,16 +463,29 @@ namespace FuneralManagementSystem
             //btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 30, 30);
 
 
+
         }
 
         private void btnPaying_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmPaying());
+
+
+
+
+        
+
         }
 
         private void btnClient_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmArchivedClients());
+
+
+
+
+         
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
