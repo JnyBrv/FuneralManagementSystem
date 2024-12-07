@@ -68,18 +68,31 @@ namespace FuneralManagementSystem
         //}
 
 
-        private void ResetButtonIcons()
+        private void fillSpaceForIcon()
         {
-            //defualt yellow color icon
-            btnPackages.Image = Properties.Resources.packageIcon; 
-            btnClients.Image = Properties.Resources.clientIcon;  
-            btnArchive.Image = Properties.Resources.archive_color;  
+          
+
+            btnPackages.Padding = new Padding(15, 0, 0, 0);
+            btnClients.Padding = new Padding(13, 0, 0, 0);
+            btnArchive.Padding = new Padding(18, 0, 0, 0);
+            btnLogout.Padding = new Padding(15, 0, 0, 0);
+
         }
 
+        private Image resizeIcon(Image image, int width, int height)
+        {
+            //resize the icon
+            Bitmap resizedImage = new Bitmap(image, new Size(width, height));
+            return resizedImage;
+
+        }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
+        
+
+
             OpenChildForm(new FrmPackages());
             panelTitleBar.Visible = false;
 
@@ -92,43 +105,57 @@ namespace FuneralManagementSystem
             btnArchive.ForeColor = Color.Gold;
 
             //clicked image color
-            ResetButtonIcons();
-            btnPackages.Image = Properties.Resources.package_black;
-           
+            fillSpaceForIcon();
+            btnPackages.Image = resizeIcon(Properties.Resources.package_black, 30, 30);
+            btnPackages.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPackages.TextAlign = ContentAlignment.MiddleCenter;
+
+            // change the other buttons to yellow
+            btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 40, 40);
+            btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 30, 30);
+
+
+
         }
 
+       
 
         //pang reset ng icon
-        private void clientIconDropdown()
-        {
-            if (isClientsExpanded)
-            {
-                btnOnService.Visible = false;
-                btnPaying.Visible = false;
-                btnClients.Text = "              Clients       ▼"; 
-            }
-            else
-            {
+        //private void clientIconDropdown()
+        //{
+        //    if (isClientsExpanded)
+        //    {
+        //        btnOnService.Visible = false;
+        //        btnPaying.Visible = false;
+        //        btnClients.Text = "       Clients         ▲"; 
+        //    }
+        //    else
+        //    {
                 
-                btnOnService.Visible = true;
-                btnPaying.Visible = true;
-                btnClients.Text = "              Clients       ▲"; 
-            }
+        //        btnOnService.Visible = true;
+        //        btnPaying.Visible = true;
+        //        btnClients.Text = "       Clients         ▼"; 
+        //    }
 
-            isClientsIcon = !isClientsIcon;
-        }
+        //    isClientsIcon = !isClientsIcon;
+        //}
 
 
         private void btnClients_Click(object sender, EventArgs e)
         {
-            //icon dropdown
-            clientIconDropdown();
+           
+            //clientIconDropdown();
 
 
             //clicked image color
-            ResetButtonIcons();
-            btnClients.Image = Properties.Resources.client_black;
+            fillSpaceForIcon();
+            btnClients.Image = resizeIcon(Properties.Resources.client_black, 40, 40);
+            btnClients.ImageAlign = ContentAlignment.MiddleLeft;
+            btnClients.TextAlign = ContentAlignment.MiddleCenter;
 
+            // change the other buttons to yellow
+            btnPackages.Image = resizeIcon(Properties.Resources.packageIcon, 30, 30);
+            btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 30, 30);
 
             //dropdown
             if (!isClientsExpanded)
@@ -137,7 +164,7 @@ namespace FuneralManagementSystem
                 btnOnService.Visible = true;
                 btnPaying.Visible = true;
                 isClientsExpanded = true;
-
+                btnClients.Text = "         Clients         ▲";
             }
             else
             {
@@ -145,6 +172,7 @@ namespace FuneralManagementSystem
                 btnOnService.Visible = false;
                 btnPaying.Visible = false;
                 isClientsExpanded = false;
+                btnClients.Text = "         Clients         ▼";
             }
 
 
@@ -161,25 +189,25 @@ namespace FuneralManagementSystem
 
 
         //
-        private void archiveIconDropdown()
-        {
-            if (isArchiveExpanded)
-            {
+        //private void archiveIconDropdown()
+        //{
+        //    if (isArchiveExpanded)
+        //    {
 
-                btnClient.Visible = false;
-                btnEmployees.Visible = false;
-                btnArchive.Text = "              Archive      ▼";
+        //        btnClient.Visible = false;
+        //        btnEmployees.Visible = false;
+        //        btnArchive.Text = "     Archive      ▲";
 
-            }else
-            {
+        //    }else
+        //    {
 
-                btnClient.Visible = true;
-                btnEmployees.Visible = true;
-                btnArchive.Text = "              Archive      ▲";
-            }
+        //        btnClient.Visible = true;
+        //        btnEmployees.Visible = true;
+        //        btnArchive.Text = "     Archive      ▼";
+        //    }
 
-            isArchiveIcon = !isArchiveIcon;
-        }
+        //    isArchiveIcon = !isArchiveIcon;
+        //}
 
         private void btnEmployees_Click(object sender, EventArgs e)
         {
@@ -188,11 +216,24 @@ namespace FuneralManagementSystem
             //ARCHIVE BUTTON NA TOHHHHHH
 
             //dropdown icon
-            archiveIconDropdown();
+        
+
+
 
             //clicled image color
-            ResetButtonIcons();
-            btnArchive.Image = Properties.Resources.archive_black;
+            fillSpaceForIcon();
+       
+            btnArchive.Image = resizeIcon(Properties.Resources.archive_black, 30, 30);
+            btnArchive.ImageAlign = ContentAlignment.MiddleLeft;
+            btnArchive.TextAlign = ContentAlignment.MiddleCenter;
+
+            // change the other buttons to yellow
+            btnPackages.Image = resizeIcon(Properties.Resources.packageIcon, 30, 30);
+            btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 40, 40);
+
+
+
+
 
             if (!isClientsExpanded)
             {
@@ -200,7 +241,7 @@ namespace FuneralManagementSystem
                 btnClient.Visible = true;
 
                 isClientsExpanded = true;
-                btnArchive.Text = "              Archive      ▲";
+                btnArchive.Text = "        Archive       ▲";
             }
             else
             {
@@ -208,7 +249,7 @@ namespace FuneralManagementSystem
                 btnClient.Visible = false;
 
                 isClientsExpanded = false;
-                btnArchive.Text = "              Archive      ▼";
+                btnArchive.Text = "        Archive       ▼";
                 
             }
 
@@ -222,13 +263,66 @@ namespace FuneralManagementSystem
             btnArchive.ForeColor = Color.Black;
         }
 
-        
+
 
         private void panelMainMenu_Paint(object sender, PaintEventArgs e)
         {
             panelTitleBar.Visible = false;
-            
+
+
+            //fillSpaceForIcon();
+            //btnPackages.Image = resizeIcon(Properties.Resources.packageIcon, 30, 30);
+            //btnPackages.ImageAlign = ContentAlignment.MiddleLeft;
+            //btnPackages.TextAlign = ContentAlignment.MiddleCenter;
+
+            //btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 40, 40);
+            //btnClients.ImageAlign = ContentAlignment.MiddleLeft;
+            //btnClients.TextAlign = ContentAlignment.MiddleCenter;
+
+            //btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 30, 30);
+            //btnArchive.ImageAlign = ContentAlignment.MiddleLeft;
+            //btnArchive.TextAlign = ContentAlignment.MiddleCenter;
+            //ResetButtonIcons();
+            ////I ONLY ADDED THIS SINCE THE PACKAGE IS THE FIRST TO POP UP
+            //btnPackages.Image = resizeIcon(Properties.Resources.package_black, 30, 30);
+
+            //fillSpaceForIcon();
+            //btnPackages.Image = resizeIcon(Properties.Resources.packageIcon, 30, 30);
+            //btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 40, 40);
+            //btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 30, 30);
+            //btnLogout.Image = resizeIcon(Properties.Resources.backIcon, 40, 40);
+
+
+            ////resize the icon to small
+            //btnPackages.Image = resizeIcon(Properties.Resources.package_black, 32, 32);
+            //btnPackages.Image = resizeIcon(Properties.Resources.packageIcon, 32, 32);
+            //btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 32, 32);
+            //btnClients.Image = resizeIcon(Properties.Resources.client_black, 32, 32);
+            //btnArchive.Image = resizeIcon(Properties.Resources.archive_black, 32, 32);
+            //btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 32, 32);
+
+
+            //btnPackages.TextAlign = ContentAlignment.MiddleCenter;
+            //btnClients.TextAlign = ContentAlignment.MiddleCenter;
+            //btnArchive.TextAlign = ContentAlignment.MiddleCenter;
+
+
+            ////filler for the small size icon
+            //btnPackages.Padding = new Padding(15, 0, 0, 0);
+            //btnClients.Padding = new Padding(15, 0, 0, 0);
+            //btnArchive.Padding = new Padding(15, 0, 0, 0);
+
+
         }
+
+        private void ResetButtonIcons()
+        {
+            // Reset all main button icons to yellow
+            btnPackages.Image = resizeIcon(Properties.Resources.packageIcon, 30, 30);
+            btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 30, 30);
+            btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 30, 30);
+        }
+
 
         private void frmMain_Load(object sender, EventArgs e)
         {
@@ -276,6 +370,22 @@ namespace FuneralManagementSystem
         private void btnOnService_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmClients());
+
+            fillSpaceForIcon();
+
+         
+            // change the color of icon sa dropdown
+           
+          
+            //btnClients.Image = resizeIcon(Properties.Resources.client_black, 40, 40);
+            //btnClients.ImageAlign = ContentAlignment.MiddleLeft;
+            //btnClients.TextAlign = ContentAlignment.MiddleCenter;
+
+            //// change the other buttons to yellow
+            //btnPackages.Image = resizeIcon(Properties.Resources.packageIcon, 30, 30);
+            //btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 30, 30);
+
+
         }
 
         private void btnPaying_Click(object sender, EventArgs e)
@@ -286,6 +396,11 @@ namespace FuneralManagementSystem
         private void btnClient_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmArchivedClients());
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 

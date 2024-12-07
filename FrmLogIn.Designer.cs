@@ -75,11 +75,11 @@
             // lblWarning
             // 
             this.lblWarning.AutoSize = true;
-            this.lblWarning.Font = new System.Drawing.Font("Century", 12F);
+            this.lblWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblWarning.ForeColor = System.Drawing.Color.Red;
             this.lblWarning.Location = new System.Drawing.Point(587, 659);
             this.lblWarning.Name = "lblWarning";
-            this.lblWarning.Size = new System.Drawing.Size(358, 20);
+            this.lblWarning.Size = new System.Drawing.Size(345, 20);
             this.lblWarning.TabIndex = 12;
             this.lblWarning.Text = "Wrong username or password. Please try again.";
             // 
@@ -155,6 +155,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
