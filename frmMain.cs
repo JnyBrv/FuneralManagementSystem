@@ -195,19 +195,19 @@ namespace FuneralManagementSystem
             ResetButtonIcons();
             btnArchive.Image = Properties.Resources.archive_black;
 
-            if (!isArchiveExpanded)
+            if (!isClientsExpanded)
             {
                 btnEmployees.Visible = true;
                 btnClient.Visible = true;
 
-                isArchiveExpanded = true;
+                isClientsExpanded = true;
             }
             else
             {
                 btnEmployees.Visible = false;
                 btnClient.Visible = false;
 
-                isArchiveExpanded = false;
+                isClientsExpanded = false;
             }
 
 
