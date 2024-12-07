@@ -53,9 +53,12 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dateOfPurchase = new System.Windows.Forms.DateTimePicker();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.timeOfInternment = new System.Windows.Forms.DateTimePicker();
             this.txtInternmentCity = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -68,11 +71,8 @@
             this.cmbSex = new System.Windows.Forms.ComboBox();
             this.txtDeceasedMiddleName = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtInternmentProvince = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtTimeofDeath = new System.Windows.Forms.TextBox();
-            this.txtTimeOfInterment = new System.Windows.Forms.TextBox();
             this.datepickDateofDeath = new System.Windows.Forms.DateTimePicker();
             this.txtInternmentBrgy = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -81,6 +81,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             this.panel2.SuspendLayout();
@@ -141,6 +142,7 @@
             this.txtClientLastname.Name = "txtClientLastname";
             this.txtClientLastname.Size = new System.Drawing.Size(457, 34);
             this.txtClientLastname.TabIndex = 1;
+            this.txtClientLastname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClientLastname_KeyPress);
             // 
             // txtClientFirstname
             // 
@@ -150,6 +152,7 @@
             this.txtClientFirstname.Name = "txtClientFirstname";
             this.txtClientFirstname.Size = new System.Drawing.Size(457, 34);
             this.txtClientFirstname.TabIndex = 2;
+            this.txtClientFirstname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClientFirstname_KeyPress);
             // 
             // txtClientMiddlename
             // 
@@ -159,6 +162,7 @@
             this.txtClientMiddlename.Name = "txtClientMiddlename";
             this.txtClientMiddlename.Size = new System.Drawing.Size(457, 34);
             this.txtClientMiddlename.TabIndex = 3;
+            this.txtClientMiddlename.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClientMiddlename_KeyPress);
             // 
             // label14
             // 
@@ -190,15 +194,17 @@
             this.txtRelation.Name = "txtRelation";
             this.txtRelation.Size = new System.Drawing.Size(457, 34);
             this.txtRelation.TabIndex = 4;
+            this.txtRelation.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRelation_KeyPress);
             // 
             // txtContactno
             // 
-            this.txtContactno.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContactno.Location = new System.Drawing.Point(521, 115);
+            this.txtContactno.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContactno.Location = new System.Drawing.Point(597, 115);
             this.txtContactno.Margin = new System.Windows.Forms.Padding(4);
             this.txtContactno.Name = "txtContactno";
-            this.txtContactno.Size = new System.Drawing.Size(457, 34);
+            this.txtContactno.Size = new System.Drawing.Size(381, 34);
             this.txtContactno.TabIndex = 5;
+            this.txtContactno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactno_KeyPress);
             // 
             // label17
             // 
@@ -272,6 +278,7 @@
             this.txtClientBrgy.Name = "txtClientBrgy";
             this.txtClientBrgy.Size = new System.Drawing.Size(345, 34);
             this.txtClientBrgy.TabIndex = 8;
+            this.txtClientBrgy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClientBrgy_KeyPress);
             // 
             // txtClientCity
             // 
@@ -281,6 +288,7 @@
             this.txtClientCity.Name = "txtClientCity";
             this.txtClientCity.Size = new System.Drawing.Size(345, 34);
             this.txtClientCity.TabIndex = 9;
+            this.txtClientCity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClientCity_KeyPress);
             // 
             // txtClientProvince
             // 
@@ -290,6 +298,7 @@
             this.txtClientProvince.Name = "txtClientProvince";
             this.txtClientProvince.Size = new System.Drawing.Size(345, 34);
             this.txtClientProvince.TabIndex = 10;
+            this.txtClientProvince.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClientProvince_KeyPress);
             // 
             // panel1
             // 
@@ -301,7 +310,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1740, 100);
             this.panel1.TabIndex = 22;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pbExit
             // 
@@ -352,6 +360,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.dateOfPurchase);
+            this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label13);
@@ -376,6 +387,40 @@
             this.panel2.Size = new System.Drawing.Size(1498, 281);
             this.panel2.TabIndex = 24;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Georgia", 15F);
+            this.label10.Location = new System.Drawing.Point(1028, 83);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(66, 30);
+            this.label10.TabIndex = 41;
+            this.label10.Text = "Date";
+            // 
+            // dateOfPurchase
+            // 
+            this.dateOfPurchase.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateOfPurchase.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateOfPurchase.Location = new System.Drawing.Point(1033, 118);
+            this.dateOfPurchase.Margin = new System.Windows.Forms.Padding(4);
+            this.dateOfPurchase.Name = "dateOfPurchase";
+            this.dateOfPurchase.Size = new System.Drawing.Size(457, 34);
+            this.dateOfPurchase.TabIndex = 42;
+            this.dateOfPurchase.Value = new System.DateTime(2024, 12, 7, 0, 0, 0, 0);
+            this.dateOfPurchase.ValueChanged += new System.EventHandler(this.dateOfPurchase_ValueChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(520, 118);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(69, 28);
+            this.label16.TabIndex = 22;
+            this.label16.Text = "+639";
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.btnNext);
@@ -389,27 +434,12 @@
             this.panel3.Size = new System.Drawing.Size(1740, 1055);
             this.panel3.TabIndex = 25;
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Georgia", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(96, 521);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(347, 49);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Deceased Details";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.Controls.Add(this.timeOfInternment);
             this.panel4.Controls.Add(this.txtInternmentCity);
             this.panel4.Controls.Add(this.label22);
             this.panel4.Controls.Add(this.label21);
@@ -422,11 +452,8 @@
             this.panel4.Controls.Add(this.cmbSex);
             this.panel4.Controls.Add(this.txtDeceasedMiddleName);
             this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.txtInternmentProvince);
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.txtTimeofDeath);
-            this.panel4.Controls.Add(this.txtTimeOfInterment);
             this.panel4.Controls.Add(this.datepickDateofDeath);
             this.panel4.Controls.Add(this.txtInternmentBrgy);
             this.panel4.Controls.Add(this.label8);
@@ -439,7 +466,17 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1498, 375);
             this.panel4.TabIndex = 57;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // timeOfInternment
+            // 
+            this.timeOfInternment.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeOfInternment.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.timeOfInternment.Location = new System.Drawing.Point(517, 330);
+            this.timeOfInternment.Name = "timeOfInternment";
+            this.timeOfInternment.ShowUpDown = true;
+            this.timeOfInternment.Size = new System.Drawing.Size(458, 34);
+            this.timeOfInternment.TabIndex = 56;
+            this.timeOfInternment.Value = new System.DateTime(2024, 12, 7, 15, 38, 0, 0);
             // 
             // txtInternmentCity
             // 
@@ -449,6 +486,7 @@
             this.txtInternmentCity.Name = "txtInternmentCity";
             this.txtInternmentCity.Size = new System.Drawing.Size(345, 34);
             this.txtInternmentCity.TabIndex = 48;
+            this.txtInternmentCity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInternmentCity_KeyPress);
             // 
             // label22
             // 
@@ -475,6 +513,7 @@
             // datepickDateofInternment
             // 
             this.datepickDateofInternment.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datepickDateofInternment.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.datepickDateofInternment.Location = new System.Drawing.Point(6, 331);
             this.datepickDateofInternment.Margin = new System.Windows.Forms.Padding(4);
             this.datepickDateofInternment.Name = "datepickDateofInternment";
@@ -511,6 +550,7 @@
             this.txtDeceasedLastName.Name = "txtDeceasedLastName";
             this.txtDeceasedLastName.Size = new System.Drawing.Size(457, 34);
             this.txtDeceasedLastName.TabIndex = 32;
+            this.txtDeceasedLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDeceasedLastName_KeyPress);
             // 
             // label6
             // 
@@ -531,12 +571,16 @@
             this.txtDeceasedFirstName.Name = "txtDeceasedFirstName";
             this.txtDeceasedFirstName.Size = new System.Drawing.Size(457, 34);
             this.txtDeceasedFirstName.TabIndex = 33;
+            this.txtDeceasedFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDeceasedFirstName_KeyPress);
             // 
             // cmbSex
             // 
             this.cmbSex.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSex.FormattingEnabled = true;
-            this.cmbSex.Location = new System.Drawing.Point(1030, 118);
+            this.cmbSex.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cmbSex.Location = new System.Drawing.Point(521, 114);
             this.cmbSex.Margin = new System.Windows.Forms.Padding(4);
             this.cmbSex.Name = "cmbSex";
             this.cmbSex.Size = new System.Drawing.Size(459, 37);
@@ -550,28 +594,18 @@
             this.txtDeceasedMiddleName.Name = "txtDeceasedMiddleName";
             this.txtDeceasedMiddleName.Size = new System.Drawing.Size(457, 34);
             this.txtDeceasedMiddleName.TabIndex = 34;
+            this.txtDeceasedMiddleName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDeceasedMiddleName_KeyPress);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Georgia", 15F);
-            this.label9.Location = new System.Drawing.Point(1026, 84);
+            this.label9.Location = new System.Drawing.Point(517, 84);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(52, 30);
             this.label9.TabIndex = 50;
             this.label9.Text = "Sex";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Georgia", 15F);
-            this.label10.Location = new System.Drawing.Point(514, 84);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(176, 30);
-            this.label10.TabIndex = 35;
-            this.label10.Text = "Time Of Death";
             // 
             // txtInternmentProvince
             // 
@@ -581,6 +615,7 @@
             this.txtInternmentProvince.Name = "txtInternmentProvince";
             this.txtInternmentProvince.Size = new System.Drawing.Size(345, 34);
             this.txtInternmentProvince.TabIndex = 49;
+            this.txtInternmentProvince.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInternmentProvince_KeyPress);
             // 
             // label7
             // 
@@ -592,24 +627,6 @@
             this.label7.Size = new System.Drawing.Size(167, 30);
             this.label7.TabIndex = 37;
             this.label7.Text = "Date of Death";
-            // 
-            // txtTimeofDeath
-            // 
-            this.txtTimeofDeath.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimeofDeath.Location = new System.Drawing.Point(519, 117);
-            this.txtTimeofDeath.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTimeofDeath.Name = "txtTimeofDeath";
-            this.txtTimeofDeath.Size = new System.Drawing.Size(457, 34);
-            this.txtTimeofDeath.TabIndex = 39;
-            // 
-            // txtTimeOfInterment
-            // 
-            this.txtTimeOfInterment.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimeOfInterment.Location = new System.Drawing.Point(518, 331);
-            this.txtTimeOfInterment.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTimeOfInterment.Name = "txtTimeOfInterment";
-            this.txtTimeOfInterment.Size = new System.Drawing.Size(345, 34);
-            this.txtTimeOfInterment.TabIndex = 47;
             // 
             // datepickDateofDeath
             // 
@@ -628,6 +645,7 @@
             this.txtInternmentBrgy.Name = "txtInternmentBrgy";
             this.txtInternmentBrgy.Size = new System.Drawing.Size(345, 34);
             this.txtInternmentBrgy.TabIndex = 47;
+            this.txtInternmentBrgy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInternmentBrgy_KeyPress);
             // 
             // label8
             // 
@@ -692,6 +710,21 @@
             this.label26.Size = new System.Drawing.Size(208, 30);
             this.label26.TabIndex = 44;
             this.label26.Text = "City/Municipality";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Georgia", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(96, 521);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(347, 49);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Deceased Details";
             // 
             // frmClientContractForm
             // 
@@ -759,11 +792,8 @@
         private System.Windows.Forms.ComboBox cmbSex;
         private System.Windows.Forms.TextBox txtDeceasedMiddleName;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtInternmentProvince;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtTimeofDeath;
-        private System.Windows.Forms.TextBox txtTimeOfInterment;
         private System.Windows.Forms.DateTimePicker datepickDateofDeath;
         private System.Windows.Forms.TextBox txtInternmentBrgy;
         private System.Windows.Forms.Label label8;
@@ -772,5 +802,9 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.DateTimePicker timeOfInternment;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DateTimePicker dateOfPurchase;
     }
 }

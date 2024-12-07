@@ -22,7 +22,6 @@ namespace FuneralManagementSystem
 
         }
 
-        
 
         private void FrmPackages_Load(object sender, EventArgs e)
         {
@@ -40,6 +39,7 @@ namespace FuneralManagementSystem
             parentForm = parent;
         }
         frmMain main;
+        frmClientContractForm ccf;
         private void btnAddClient_Click(object sender, EventArgs e)
         {
             //main = (frmMain)Application.OpenForms["frmMain"];
@@ -85,6 +85,8 @@ namespace FuneralManagementSystem
         {
             main = (frmMain)Application.OpenForms["frmMain"];
             main.OpenChildForm(new frmClientContractForm());
+            ccf = (frmClientContractForm)Application.OpenForms["frmClientContractForm"];
+            ccf.package = 0;
             main.panelTitleBar.Visible = false;
         }
         private void btnOmsAvail_Click(object sender, EventArgs e)
@@ -92,10 +94,13 @@ namespace FuneralManagementSystem
             
         }
 
-        private void btnBuyPackage2_Click_1(object sender, EventArgs e)
-        {
+
+        private void btnpackageB_Click(object sender, EventArgs e)
+        {   
             main = (frmMain)Application.OpenForms["frmMain"];
             main.OpenChildForm(new frmClientContractForm());
+            ccf = (frmClientContractForm)Application.OpenForms["frmClientContractForm"];
+            ccf.package = 1;
             main.panelTitleBar.Visible = false;
         }
     }

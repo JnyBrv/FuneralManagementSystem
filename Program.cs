@@ -19,9 +19,8 @@ namespace FuneralManagementSystem
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
          
-            Application.Run(new frmMain());
-            //Application.Run(new frmMain());
-            //ff
+            Application.Run(new frmInclusions());
+            
         }
     }
 }

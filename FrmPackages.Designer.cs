@@ -41,11 +41,11 @@
             this.btnAddClient = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnpackageB = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblDetailsPackage2 = new System.Windows.Forms.Label();
             this.lblPackage2 = new System.Windows.Forms.Label();
             this.pbPackage2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelPackage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPackage1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -65,7 +65,7 @@
             this.panelPackage1.Controls.Add(this.pbPackage1);
             this.panelPackage1.Controls.Add(this.lblPricePackage1);
             this.panelPackage1.Location = new System.Drawing.Point(94, 139);
-            this.panelPackage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelPackage1.Margin = new System.Windows.Forms.Padding(4);
             this.panelPackage1.Name = "panelPackage1";
             this.panelPackage1.Size = new System.Drawing.Size(735, 850);
             this.panelPackage1.TabIndex = 0;
@@ -101,7 +101,7 @@
             this.btnOmsAvail.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOmsAvail.ForeColor = System.Drawing.Color.Black;
             this.btnOmsAvail.Location = new System.Drawing.Point(435, 753);
-            this.btnOmsAvail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOmsAvail.Margin = new System.Windows.Forms.Padding(4);
             this.btnOmsAvail.Name = "btnOmsAvail";
             this.btnOmsAvail.Size = new System.Drawing.Size(246, 48);
             this.btnOmsAvail.TabIndex = 4;
@@ -114,7 +114,7 @@
             this.pbPackage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbPackage1.Image = global::FuneralManagementSystem.Properties.Resources.package1Image;
             this.pbPackage1.Location = new System.Drawing.Point(122, 68);
-            this.pbPackage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbPackage1.Margin = new System.Windows.Forms.Padding(4);
             this.pbPackage1.Name = "pbPackage1";
             this.pbPackage1.Size = new System.Drawing.Size(472, 219);
             this.pbPackage1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -142,7 +142,7 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1740, 100);
             this.panel2.TabIndex = 1;
@@ -152,7 +152,7 @@
             // 
             this.pictureBox1.Image = global::FuneralManagementSystem.Properties.Resources.packageIcon;
             this.pictureBox1.Location = new System.Drawing.Point(26, 13);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(101, 81);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -183,7 +183,7 @@
             this.btnAddClient.Image = ((System.Drawing.Image)(resources.GetObject("btnAddClient.Image")));
             this.btnAddClient.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddClient.Location = new System.Drawing.Point(1375, 23);
-            this.btnAddClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddClient.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddClient.Name = "btnAddClient";
             this.btnAddClient.Size = new System.Drawing.Size(275, 62);
             this.btnAddClient.TabIndex = 1;
@@ -207,16 +207,42 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnpackageB);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblDetailsPackage2);
             this.panel1.Controls.Add(this.lblPackage2);
             this.panel1.Controls.Add(this.pbPackage2);
             this.panel1.Location = new System.Drawing.Point(915, 139);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(735, 850);
             this.panel1.TabIndex = 5;
+            // 
+            // btnpackageB
+            // 
+            this.btnpackageB.BackColor = System.Drawing.Color.Gold;
+            this.btnpackageB.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpackageB.ForeColor = System.Drawing.Color.Black;
+            this.btnpackageB.Location = new System.Drawing.Point(425, 751);
+            this.btnpackageB.Margin = new System.Windows.Forms.Padding(4);
+            this.btnpackageB.Name = "btnpackageB";
+            this.btnpackageB.Size = new System.Drawing.Size(246, 48);
+            this.btnpackageB.TabIndex = 6;
+            this.btnpackageB.Text = "PURCHASE";
+            this.btnpackageB.UseVisualStyleBackColor = false;
+            this.btnpackageB.Click += new System.EventHandler(this.btnpackageB_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(196, 753);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(203, 35);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "₱ 65,000.00";
             // 
             // lblDetailsPackage2
             // 
@@ -248,37 +274,12 @@
             this.pbPackage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbPackage2.Image = global::FuneralManagementSystem.Properties.Resources.package2Image;
             this.pbPackage2.Location = new System.Drawing.Point(145, 54);
-            this.pbPackage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbPackage2.Margin = new System.Windows.Forms.Padding(4);
             this.pbPackage2.Name = "pbPackage2";
             this.pbPackage2.Size = new System.Drawing.Size(472, 219);
             this.pbPackage2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPackage2.TabIndex = 1;
             this.pbPackage2.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Gold;
-            this.button1.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(425, 751);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(246, 48);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "PURCHASE";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(196, 753);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 35);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "₱ 65,000.00";
             // 
             // FrmPackages
             // 
@@ -290,7 +291,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelPackage1);
             this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmPackages";
             this.Text = "FrmPackages";
             this.Load += new System.EventHandler(this.FrmPackages_Load);
@@ -325,7 +326,7 @@
         private System.Windows.Forms.Label lblDetailsPackage2;
         private System.Windows.Forms.Label lblPackage2;
         private System.Windows.Forms.PictureBox pbPackage2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnpackageB;
         private System.Windows.Forms.Label label1;
     }
 }
