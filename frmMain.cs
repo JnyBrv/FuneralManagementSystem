@@ -200,6 +200,7 @@ namespace FuneralManagementSystem
                 btnClient.Visible = true;
 
                 isClientsExpanded = true;
+                btnArchive.Text = "              Archive      ▲";
             }
             else
             {
@@ -207,6 +208,8 @@ namespace FuneralManagementSystem
                 btnClient.Visible = false;
 
                 isClientsExpanded = false;
+                btnArchive.Text = "              Archive      ▼";
+                
             }
 
 
