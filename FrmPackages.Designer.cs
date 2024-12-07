@@ -43,9 +43,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDetailsPackage2 = new System.Windows.Forms.Label();
             this.lblPackage2 = new System.Windows.Forms.Label();
-            this.btnBuyPackage2 = new System.Windows.Forms.Button();
             this.pbPackage2 = new System.Windows.Forms.PictureBox();
-            this.lblPricePackage2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelPackage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPackage1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -64,18 +64,20 @@
             this.panelPackage1.Controls.Add(this.btnOmsAvail);
             this.panelPackage1.Controls.Add(this.pbPackage1);
             this.panelPackage1.Controls.Add(this.lblPricePackage1);
-            this.panelPackage1.Location = new System.Drawing.Point(111, 148);
+            this.panelPackage1.Location = new System.Drawing.Point(94, 139);
+            this.panelPackage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelPackage1.Name = "panelPackage1";
-            this.panelPackage1.Size = new System.Drawing.Size(552, 697);
+            this.panelPackage1.Size = new System.Drawing.Size(735, 850);
             this.panelPackage1.TabIndex = 0;
             // 
             // lblDetailsPackage1
             // 
-            this.lblDetailsPackage1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDetailsPackage1.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetailsPackage1.ForeColor = System.Drawing.Color.Black;
-            this.lblDetailsPackage1.Location = new System.Drawing.Point(42, 271);
+            this.lblDetailsPackage1.Location = new System.Drawing.Point(56, 312);
+            this.lblDetailsPackage1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDetailsPackage1.Name = "lblDetailsPackage1";
-            this.lblDetailsPackage1.Size = new System.Drawing.Size(469, 317);
+            this.lblDetailsPackage1.Size = new System.Drawing.Size(625, 401);
             this.lblDetailsPackage1.TabIndex = 2;
             this.lblDetailsPackage1.Text = resources.GetString("lblDetailsPackage1.Text");
             // 
@@ -85,20 +87,23 @@
             this.lblPackage1Title.BackColor = System.Drawing.Color.Gainsboro;
             this.lblPackage1Title.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPackage1Title.ForeColor = System.Drawing.Color.White;
-            this.lblPackage1Title.Location = new System.Drawing.Point(196, 12);
+            this.lblPackage1Title.Location = new System.Drawing.Point(261, 15);
+            this.lblPackage1Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPackage1Title.Name = "lblPackage1Title";
-            this.lblPackage1Title.Size = new System.Drawing.Size(157, 29);
+            this.lblPackage1Title.Size = new System.Drawing.Size(197, 35);
             this.lblPackage1Title.TabIndex = 0;
             this.lblPackage1Title.Text = "PACKAGE 1";
             this.lblPackage1Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnOmsAvail
             // 
-            this.btnOmsAvail.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnOmsAvail.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOmsAvail.Location = new System.Drawing.Point(390, 602);
+            this.btnOmsAvail.BackColor = System.Drawing.Color.Gold;
+            this.btnOmsAvail.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOmsAvail.ForeColor = System.Drawing.Color.Black;
+            this.btnOmsAvail.Location = new System.Drawing.Point(435, 753);
+            this.btnOmsAvail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOmsAvail.Name = "btnOmsAvail";
-            this.btnOmsAvail.Size = new System.Drawing.Size(121, 56);
+            this.btnOmsAvail.Size = new System.Drawing.Size(246, 48);
             this.btnOmsAvail.TabIndex = 4;
             this.btnOmsAvail.Text = "PURCHASE";
             this.btnOmsAvail.UseVisualStyleBackColor = false;
@@ -108,9 +113,10 @@
             // 
             this.pbPackage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbPackage1.Image = global::FuneralManagementSystem.Properties.Resources.package1Image;
-            this.pbPackage1.Location = new System.Drawing.Point(83, 55);
+            this.pbPackage1.Location = new System.Drawing.Point(122, 68);
+            this.pbPackage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbPackage1.Name = "pbPackage1";
-            this.pbPackage1.Size = new System.Drawing.Size(378, 197);
+            this.pbPackage1.Size = new System.Drawing.Size(472, 219);
             this.pbPackage1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPackage1.TabIndex = 1;
             this.pbPackage1.TabStop = false;
@@ -118,11 +124,12 @@
             // lblPricePackage1
             // 
             this.lblPricePackage1.AutoSize = true;
-            this.lblPricePackage1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPricePackage1.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPricePackage1.ForeColor = System.Drawing.Color.Black;
-            this.lblPricePackage1.Location = new System.Drawing.Point(217, 613);
+            this.lblPricePackage1.Location = new System.Drawing.Point(206, 755);
+            this.lblPricePackage1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPricePackage1.Name = "lblPricePackage1";
-            this.lblPricePackage1.Size = new System.Drawing.Size(157, 29);
+            this.lblPricePackage1.Size = new System.Drawing.Size(203, 35);
             this.lblPricePackage1.TabIndex = 3;
             this.lblPricePackage1.Text = "₱ 45,000.00";
             // 
@@ -135,17 +142,19 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1416, 81);
+            this.panel2.Size = new System.Drawing.Size(1740, 100);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FuneralManagementSystem.Properties.Resources.packageIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(26, 13);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(83, 75);
+            this.pictureBox1.Size = new System.Drawing.Size(101, 81);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
@@ -155,10 +164,10 @@
             this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbExit.BackColor = System.Drawing.Color.Transparent;
             this.pbExit.Image = global::FuneralManagementSystem.Properties.Resources.exit;
-            this.pbExit.Location = new System.Drawing.Point(1333, 0);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(2);
+            this.pbExit.Location = new System.Drawing.Point(1689, 0);
+            this.pbExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(38, 41);
+            this.pbExit.Size = new System.Drawing.Size(51, 50);
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbExit.TabIndex = 16;
             this.pbExit.TabStop = false;
@@ -173,9 +182,10 @@
             this.btnAddClient.ForeColor = System.Drawing.Color.Black;
             this.btnAddClient.Image = ((System.Drawing.Image)(resources.GetObject("btnAddClient.Image")));
             this.btnAddClient.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddClient.Location = new System.Drawing.Point(1031, 12);
+            this.btnAddClient.Location = new System.Drawing.Point(1375, 23);
+            this.btnAddClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddClient.Name = "btnAddClient";
-            this.btnAddClient.Size = new System.Drawing.Size(206, 50);
+            this.btnAddClient.Size = new System.Drawing.Size(275, 62);
             this.btnAddClient.TabIndex = 1;
             this.btnAddClient.Text = "   Add Packages ";
             this.btnAddClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -186,9 +196,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Georgia", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(101, 19);
+            this.label3.Location = new System.Drawing.Point(135, 23);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(238, 43);
+            this.label3.Size = new System.Drawing.Size(303, 54);
             this.label3.TabIndex = 0;
             this.label3.Text = "PACKAGES";
             // 
@@ -196,23 +207,25 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblDetailsPackage2);
             this.panel1.Controls.Add(this.lblPackage2);
-            this.panel1.Controls.Add(this.btnBuyPackage2);
             this.panel1.Controls.Add(this.pbPackage2);
-            this.panel1.Controls.Add(this.lblPricePackage2);
-            this.panel1.Location = new System.Drawing.Point(759, 148);
+            this.panel1.Location = new System.Drawing.Point(915, 139);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(552, 697);
+            this.panel1.Size = new System.Drawing.Size(735, 850);
             this.panel1.TabIndex = 5;
             // 
             // lblDetailsPackage2
             // 
-            this.lblDetailsPackage2.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDetailsPackage2.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetailsPackage2.ForeColor = System.Drawing.Color.Black;
-            this.lblDetailsPackage2.Location = new System.Drawing.Point(42, 271);
+            this.lblDetailsPackage2.Location = new System.Drawing.Point(65, 312);
+            this.lblDetailsPackage2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDetailsPackage2.Name = "lblDetailsPackage2";
-            this.lblDetailsPackage2.Size = new System.Drawing.Size(469, 317);
+            this.lblDetailsPackage2.Size = new System.Drawing.Size(625, 435);
             this.lblDetailsPackage2.TabIndex = 2;
             this.lblDetailsPackage2.Text = resources.GetString("lblDetailsPackage2.Text");
             // 
@@ -222,57 +235,62 @@
             this.lblPackage2.BackColor = System.Drawing.Color.Gainsboro;
             this.lblPackage2.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPackage2.ForeColor = System.Drawing.Color.White;
-            this.lblPackage2.Location = new System.Drawing.Point(196, 12);
+            this.lblPackage2.Location = new System.Drawing.Point(261, 15);
+            this.lblPackage2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPackage2.Name = "lblPackage2";
-            this.lblPackage2.Size = new System.Drawing.Size(160, 29);
+            this.lblPackage2.Size = new System.Drawing.Size(201, 35);
             this.lblPackage2.TabIndex = 0;
             this.lblPackage2.Text = "PACKAGE 2";
             this.lblPackage2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnBuyPackage2
-            // 
-            this.btnBuyPackage2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnBuyPackage2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuyPackage2.Location = new System.Drawing.Point(390, 602);
-            this.btnBuyPackage2.Name = "btnBuyPackage2";
-            this.btnBuyPackage2.Size = new System.Drawing.Size(121, 56);
-            this.btnBuyPackage2.TabIndex = 4;
-            this.btnBuyPackage2.Text = "PURCHASE";
-            this.btnBuyPackage2.UseVisualStyleBackColor = false;
-            this.btnBuyPackage2.Click += new System.EventHandler(this.btnBuyPackage2_Click_1);
             // 
             // pbPackage2
             // 
             this.pbPackage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbPackage2.Image = global::FuneralManagementSystem.Properties.Resources.package2Image;
-            this.pbPackage2.Location = new System.Drawing.Point(83, 55);
+            this.pbPackage2.Location = new System.Drawing.Point(145, 54);
+            this.pbPackage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbPackage2.Name = "pbPackage2";
-            this.pbPackage2.Size = new System.Drawing.Size(378, 197);
+            this.pbPackage2.Size = new System.Drawing.Size(472, 219);
             this.pbPackage2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPackage2.TabIndex = 1;
             this.pbPackage2.TabStop = false;
             // 
-            // lblPricePackage2
+            // button1
             // 
-            this.lblPricePackage2.AutoSize = true;
-            this.lblPricePackage2.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPricePackage2.ForeColor = System.Drawing.Color.Black;
-            this.lblPricePackage2.Location = new System.Drawing.Point(217, 613);
-            this.lblPricePackage2.Name = "lblPricePackage2";
-            this.lblPricePackage2.Size = new System.Drawing.Size(157, 29);
-            this.lblPricePackage2.TabIndex = 3;
-            this.lblPricePackage2.Text = "₱ 65,000.00";
+            this.button1.BackColor = System.Drawing.Color.Gold;
+            this.button1.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(425, 751);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(246, 48);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "PURCHASE";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(196, 753);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(203, 35);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "₱ 65,000.00";
             // 
             // FrmPackages
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1416, 939);
+            this.ClientSize = new System.Drawing.Size(1740, 1055);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelPackage1);
             this.ForeColor = System.Drawing.Color.White;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmPackages";
             this.Text = "FrmPackages";
             this.Load += new System.EventHandler(this.FrmPackages_Load);
@@ -306,8 +324,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblDetailsPackage2;
         private System.Windows.Forms.Label lblPackage2;
-        private System.Windows.Forms.Button btnBuyPackage2;
         private System.Windows.Forms.PictureBox pbPackage2;
-        private System.Windows.Forms.Label lblPricePackage2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
     }
 }
