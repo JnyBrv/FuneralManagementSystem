@@ -38,7 +38,11 @@ namespace FuneralManagementSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            PaymentCash frmPmt = new PaymentCash();
+            frmPmt.Show();
+
+            frmInclusions inclusions = new frmInclusions();
+            inclusions.Close();
         }
 
         private void btnPayment_Click(object sender, EventArgs e)

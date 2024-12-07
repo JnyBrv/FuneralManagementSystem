@@ -32,7 +32,7 @@
             this.panelPackage1 = new System.Windows.Forms.Panel();
             this.lblDetailsPackage1 = new System.Windows.Forms.Label();
             this.lblPackage1Title = new System.Windows.Forms.Label();
-            this.btnBuyPackage1 = new System.Windows.Forms.Button();
+            this.btnOmsAvail = new System.Windows.Forms.Button();
             this.pbPackage1 = new System.Windows.Forms.PictureBox();
             this.lblPricePackage1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -61,7 +61,7 @@
             this.panelPackage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelPackage1.Controls.Add(this.lblDetailsPackage1);
             this.panelPackage1.Controls.Add(this.lblPackage1Title);
-            this.panelPackage1.Controls.Add(this.btnBuyPackage1);
+            this.panelPackage1.Controls.Add(this.btnOmsAvail);
             this.panelPackage1.Controls.Add(this.pbPackage1);
             this.panelPackage1.Controls.Add(this.lblPricePackage1);
             this.panelPackage1.Location = new System.Drawing.Point(111, 148);
@@ -92,16 +92,17 @@
             this.lblPackage1Title.Text = "PACKAGE 1";
             this.lblPackage1Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnBuyPackage1
+            // btnOmsAvail
             // 
-            this.btnBuyPackage1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnBuyPackage1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuyPackage1.Location = new System.Drawing.Point(390, 602);
-            this.btnBuyPackage1.Name = "btnBuyPackage1";
-            this.btnBuyPackage1.Size = new System.Drawing.Size(121, 56);
-            this.btnBuyPackage1.TabIndex = 4;
-            this.btnBuyPackage1.Text = "PURCHASE";
-            this.btnBuyPackage1.UseVisualStyleBackColor = false;
+            this.btnOmsAvail.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnOmsAvail.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOmsAvail.Location = new System.Drawing.Point(390, 602);
+            this.btnOmsAvail.Name = "btnOmsAvail";
+            this.btnOmsAvail.Size = new System.Drawing.Size(121, 56);
+            this.btnOmsAvail.TabIndex = 4;
+            this.btnOmsAvail.Text = "PURCHASE";
+            this.btnOmsAvail.UseVisualStyleBackColor = false;
+            this.btnOmsAvail.Click += new System.EventHandler(this.btnBuyPackage1_Click);
             // 
             // pbPackage1
             // 
@@ -238,6 +239,7 @@
             this.btnBuyPackage2.TabIndex = 4;
             this.btnBuyPackage2.Text = "PURCHASE";
             this.btnBuyPackage2.UseVisualStyleBackColor = false;
+            this.btnBuyPackage2.Click += new System.EventHandler(this.btnBuyPackage2_Click_1);
             // 
             // pbPackage2
             // 
@@ -298,7 +300,7 @@
         private System.Windows.Forms.Button btnAddClient;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pbExit;
-        private System.Windows.Forms.Button btnBuyPackage1;
+        private System.Windows.Forms.Button btnOmsAvail;
         private System.Windows.Forms.Label lblDetailsPackage1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;

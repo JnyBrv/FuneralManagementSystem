@@ -80,5 +80,23 @@ namespace FuneralManagementSystem
         {
 
         }
+
+        private void btnBuyPackage1_Click(object sender, EventArgs e)
+        {
+            main = (frmMain)Application.OpenForms["frmMain"];
+            main.OpenChildForm(new frmClientContractForm());
+            main.panelTitleBar.Visible = false;
+        }
+        private void btnOmsAvail_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnBuyPackage2_Click_1(object sender, EventArgs e)
+        {
+            main = (frmMain)Application.OpenForms["frmMain"];
+            main.OpenChildForm(new frmClientContractForm());
+            main.panelTitleBar.Visible = false;
+        }
     }
 }

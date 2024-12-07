@@ -34,21 +34,21 @@
             this.btnClient = new System.Windows.Forms.Button();
             this.btnPaying = new System.Windows.Forms.Button();
             this.btnOnService = new System.Windows.Forms.Button();
+            this.pnlBrand = new System.Windows.Forms.Panel();
+            this.panelMainMenu = new System.Windows.Forms.Panel();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.pbExit = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnArchive = new System.Windows.Forms.Button();
             this.btnClients = new System.Windows.Forms.Button();
             this.btnPackages = new System.Windows.Forms.Button();
-            this.pnlBrand = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelMainMenu = new System.Windows.Forms.Panel();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.pbExit = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.pnlBrand.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelMainMenu.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -103,6 +103,7 @@
             this.btnClient.Text = "Clients";
             this.btnClient.UseVisualStyleBackColor = false;
             this.btnClient.Visible = false;
+            this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
             // btnPaying
             // 
@@ -120,6 +121,7 @@
             this.btnPaying.Text = "Paying";
             this.btnPaying.UseVisualStyleBackColor = false;
             this.btnPaying.Visible = false;
+            this.btnPaying.Click += new System.EventHandler(this.btnPaying_Click);
             // 
             // btnOnService
             // 
@@ -137,6 +139,50 @@
             this.btnOnService.Text = "On Service";
             this.btnOnService.UseVisualStyleBackColor = false;
             this.btnOnService.Visible = false;
+            this.btnOnService.Click += new System.EventHandler(this.btnOnService_Click);
+            // 
+            // pnlBrand
+            // 
+            this.pnlBrand.BackColor = System.Drawing.Color.Black;
+            this.pnlBrand.Controls.Add(this.pictureBox1);
+            this.pnlBrand.Location = new System.Drawing.Point(0, 0);
+            this.pnlBrand.Name = "pnlBrand";
+            this.pnlBrand.Size = new System.Drawing.Size(230, 184);
+            this.pnlBrand.TabIndex = 0;
+            // 
+            // panelMainMenu
+            // 
+            this.panelMainMenu.AutoScroll = true;
+            this.panelMainMenu.Controls.Add(this.panelTitleBar);
+            this.panelMainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMainMenu.Location = new System.Drawing.Point(230, 0);
+            this.panelMainMenu.Name = "panelMainMenu";
+            this.panelMainMenu.Size = new System.Drawing.Size(1213, 834);
+            this.panelMainMenu.TabIndex = 1;
+            this.panelMainMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMainMenu_Paint);
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.Black;
+            this.panelTitleBar.Controls.Add(this.pbExit);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(1213, 64);
+            this.panelTitleBar.TabIndex = 0;
+            // 
+            // pbExit
+            // 
+            this.pbExit.BackColor = System.Drawing.Color.Black;
+            this.pbExit.Image = global::FuneralManagementSystem.Properties.Resources.exit;
+            this.pbExit.Location = new System.Drawing.Point(1175, 2);
+            this.pbExit.Margin = new System.Windows.Forms.Padding(2);
+            this.pbExit.Name = "pbExit";
+            this.pbExit.Size = new System.Drawing.Size(38, 41);
+            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbExit.TabIndex = 16;
+            this.pbExit.TabStop = false;
+            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
             // 
             // btnLogout
             // 
@@ -212,15 +258,6 @@
             this.btnPackages.UseVisualStyleBackColor = false;
             this.btnPackages.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pnlBrand
-            // 
-            this.pnlBrand.BackColor = System.Drawing.Color.Black;
-            this.pnlBrand.Controls.Add(this.pictureBox1);
-            this.pnlBrand.Location = new System.Drawing.Point(0, 0);
-            this.pnlBrand.Name = "pnlBrand";
-            this.pnlBrand.Size = new System.Drawing.Size(230, 184);
-            this.pnlBrand.TabIndex = 0;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FuneralManagementSystem.Properties.Resources.cruzlogo;
@@ -231,40 +268,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // panelMainMenu
-            // 
-            this.panelMainMenu.AutoScroll = true;
-            this.panelMainMenu.Controls.Add(this.panelTitleBar);
-            this.panelMainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMainMenu.Location = new System.Drawing.Point(230, 0);
-            this.panelMainMenu.Name = "panelMainMenu";
-            this.panelMainMenu.Size = new System.Drawing.Size(1213, 834);
-            this.panelMainMenu.TabIndex = 1;
-            this.panelMainMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMainMenu_Paint);
-            // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.Black;
-            this.panelTitleBar.Controls.Add(this.pbExit);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1213, 64);
-            this.panelTitleBar.TabIndex = 0;
-            // 
-            // pbExit
-            // 
-            this.pbExit.BackColor = System.Drawing.Color.Black;
-            this.pbExit.Image = global::FuneralManagementSystem.Properties.Resources.exit;
-            this.pbExit.Location = new System.Drawing.Point(1175, 2);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(2);
-            this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(38, 41);
-            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbExit.TabIndex = 16;
-            this.pbExit.TabStop = false;
-            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
             // 
             // frmMain
             // 
@@ -280,10 +283,10 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.panel1.ResumeLayout(false);
             this.pnlBrand.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelMainMenu.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

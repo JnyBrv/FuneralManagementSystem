@@ -71,9 +71,9 @@ namespace FuneralManagementSystem
 
         private void ShowChildForm(int index)
         {
-            if (index < 0 || index >= childForms.Count)
+            //if (index < 0 || index >= childForms.Count)
 
-                return;
+                //return;
 
             // Close the currently active child form (if any)
             if (currentChildForm != null)

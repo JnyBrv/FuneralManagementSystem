@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FuneralManagementSystem
 {
-    public partial class frmPayingClients : Form
+    public partial class frmPaying : Form
     {
-        public frmPayingClients()
+        public frmPaying()
         {
             InitializeComponent();
         }

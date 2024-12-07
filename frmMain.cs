@@ -148,8 +148,7 @@ namespace FuneralManagementSystem
             }
 
 
-            OpenChildForm(new FrmClients());
-            panelTitleBar.Visible = false;
+            
 
             //clicked colors
             btnPackages.BackColor = Color.Black;
@@ -211,13 +210,6 @@ namespace FuneralManagementSystem
             }
 
 
-
-
-
-
-            OpenChildForm(new FrmEmployees());
-            panelTitleBar.Visible = false;
-
             //clicked colors
             btnPackages.BackColor = Color.Black;
             btnPackages.ForeColor = Color.Gold;
@@ -275,7 +267,22 @@ namespace FuneralManagementSystem
 
         private void btnEmployees_Click_1(object sender, EventArgs e)
         {
+            OpenChildForm(new FrmEmployees());
+        }
 
+        private void btnOnService_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmClients());
+        }
+
+        private void btnPaying_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmPaying());
+        }
+
+        private void btnClient_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmArchivedClients());
         }
     }
 

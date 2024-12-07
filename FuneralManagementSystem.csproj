@@ -62,6 +62,12 @@
     <Compile Include="frmActiveClient.Designer.cs">
       <DependentUpon>frmActiveClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmArchivedClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArchivedClients.Designer.cs">
+      <DependentUpon>frmArchivedClients.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAvail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,11 +116,11 @@
     <Compile Include="FrmPackages.Designer.cs">
       <DependentUpon>FrmPackages.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPayingClients.cs">
+    <Compile Include="frmPaying.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPayingClients.Designer.cs">
-      <DependentUpon>frmPayingClients.cs</DependentUpon>
+    <Compile Include="frmPaying.Designer.cs">
+      <DependentUpon>frmPaying.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSearchBox.cs">
       <SubType>UserControl</SubType>
@@ -136,6 +142,9 @@
     <EmbeddedResource Include="frmActiveClient.resx">
       <DependentUpon>frmActiveClient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmArchivedClients.resx">
+      <DependentUpon>frmArchivedClients.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAvail.resx">
       <DependentUpon>frmAvail.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDeceasedForm.resx">
       <DependentUpon>frmDeceasedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmployees.resx">
+      <DependentUpon>FrmEmployees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInclusions.resx">
       <DependentUpon>frmInclusions.cs</DependentUpon>
@@ -157,8 +169,8 @@
     <EmbeddedResource Include="FrmPackages.resx">
       <DependentUpon>FrmPackages.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPayingClients.resx">
-      <DependentUpon>frmPayingClients.cs</DependentUpon>
+    <EmbeddedResource Include="frmPaying.resx">
+      <DependentUpon>frmPaying.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSearchBox.resx">
       <DependentUpon>FrmSearchBox.cs</DependentUpon>
