@@ -90,7 +90,7 @@ namespace FuneralManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-        
+            //Packages Button
 
 
             OpenChildForm(new FrmPackages());
@@ -198,27 +198,6 @@ namespace FuneralManagementSystem
         }
 
 
-        //
-        //private void archiveIconDropdown()
-        //{
-        //    if (isArchiveExpanded)
-        //    {
-
-        //        btnClient.Visible = false;
-        //        btnEmployees.Visible = false;
-        //        btnArchive.Text = "     Archive      ▲";
-
-        //    }else
-        //    {
-
-        //        btnClient.Visible = true;
-        //        btnEmployees.Visible = true;
-        //        btnArchive.Text = "     Archive      ▼";
-        //    }
-
-        //    isArchiveIcon = !isArchiveIcon;
-        //}
-
         private void btnEmployees_Click(object sender, EventArgs e)
         {
             //ARCHIVE BUTTON NA TOHHHHHH
@@ -322,50 +301,6 @@ namespace FuneralManagementSystem
             fillSpaceForIcon();
 
 
-
-            //fillSpaceForIcon();
-            //btnPackages.Image = resizeIcon(Properties.Resources.packageIcon, 30, 30);
-            //btnPackages.ImageAlign = ContentAlignment.MiddleLeft;
-            //btnPackages.TextAlign = ContentAlignment.MiddleCenter;
-
-            //btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 40, 40);
-            //btnClients.ImageAlign = ContentAlignment.MiddleLeft;
-            //btnClients.TextAlign = ContentAlignment.MiddleCenter;
-
-            //btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 30, 30);
-            //btnArchive.ImageAlign = ContentAlignment.MiddleLeft;
-            //btnArchive.TextAlign = ContentAlignment.MiddleCenter;
-            //ResetButtonIcons();
-            ////I ONLY ADDED THIS SINCE THE PACKAGE IS THE FIRST TO POP UP
-            //btnPackages.Image = resizeIcon(Properties.Resources.package_black, 30, 30);
-
-            //fillSpaceForIcon();
-            //btnPackages.Image = resizeIcon(Properties.Resources.packageIcon, 30, 30);
-            //btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 40, 40);
-            //btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 30, 30);
-            //btnLogout.Image = resizeIcon(Properties.Resources.backIcon, 40, 40);
-
-
-            ////resize the icon to small
-            //btnPackages.Image = resizeIcon(Properties.Resources.package_black, 32, 32);
-            //btnPackages.Image = resizeIcon(Properties.Resources.packageIcon, 32, 32);
-            //btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 32, 32);
-            //btnClients.Image = resizeIcon(Properties.Resources.client_black, 32, 32);
-            //btnArchive.Image = resizeIcon(Properties.Resources.archive_black, 32, 32);
-            //btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 32, 32);
-
-
-            //btnPackages.TextAlign = ContentAlignment.MiddleCenter;
-            //btnClients.TextAlign = ContentAlignment.MiddleCenter;
-            //btnArchive.TextAlign = ContentAlignment.MiddleCenter;
-
-
-            ////filler for the small size icon
-            //btnPackages.Padding = new Padding(15, 0, 0, 0);
-            //btnClients.Padding = new Padding(15, 0, 0, 0);
-            //btnArchive.Padding = new Padding(15, 0, 0, 0);
-
-
         }
 
         private void ResetButtonIcons()
@@ -448,20 +383,31 @@ namespace FuneralManagementSystem
         {
             OpenChildForm(new FrmClients());
 
-            fillSpaceForIcon();
+            
 
 
             // change the color of icon sa dropdown
 
+            btnPackages.BackColor = Color.Gold;
+            btnPackages.ForeColor = Color.Black;
+            btnClients.BackColor = Color.Black;
+            btnClients.ForeColor = Color.Gold;
+            btnArchive.BackColor = Color.Black;
+            btnArchive.ForeColor = Color.Gold;
 
-            //btnClients.Image = resizeIcon(Properties.Resources.client_black, 40, 40);
-            //btnClients.ImageAlign = ContentAlignment.MiddleLeft;
-            //btnClients.TextAlign = ContentAlignment.MiddleCenter;
+            fillSpaceForIcon();
 
-            //// change the other buttons to yellow
-            //btnPackages.Image = resizeIcon(Properties.Resources.packageIcon, 30, 30);
-            //btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 30, 30);
+            btnPackages.Image = resizeIcon(Properties.Resources.package_black, 30, 30);
+            btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 40, 40);
+            btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 30, 30);
 
+            btnPackages.ImageAlign = ContentAlignment.MiddleLeft;
+            btnClients.ImageAlign = ContentAlignment.MiddleLeft;
+            btnArchive.ImageAlign = ContentAlignment.MiddleLeft;
+
+            btnPackages.TextAlign = ContentAlignment.MiddleCenter;
+            btnClients.TextAlign = ContentAlignment.MiddleCenter;
+            btnArchive.TextAlign = ContentAlignment.MiddleCenter;
 
 
         }
