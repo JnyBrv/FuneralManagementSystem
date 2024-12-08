@@ -14,9 +14,8 @@ namespace FuneralManagementSystem
     public partial class frmInclusions : Form
     {
         frmMain main;
-        //public int package, id;
-        int id = 4;
         string total;
+        public int id;
 
         //SQL Connection
         SqlConnection con = new SqlConnection(@"Data Source=JIANNESANTOS\SQLEXPRESS;Initial Catalog=FuneralManagementSystem;Integrated Security=True");
@@ -24,18 +23,15 @@ namespace FuneralManagementSystem
         public frmInclusions()
         {
             InitializeComponent();
-            loadElements();
+            loadComponents();
         }
 
-        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        public void loadComponents()
         {
-            panel1.AutoScroll = true;
-        }
 
-        public void loadElements()
-        {
             try
             {
+                id = getCount(-1);
                 date.Format = DateTimePickerFormat.Custom;
                 date.CustomFormat = "yyyy/MM/dd";
 
@@ -64,30 +60,53 @@ namespace FuneralManagementSystem
                         con.Close();
                         MessageBox.Show("Data doesn't exist.");
                     }
+                    con.Close();
                 }
             }
             catch (Exception ee)
             {
                 MessageBox.Show(ee.ToString());
             }
-
         }
+
+        public int getCount(int count)
+        {
+            try
+            {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT COUNT(*) FROM DECEASED";
+
+                object result = cmd.ExecuteScalar();
+                if (result != null)
+                {
+                    count = Convert.ToInt32(result) -1;
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return count;
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            panel1.AutoScroll = true;
+        }
+
 
         private void frmInclusions_Load(object sender, EventArgs e)
         {
             panel1 = new Panel();
-
-            
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            PaymentCash frmPmt = new PaymentCash();
-            frmPmt.Show();
-
-            frmInclusions inclusions = new frmInclusions();
-            inclusions.Close();
-        }
+        
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
@@ -143,12 +162,44 @@ namespace FuneralManagementSystem
             }
         }
 
-        private void txtAddPayment_TextChanged(object sender, EventArgs e)
+
+        private void txtAddPayment_Leave(object sender, EventArgs e)
         {
             
         }
 
-        private void txtAddPayment_Leave(object sender, EventArgs e)
+        private void btnPayment_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                id = getCount(-1);
+                String item = txtAddInclusions.Text;
+                float bal = float.Parse(lblTotal.Text);
+                con.Open();
+
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "UPDATE CLIENT SET addInclusions = '"+ item +"' WHERE clientID = " + id +
+                    "UPDATE CLIENT SET balance = '" + bal + "' WHERE clientID = " + id;
+                cmd.ExecuteNonQuery();
+
+                con.Close();
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+            }
+
+            main = (frmMain)Application.OpenForms["frmMain"];
+            main.OpenChildForm(new PaymentCash());
+            main.panelTitleBar.Visible = false;
+
+            frmInclusions inclusions = new frmInclusions();
+            inclusions.Close();
+
+        }
+
+        private void txtAddPayment_TextChanged(object sender, EventArgs e)
         {
             lblTotal.Text = total;
             // Get the value from TextBox1, parsing it as a decimal
@@ -165,11 +216,11 @@ namespace FuneralManagementSystem
             else
             {
                 // Handle invalid input, e.g., clear the result label
-                lblTotal.Text = string.Empty;
+                lblTotal.Text = total;
             }
         }
 
-        private void txtPackage_TextChanged(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

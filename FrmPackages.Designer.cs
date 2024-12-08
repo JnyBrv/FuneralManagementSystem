@@ -98,6 +98,7 @@
             // btnOmsAvail
             // 
             this.btnOmsAvail.BackColor = System.Drawing.Color.Gold;
+            this.btnOmsAvail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOmsAvail.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOmsAvail.ForeColor = System.Drawing.Color.Black;
             this.btnOmsAvail.Location = new System.Drawing.Point(435, 753);
@@ -221,6 +222,7 @@
             // btnpackageB
             // 
             this.btnpackageB.BackColor = System.Drawing.Color.Gold;
+            this.btnpackageB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnpackageB.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnpackageB.ForeColor = System.Drawing.Color.Black;
             this.btnpackageB.Location = new System.Drawing.Point(425, 751);

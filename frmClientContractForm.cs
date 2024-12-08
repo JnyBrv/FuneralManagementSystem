@@ -27,9 +27,8 @@ namespace FuneralManagementSystem
         }
 
         //SQL Connection
-        //SqlConnection con = new SqlConnection("Data Source=JIANNESANTOS\SQLEXPRESS;Initial Catalog=FuneralManagementSystem;Integrated Security=True");
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-OPC66SP\\SQLEXPRESS;Initial Catalog=FuneralManagementSystem;Integrated Security=True;");
-
+        SqlConnection con = new SqlConnection(@"Data Source=JIANNESANTOS\SQLEXPRESS;Initial Catalog=FuneralManagementSystem;Integrated Security=True");
+        
 
 
         private void pbExit_Click(object sender, EventArgs e)
@@ -72,6 +71,7 @@ namespace FuneralManagementSystem
         }
 
         public int package;
+        public int id;
 
         private void btnNext_Click(object sender, EventArgs e)
         {
@@ -91,7 +91,9 @@ namespace FuneralManagementSystem
                 }
                 else
                 {
-                    int id = getCount(0);
+                    id = getCount(-1);
+
+
                     //client information
                     String fname = txtClientFirstname.Text;
                     String mname = txtClientMiddlename.Text;
@@ -129,11 +131,10 @@ namespace FuneralManagementSystem
                     cmd.ExecuteNonQuery();
 
                     con.Close();
+
+
                     main = (frmMain)Application.OpenForms["frmMain"];
                     main.OpenChildForm(new frmInclusions());
-                    inc = (frmInclusions)Application.OpenForms["frmInclusions"];
-                    //inc.package = package;
-                    //inc.id = id;
                     main.panelTitleBar.Visible = false;
                 }
             }
