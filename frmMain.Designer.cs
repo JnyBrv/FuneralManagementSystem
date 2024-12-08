@@ -79,9 +79,9 @@
             this.btnEmployees.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmployees.ForeColor = System.Drawing.Color.Gold;
             this.btnEmployees.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployees.Location = new System.Drawing.Point(0, 548);
+            this.btnEmployees.Location = new System.Drawing.Point(46, 548);
             this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Size = new System.Drawing.Size(230, 39);
+            this.btnEmployees.Size = new System.Drawing.Size(178, 39);
             this.btnEmployees.TabIndex = 6;
             this.btnEmployees.Text = "Employees";
             this.btnEmployees.UseVisualStyleBackColor = false;
@@ -133,9 +133,9 @@
             this.btnOnService.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOnService.ForeColor = System.Drawing.Color.Gold;
             this.btnOnService.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOnService.Location = new System.Drawing.Point(0, 366);
+            this.btnOnService.Location = new System.Drawing.Point(31, 366);
             this.btnOnService.Name = "btnOnService";
-            this.btnOnService.Size = new System.Drawing.Size(230, 35);
+            this.btnOnService.Size = new System.Drawing.Size(199, 35);
             this.btnOnService.TabIndex = 3;
             this.btnOnService.Text = "On Service";
             this.btnOnService.UseVisualStyleBackColor = false;
@@ -229,7 +229,7 @@
             // 
             this.pictureBox1.Image = global::FuneralManagementSystem.Properties.Resources.cruzlogo;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(230, 181);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -263,7 +263,7 @@
             this.pbExit.BackColor = System.Drawing.Color.Black;
             this.pbExit.Image = global::FuneralManagementSystem.Properties.Resources.exit;
             this.pbExit.Location = new System.Drawing.Point(1038, 2);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbExit.Margin = new System.Windows.Forms.Padding(2);
             this.pbExit.Name = "pbExit";
             this.pbExit.Size = new System.Drawing.Size(38, 41);
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

@@ -168,5 +168,10 @@ namespace FuneralManagementSystem
                 lblTotal.Text = string.Empty;
             }
         }
+
+        private void txtPackage_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

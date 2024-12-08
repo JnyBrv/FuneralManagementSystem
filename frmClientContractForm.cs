@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,7 +27,9 @@ namespace FuneralManagementSystem
         }
 
         //SQL Connection
-        SqlConnection con = new SqlConnection(@"Data Source=JIANNESANTOS\SQLEXPRESS;Initial Catalog=FuneralManagementSystem;Integrated Security=True");
+        //SqlConnection con = new SqlConnection("Data Source=JIANNESANTOS\SQLEXPRESS;Initial Catalog=FuneralManagementSystem;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-OPC66SP\\SQLEXPRESS;Initial Catalog=FuneralManagementSystem;Integrated Security=True;");
+
 
 
         private void pbExit_Click(object sender, EventArgs e)
@@ -81,10 +84,12 @@ namespace FuneralManagementSystem
                     || timeOfInternment.Text == "" || cmbSex.Text == "" || txtInternmentStreet.Text == "" || txtInternmentBrgy.Text == "" || txtInternmentCity.Text == "" || txtInternmentProvince.Text == "")
                 {
                     MessageBox.Show("Please fill all text box field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                } else if(txtContactno.Text.Length < 9)
+                }
+                else if (txtContactno.Text.Length < 9)
                 {
                     MessageBox.Show("Phone number must be at least 12 digits.", "Invalid Phone Number", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                } else
+                }
+                else
                 {
                     int id = getCount(0);
                     //client information
@@ -110,13 +115,13 @@ namespace FuneralManagementSystem
                     timeOfInternment.CustomFormat = "hh:mm tt";
                     String sex = cmbSex.Text;
                     String place = txtInternmentStreet.Text + ", " + txtInternmentBrgy.Text + ", " + txtInternmentCity.Text + ", " + txtInternmentProvince.Text;
-                    
+
                     //insert into database
                     con.Open();
 
                     SqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = 
+                    cmd.CommandText =
                         "INSERT INTO DECEASED (deceasedID, deceasedFname, deceasedMname, deceasedLname, dateOfDeath, dateOfInternment, timeOfInternment, placeOfInternment, sex, archive)" +
                         " VALUES (" + id + ", '" + dfname + "', '" + dmname + "', '" + dlname + "', '" + datepickDateofDeath.Text + "', '" + datepickDateofInternment.Text + "', '" + timeOfInternment.Text + "', '" + place + "', '" + sex + "', 0) " +
                         " INSERT INTO CLIENT (clientID, clientFname, clientMname, clientLname, clientRelation, clientAddress, clientContactNo, dateOfPurchase, archive, packageID, deceasedID)" +
@@ -137,10 +142,10 @@ namespace FuneralManagementSystem
                 MessageBox.Show(ee.ToString());
             }
 
-            
+
         }
 
-        
+
 
         private void txtClientLastname_KeyPress(object sender, KeyPressEventArgs e)
         {

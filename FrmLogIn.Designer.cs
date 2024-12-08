@@ -47,6 +47,7 @@
             // 
             // cbShowPassword
             // 
+            this.cbShowPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbShowPassword.AutoSize = true;
             this.cbShowPassword.Font = new System.Drawing.Font("Georgia", 12F);
             this.cbShowPassword.ForeColor = System.Drawing.Color.Gold;
@@ -60,11 +61,13 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLogin.BackColor = System.Drawing.Color.Gold;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(583, 693);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLogin.MaximumSize = new System.Drawing.Size(369, 47);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(369, 47);
             this.btnLogin.TabIndex = 13;
@@ -74,6 +77,7 @@
             // 
             // lblWarning
             // 
+            this.lblWarning.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblWarning.AutoSize = true;
             this.lblWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblWarning.ForeColor = System.Drawing.Color.Red;
@@ -85,6 +89,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPassword.Font = new System.Drawing.Font("Georgia", 14F);
             this.txtPassword.Location = new System.Drawing.Point(583, 580);
             this.txtPassword.Name = "txtPassword";
@@ -93,6 +98,7 @@
             // 
             // txtUsername
             // 
+            this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUsername.BackColor = System.Drawing.Color.White;
             this.txtUsername.Font = new System.Drawing.Font("Georgia", 14F);
             this.txtUsername.Location = new System.Drawing.Point(583, 489);
@@ -103,6 +109,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Georgia", 15F);
             this.label3.ForeColor = System.Drawing.Color.Gold;
@@ -114,6 +121,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Georgia", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gold;
@@ -125,9 +133,11 @@
             // 
             // pboxLogo
             // 
+            this.pboxLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pboxLogo.BackColor = System.Drawing.Color.Transparent;
             this.pboxLogo.Image = global::FuneralManagementSystem.Properties.Resources.cruzlogocircle;
             this.pboxLogo.Location = new System.Drawing.Point(643, 130);
+            this.pboxLogo.MaximumSize = new System.Drawing.Size(250, 250);
             this.pboxLogo.Name = "pboxLogo";
             this.pboxLogo.Size = new System.Drawing.Size(250, 250);
             this.pboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -136,6 +146,7 @@
             // 
             // pbExit
             // 
+            this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbExit.Image = global::FuneralManagementSystem.Properties.Resources.exit;
             this.pbExit.Location = new System.Drawing.Point(1478, 12);
             this.pbExit.Name = "pbExit";
@@ -159,6 +170,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::FuneralManagementSystem.Properties.Resources.curveflip;
             this.pictureBox2.Location = new System.Drawing.Point(842, 178);
