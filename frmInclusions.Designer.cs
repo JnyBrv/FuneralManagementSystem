@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInclusions));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -57,8 +58,7 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.richTextBox1);
@@ -97,7 +97,7 @@
             // 
             this.richTextBox1.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(11, 131);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(1151, 101);
             this.richTextBox1.TabIndex = 57;
@@ -108,7 +108,7 @@
             this.txtPackage.BackColor = System.Drawing.Color.White;
             this.txtPackage.Font = new System.Drawing.Font("Georgia", 15F);
             this.txtPackage.Location = new System.Drawing.Point(11, 38);
-            this.txtPackage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPackage.Margin = new System.Windows.Forms.Padding(2);
             this.txtPackage.Name = "txtPackage";
             this.txtPackage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtPackage.Size = new System.Drawing.Size(531, 30);
@@ -129,7 +129,7 @@
             // 
             this.txtAddPayment.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddPayment.Location = new System.Drawing.Point(47, 418);
-            this.txtAddPayment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAddPayment.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddPayment.Multiline = true;
             this.txtAddPayment.Name = "txtAddPayment";
             this.txtAddPayment.Size = new System.Drawing.Size(1115, 32);
@@ -152,7 +152,7 @@
             // 
             this.txtAddInclusions.Font = new System.Drawing.Font("Georgia", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddInclusions.Location = new System.Drawing.Point(11, 297);
-            this.txtAddInclusions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAddInclusions.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddInclusions.Multiline = true;
             this.txtAddInclusions.Name = "txtAddInclusions";
             this.txtAddInclusions.Size = new System.Drawing.Size(1151, 78);
@@ -293,17 +293,18 @@
             this.panel2.Controls.Add(this.label11);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1305, 81);
             this.panel2.TabIndex = 1;
             // 
             // pbExit
             // 
+            this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbExit.BackColor = System.Drawing.Color.Transparent;
-            this.pbExit.Image = global::FuneralManagementSystem.Properties.Resources.exit;
-            this.pbExit.Location = new System.Drawing.Point(1255, 0);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbExit.Image = ((System.Drawing.Image)(resources.GetObject("pbExit.Image")));
+            this.pbExit.Location = new System.Drawing.Point(1267, 0);
+            this.pbExit.Margin = new System.Windows.Forms.Padding(2);
             this.pbExit.Name = "pbExit";
             this.pbExit.Size = new System.Drawing.Size(38, 41);
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
