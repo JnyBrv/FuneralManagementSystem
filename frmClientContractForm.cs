@@ -58,14 +58,11 @@ namespace FuneralManagementSystem
                 {
                     count = Convert.ToInt32(result);
                 }
+                con.Close();
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
-            }
-            finally
-            {
-                con.Close();
             }
             return count;
         }
@@ -92,7 +89,6 @@ namespace FuneralManagementSystem
                 else
                 {
                     id = getCount(-1);
-
 
                     //client information
                     String fname = txtClientFirstname.Text;

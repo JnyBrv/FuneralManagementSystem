@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.txtPackage = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtAddPayment = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pbExit = new System.Windows.Forms.PictureBox();
+            this.txtPackage = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
@@ -59,9 +59,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.txtPackage);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.richTextBox1);
-            this.panel1.Controls.Add(this.txtPackage);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txtAddPayment);
             this.panel1.Controls.Add(this.label3);
@@ -103,18 +103,6 @@
             this.richTextBox1.Size = new System.Drawing.Size(1533, 195);
             this.richTextBox1.TabIndex = 57;
             this.richTextBox1.Text = "";
-            // 
-            // txtPackage
-            // 
-            this.txtPackage.BackColor = System.Drawing.Color.White;
-            this.txtPackage.Font = new System.Drawing.Font("Georgia", 15F);
-            this.txtPackage.Location = new System.Drawing.Point(15, 47);
-            this.txtPackage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPackage.Name = "txtPackage";
-            this.txtPackage.ReadOnly = true;
-            this.txtPackage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtPackage.Size = new System.Drawing.Size(707, 36);
-            this.txtPackage.TabIndex = 56;
             // 
             // label9
             // 
@@ -290,6 +278,19 @@
             this.pbExit.TabStop = false;
             this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
             // 
+            // txtPackage
+            // 
+            this.txtPackage.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPackage.FormattingEnabled = true;
+            this.txtPackage.Items.AddRange(new object[] {
+            "Package A",
+            "Package B"});
+            this.txtPackage.Location = new System.Drawing.Point(15, 47);
+            this.txtPackage.Name = "txtPackage";
+            this.txtPackage.Size = new System.Drawing.Size(707, 35);
+            this.txtPackage.TabIndex = 59;
+            this.txtPackage.SelectedIndexChanged += new System.EventHandler(this.txtPackage_SelectedIndexChanged);
+            // 
             // frmInclusions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -328,8 +329,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtAddPayment;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtPackage;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox txtPackage;
     }
 }

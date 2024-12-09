@@ -24,6 +24,7 @@ namespace FuneralManagementSystem
         {
             InitializeComponent();
             loadComponents();
+            initialBalance();
         }
 
         public void loadComponents()
@@ -36,7 +37,7 @@ namespace FuneralManagementSystem
                 date.CustomFormat = "yyyy/MM/dd";
 
                 String query = "SELECT CLIENT.dateOfPurchase, PACKAGE.packageName, PACKAGE.packageInclusions, PACKAGE.packageAmount FROM CLIENT " +
-                    "INNER JOIN PACKAGE ON CLIENT.packageID = PACKAGE.packageID WHERE CLIENT.clientID = " + id + "; ";
+                    "INNER JOIN PACKAGE ON CLIENT.packageID = PACKAGE.packageID WHERE CLIENT.clientID = " + id ;
 
                 if (con.State != ConnectionState.Open)
                 {
@@ -61,38 +62,66 @@ namespace FuneralManagementSystem
                         MessageBox.Show("Data doesn't exist.");
                     }
                     con.Close();
+
+                    
                 }
+                
+                
             }
             catch (Exception ee)
             {
                 MessageBox.Show(ee.ToString());
             }
+
+
         }
 
         public int getCount(int count)
         {
             try
             {
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "SELECT COUNT(*) FROM DECEASED";
+
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        count = Convert.ToInt32(result) - 1;
+
+                    }
+                    con.Close();
+                }
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show("HERE" + ee.Message);
+            }
+            return count;
+        }
+
+        public void initialBalance()
+        {
+            try
+            {
+                id = getCount(-1);
+                String item = txtAddInclusions.Text;
+                float bal = float.Parse(lblTotal.Text);
+
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT COUNT(*) FROM DECEASED";
-
-                object result = cmd.ExecuteScalar();
-                if (result != null)
-                {
-                    count = Convert.ToInt32(result) -1;
-                }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            finally
-            {
+                cmd.CommandText = "UPDATE CLIENT SET balance = '" + bal + "' WHERE clientID = " + id;
+                cmd.ExecuteNonQuery();
                 con.Close();
             }
-            return count;
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+            }
         }
 
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
@@ -223,6 +252,80 @@ namespace FuneralManagementSystem
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txtPackage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedItem = txtPackage.SelectedItem.ToString();
+            id = getCount(-1);
+
+            if (selectedItem == "Package A")
+            {
+                try
+                {
+                    String query = "SELECT packageAmount, packageInclusions  FROM PACKAGE WHERE packageName = '" + selectedItem + "'; " +
+                                    "UPDATE CLIENT SET packageID = 0 WHERE clientID = " + id ;
+
+                    if (con.State != ConnectionState.Open)
+                    {
+                        con.Open();
+                        SqlCommand cmd = new SqlCommand(query, con);
+
+                        SqlDataReader read = cmd.ExecuteReader();
+                        read.Read();
+
+                        if (read.HasRows)
+                        {
+                            richTextBox1.Text = read[1].ToString();
+                            lblTotal.Text = read[0].ToString();
+                            total = read[0].ToString();
+                        }
+                        else
+                        {
+                            con.Close();
+                            MessageBox.Show("Data doesn't exist.");
+                        }
+                        con.Close();
+                    }
+                }
+                catch (Exception ee)
+                {
+                    MessageBox.Show(ee.ToString());
+                }
+            }
+            else if (selectedItem == "Package B")
+            {
+                
+                String query = "SELECT packageAmount, packageInclusions  FROM PACKAGE WHERE packageName = '" + selectedItem + "'; " +
+                            "UPDATE CLIENT SET packageID = 1 WHERE clientID = " + id ;
+
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand(query, con);
+
+                    SqlDataReader read = cmd.ExecuteReader();
+                    read.Read();
+
+                    if (read.HasRows)
+                    {
+                        richTextBox1.Text = read[1].ToString();
+                        lblTotal.Text = read[0].ToString();
+                        total = read[0].ToString();
+                    }
+                    else
+                    {
+                        con.Close();
+                        MessageBox.Show("Data doesn't exist.");
+                    }
+                    con.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid package. ",
+                "Package error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
