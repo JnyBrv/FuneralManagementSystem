@@ -56,11 +56,11 @@
     <Compile Include="Clients.Designer.cs">
       <DependentUpon>Clients.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmActiveClient.cs">
+    <Compile Include="frmUpdateDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmActiveClient.Designer.cs">
-      <DependentUpon>frmActiveClient.cs</DependentUpon>
+    <Compile Include="frmUpdateDetails.Designer.cs">
+      <DependentUpon>frmUpdateDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="frmArchivedClients.cs">
       <SubType>Form</SubType>
@@ -139,8 +139,8 @@
     <EmbeddedResource Include="Clients.resx">
       <DependentUpon>Clients.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmActiveClient.resx">
-      <DependentUpon>frmActiveClient.cs</DependentUpon>
+    <EmbeddedResource Include="frmUpdateDetails.resx">
+      <DependentUpon>frmUpdateDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmArchivedClients.resx">
       <DependentUpon>frmArchivedClients.cs</DependentUpon>

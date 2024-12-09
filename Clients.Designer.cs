@@ -28,27 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDateAdded = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridClient = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picPackage = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbExit = new System.Windows.Forms.PictureBox();
-            this.btnpackageB = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlPreview = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.lblPlace = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblContact = new System.Windows.Forms.Label();
+            this.lblDeceased = new System.Windows.Forms.Label();
+            this.lblClient = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridClient)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPackage)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
@@ -56,54 +60,47 @@
             this.pnlPreview.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridClient
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colName,
-            this.colDateAdded});
-            this.dataGridView1.Location = new System.Drawing.Point(70, 66);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1174, 659);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // colName
-            // 
-            this.colName.HeaderText = "Name";
-            this.colName.MinimumWidth = 6;
-            this.colName.Name = "colName";
-            this.colName.Width = 125;
-            // 
-            // colDateAdded
-            // 
-            this.colDateAdded.HeaderText = "Date Availed";
-            this.colDateAdded.MinimumWidth = 6;
-            this.colDateAdded.Name = "colDateAdded";
-            this.colDateAdded.Width = 125;
+            this.dataGridClient.AllowUserToAddRows = false;
+            this.dataGridClient.AllowUserToDeleteRows = false;
+            this.dataGridClient.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridClient.GridColor = System.Drawing.Color.DimGray;
+            this.dataGridClient.Location = new System.Drawing.Point(53, 136);
+            this.dataGridClient.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridClient.Name = "dataGridClient";
+            this.dataGridClient.ReadOnly = true;
+            this.dataGridClient.RowHeadersWidth = 51;
+            this.dataGridClient.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridClient.Size = new System.Drawing.Size(1174, 659);
+            this.dataGridClient.TabIndex = 0;
+            this.dataGridClient.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridClient_CellClick);
+            this.dataGridClient.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridClient_CellContentClick);
             // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(41, 298);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(153, 29);
+            this.label8.Size = new System.Drawing.Size(154, 29);
             this.label8.TabIndex = 2;
             this.label8.Text = "Client Name:";
             // 
-            // pictureBox1
+            // picPackage
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Location = new System.Drawing.Point(44, 47);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(356, 227);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picPackage.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.picPackage.Location = new System.Drawing.Point(44, 47);
+            this.picPackage.Margin = new System.Windows.Forms.Padding(4);
+            this.picPackage.Name = "picPackage";
+            this.picPackage.Size = new System.Drawing.Size(356, 227);
+            this.picPackage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPackage.TabIndex = 0;
+            this.picPackage.TabStop = false;
             // 
             // panel4
             // 
@@ -113,18 +110,44 @@
             this.panel4.AutoScroll = true;
             this.panel4.AutoSize = true;
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Controls.Add(this.btnSearch);
+            this.panel4.Controls.Add(this.txtSearch);
+            this.panel4.Controls.Add(this.dataGridClient);
             this.panel4.Location = new System.Drawing.Point(0, 101);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1291, 985);
             this.panel4.TabIndex = 3;
             // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Gold;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Georgia", 13F);
+            this.btnSearch.ForeColor = System.Drawing.Color.Black;
+            this.btnSearch.Location = new System.Drawing.Point(1002, 54);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(225, 41);
+            this.btnSearch.TabIndex = 19;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearch.Font = new System.Drawing.Font("Georgia", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(53, 56);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(882, 36);
+            this.txtSearch.TabIndex = 4;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Controls.Add(this.txtSearch);
-            this.panel3.Controls.Add(this.btnpackageB);
             this.panel3.Controls.Add(this.pbExit);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label5);
@@ -149,20 +172,6 @@
             this.pbExit.TabIndex = 20;
             this.pbExit.TabStop = false;
             this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
-            // 
-            // btnpackageB
-            // 
-            this.btnpackageB.BackColor = System.Drawing.Color.Gold;
-            this.btnpackageB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnpackageB.Font = new System.Drawing.Font("Georgia", 13F);
-            this.btnpackageB.ForeColor = System.Drawing.Color.Black;
-            this.btnpackageB.Location = new System.Drawing.Point(1338, 31);
-            this.btnpackageB.Margin = new System.Windows.Forms.Padding(4);
-            this.btnpackageB.Name = "btnpackageB";
-            this.btnpackageB.Size = new System.Drawing.Size(181, 41);
-            this.btnpackageB.TabIndex = 19;
-            this.btnpackageB.Text = "Search";
-            this.btnpackageB.UseVisualStyleBackColor = false;
             // 
             // label9
             // 
@@ -190,17 +199,6 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "On Service";
             // 
-            // txtSearch
-            // 
-            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearch.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(544, 34);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(764, 34);
-            this.txtSearch.TabIndex = 4;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -216,12 +214,18 @@
             // pnlPreview
             // 
             this.pnlPreview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pnlPreview.Controls.Add(this.btnDelete);
+            this.pnlPreview.Controls.Add(this.lblPlace);
+            this.pnlPreview.Controls.Add(this.lblDate);
+            this.pnlPreview.Controls.Add(this.lblContact);
+            this.pnlPreview.Controls.Add(this.lblDeceased);
+            this.pnlPreview.Controls.Add(this.lblClient);
             this.pnlPreview.Controls.Add(this.button1);
             this.pnlPreview.Controls.Add(this.label12);
             this.pnlPreview.Controls.Add(this.label11);
             this.pnlPreview.Controls.Add(this.label10);
             this.pnlPreview.Controls.Add(this.label1);
-            this.pnlPreview.Controls.Add(this.pictureBox1);
+            this.pnlPreview.Controls.Add(this.picPackage);
             this.pnlPreview.Controls.Add(this.label8);
             this.pnlPreview.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlPreview.Location = new System.Drawing.Point(1294, 100);
@@ -229,13 +233,83 @@
             this.pnlPreview.Size = new System.Drawing.Size(446, 955);
             this.pnlPreview.TabIndex = 7;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Gold;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Georgia", 13F);
+            this.btnDelete.ForeColor = System.Drawing.Color.Black;
+            this.btnDelete.Location = new System.Drawing.Point(46, 785);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(364, 41);
+            this.btnDelete.TabIndex = 26;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // lblPlace
+            // 
+            this.lblPlace.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblPlace.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlace.Location = new System.Drawing.Point(41, 631);
+            this.lblPlace.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPlace.Name = "lblPlace";
+            this.lblPlace.Size = new System.Drawing.Size(369, 62);
+            this.lblPlace.TabIndex = 25;
+            this.lblPlace.Text = "ABC";
+            // 
+            // lblDate
+            // 
+            this.lblDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblDate.Font = new System.Drawing.Font("Arial", 13F);
+            this.lblDate.Location = new System.Drawing.Point(41, 557);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(369, 29);
+            this.lblDate.TabIndex = 24;
+            this.lblDate.Text = "ABC";
+            // 
+            // lblContact
+            // 
+            this.lblContact.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblContact.Font = new System.Drawing.Font("Arial", 13F);
+            this.lblContact.Location = new System.Drawing.Point(41, 482);
+            this.lblContact.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblContact.Name = "lblContact";
+            this.lblContact.Size = new System.Drawing.Size(359, 29);
+            this.lblContact.TabIndex = 23;
+            this.lblContact.Text = "ABC";
+            // 
+            // lblDeceased
+            // 
+            this.lblDeceased.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblDeceased.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeceased.Location = new System.Drawing.Point(41, 408);
+            this.lblDeceased.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDeceased.Name = "lblDeceased";
+            this.lblDeceased.Size = new System.Drawing.Size(359, 29);
+            this.lblDeceased.TabIndex = 22;
+            this.lblDeceased.Text = "ABC";
+            // 
+            // lblClient
+            // 
+            this.lblClient.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblClient.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClient.Location = new System.Drawing.Point(41, 332);
+            this.lblClient.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblClient.Name = "lblClient";
+            this.lblClient.Size = new System.Drawing.Size(359, 29);
+            this.lblClient.TabIndex = 21;
+            this.lblClient.Text = "ABC";
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Gold;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Georgia", 13F);
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(46, 665);
+            this.button1.Location = new System.Drawing.Point(46, 719);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(364, 41);
@@ -247,11 +321,11 @@
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(41, 595);
+            this.label12.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(41, 523);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(226, 29);
+            this.label12.Size = new System.Drawing.Size(227, 29);
             this.label12.TabIndex = 6;
             this.label12.Text = "Date of Internment:";
             // 
@@ -259,11 +333,11 @@
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(41, 523);
+            this.label11.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(41, 597);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(233, 29);
+            this.label11.Size = new System.Drawing.Size(234, 29);
             this.label11.TabIndex = 5;
             this.label11.Text = "Place of Internment:";
             // 
@@ -271,11 +345,11 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(41, 448);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(196, 29);
+            this.label10.Size = new System.Drawing.Size(199, 29);
             this.label10.TabIndex = 4;
             this.label10.Text = "Contact Number:";
             // 
@@ -283,11 +357,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(41, 374);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 29);
+            this.label1.Size = new System.Drawing.Size(190, 29);
             this.label1.TabIndex = 3;
             this.label1.Text = "Decedent Name:";
             // 
@@ -302,9 +376,10 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmClients";
             this.Text = "Clients";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridClient)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPackage)).EndInit();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
@@ -318,10 +393,8 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDateAdded;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dataGridClient;
+        private System.Windows.Forms.PictureBox picPackage;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
@@ -329,7 +402,7 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnpackageB;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel pnlPreview;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label12;
@@ -337,5 +410,11 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pbExit;
+        private System.Windows.Forms.Label lblPlace;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblContact;
+        private System.Windows.Forms.Label lblDeceased;
+        private System.Windows.Forms.Label lblClient;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
