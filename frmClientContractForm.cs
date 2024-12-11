@@ -15,10 +15,14 @@ namespace FuneralManagementSystem
     public partial class frmClientContractForm : Form
     {
         frmMain main;
-        frmInclusions inc;
         public frmClientContractForm()
         {
             InitializeComponent();
+
+            dateOfPurchase.Value = DateTime.Today;
+            datepickDateofDeath.Value = DateTime.Today;
+            datepickDateofInternment.Value = DateTime.Today;
+            timeOfInternment.Value = DateTime.Today;
 
         }
         private void frmClientContractForm_Load(object sender, EventArgs e)

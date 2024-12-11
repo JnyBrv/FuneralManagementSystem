@@ -16,6 +16,7 @@ namespace FuneralManagementSystem
         frmMain main;
         String selectedUser;
         public int user;
+        frmUpdateDetails upd;
         public FrmClients()
         {
             InitializeComponent();
@@ -90,8 +91,8 @@ namespace FuneralManagementSystem
 
                 selectedUser = row.Cells[0].Value.ToString();
 
-                int user = Convert.ToInt32(selectedUser);
-                try
+                user = Convert.ToInt32(selectedUser);
+            try
                 {
                     String query = " SELECT CONCAT(CLIENT.clientFname, ' ', CLIENT.clientMname, ' ', CLIENT.clientLname) AS ClientName, " +
                                 "CONCAT(DECEASED.deceasedFname, ' ', DECEASED.deceasedMname, ' ', DECEASED.deceasedLname) AS DeceasedName, " +
@@ -298,6 +299,18 @@ namespace FuneralManagementSystem
             }
 
             
+        }
+
+        public void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+            main = (frmMain)Application.OpenForms["frmMain"];
+            frmUpdateDetails updateForm = new frmUpdateDetails();
+            updateForm.client = user;
+            main.OpenChildForm(updateForm);
+
+
+
         }
     }
 }

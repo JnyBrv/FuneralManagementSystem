@@ -204,11 +204,12 @@ namespace FuneralManagementSystem
                 id = getCount(-1);
                 String item = txtAddInclusions.Text;
                 float bal = float.Parse(lblTotal.Text);
+                String inclusionTotal = txtAddPayment.Text;
                 con.Open();
 
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "UPDATE CLIENT SET addInclusions = '"+ item +"' WHERE clientID = " + id +
+                cmd.CommandText = "UPDATE CLIENT SET addInclusions = '"+ item +"', inclusionsTotal = '" + inclusionTotal + "' WHERE clientID = " + id +
                     "UPDATE CLIENT SET balance = '" + bal + "' WHERE clientID = " + id;
                 cmd.ExecuteNonQuery();
 

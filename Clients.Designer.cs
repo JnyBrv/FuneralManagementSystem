@@ -46,11 +46,12 @@
             this.lblContact = new System.Windows.Forms.Label();
             this.lblDeceased = new System.Windows.Forms.Label();
             this.lblClient = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridClient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPackage)).BeginInit();
             this.panel4.SuspendLayout();
@@ -214,13 +215,14 @@
             // pnlPreview
             // 
             this.pnlPreview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pnlPreview.Controls.Add(this.button1);
             this.pnlPreview.Controls.Add(this.btnDelete);
             this.pnlPreview.Controls.Add(this.lblPlace);
             this.pnlPreview.Controls.Add(this.lblDate);
             this.pnlPreview.Controls.Add(this.lblContact);
             this.pnlPreview.Controls.Add(this.lblDeceased);
             this.pnlPreview.Controls.Add(this.lblClient);
-            this.pnlPreview.Controls.Add(this.button1);
+            this.pnlPreview.Controls.Add(this.btnUpdate);
             this.pnlPreview.Controls.Add(this.label12);
             this.pnlPreview.Controls.Add(this.label11);
             this.pnlPreview.Controls.Add(this.label10);
@@ -303,19 +305,20 @@
             this.lblClient.TabIndex = 21;
             this.lblClient.Text = "ABC";
             // 
-            // button1
+            // btnUpdate
             // 
-            this.button1.BackColor = System.Drawing.Color.Gold;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Georgia", 13F);
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(46, 719);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(364, 41);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.Color.Gold;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Georgia", 13F);
+            this.btnUpdate.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdate.Location = new System.Drawing.Point(46, 719);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(364, 41);
+            this.btnUpdate.TabIndex = 20;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label12
             // 
@@ -365,6 +368,20 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Decedent Name:";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gold;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Georgia", 13F);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(46, 856);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(364, 41);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Complete Service";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // FrmClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -404,7 +421,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel pnlPreview;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -416,5 +432,7 @@
         private System.Windows.Forms.Label lblDeceased;
         private System.Windows.Forms.Label lblClient;
         private System.Windows.Forms.Button btnDelete;
+        public System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button button1;
     }
 }

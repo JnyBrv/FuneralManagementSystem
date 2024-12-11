@@ -188,16 +188,13 @@ namespace FuneralManagementSystem
             {
                 num2 = decimal.Parse(txtPayment.Text);
             }
-
-            // Convert TextBox3 to a double
+            
             num3 = decimal.Parse(txtTotalAmount.Text);
 
-            // Calculate the result
 
             payamount = (num1 + num2);
             result = num3 - payamount;
 
-            // Check if the result is negative
             if (result < 0)
             {
                 MessageBox.Show("You've entered an exceeding amount.", "Payment error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -206,7 +203,6 @@ namespace FuneralManagementSystem
             }
             else
             {
-                // Format the result to 2 decimal places
                 result = Math.Round(result, 2);
                 lblTotal.Text = result.ToString("0.00");
             }
@@ -247,7 +243,7 @@ namespace FuneralManagementSystem
 
                 con.Close();
 
-                MessageBox.Show("Recorded Successfully!");
+                MessageBox.Show("Record saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 main = (frmMain)Application.OpenForms["frmMain"];
                 main.OpenChildForm(new FrmPackages());
                 main.panelTitleBar.Visible = false;

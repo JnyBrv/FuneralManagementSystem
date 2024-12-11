@@ -56,6 +56,12 @@
     <Compile Include="Clients.Designer.cs">
       <DependentUpon>Clients.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPrintImg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintImg.Designer.cs">
+      <DependentUpon>frmPrintImg.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUpdateDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Clients.resx">
       <DependentUpon>Clients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintImg.resx">
+      <DependentUpon>frmPrintImg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUpdateDetails.resx">
       <DependentUpon>frmUpdateDetails.cs</DependentUpon>
