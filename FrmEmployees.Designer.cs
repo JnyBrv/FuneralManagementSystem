@@ -65,7 +65,7 @@
             this.btnSaveEdit.Location = new System.Drawing.Point(94, 178);
             this.btnSaveEdit.Name = "btnSaveEdit";
             this.btnSaveEdit.Size = new System.Drawing.Size(75, 23);
-            this.btnSaveEdit.TabIndex = 3;
+            this.btnSaveEdit.TabIndex = 8;
             this.btnSaveEdit.Text = "Save Edit";
             this.btnSaveEdit.UseVisualStyleBackColor = true;
             // 
@@ -134,7 +134,7 @@
             this.btnArchive.Location = new System.Drawing.Point(175, 178);
             this.btnArchive.Name = "btnArchive";
             this.btnArchive.Size = new System.Drawing.Size(75, 23);
-            this.btnArchive.TabIndex = 3;
+            this.btnArchive.TabIndex = 9;
             this.btnArchive.Text = "Archive";
             this.btnArchive.UseVisualStyleBackColor = true;
             // 
@@ -146,7 +146,7 @@
             this.textBox4.Location = new System.Drawing.Point(96, 80);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(144, 20);
-            this.textBox4.TabIndex = 0;
+            this.textBox4.TabIndex = 4;
             // 
             // textBox3
             // 
@@ -156,7 +156,7 @@
             this.textBox3.Location = new System.Drawing.Point(96, 109);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(144, 20);
-            this.textBox3.TabIndex = 0;
+            this.textBox3.TabIndex = 5;
             // 
             // textBox2
             // 
@@ -166,7 +166,7 @@
             this.textBox2.Location = new System.Drawing.Point(96, 138);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(144, 20);
-            this.textBox2.TabIndex = 0;
+            this.textBox2.TabIndex = 6;
             // 
             // btnAdd
             // 
@@ -177,7 +177,7 @@
             this.btnAdd.Location = new System.Drawing.Point(13, 178);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 3;
+            this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
@@ -187,7 +187,7 @@
             this.button1.Location = new System.Drawing.Point(628, 27);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -210,7 +210,7 @@
             this.textBox1.Location = new System.Drawing.Point(244, 28);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(365, 23);
-            this.textBox1.TabIndex = 10;
+            this.textBox1.TabIndex = 1;
             // 
             // pictureBox2
             // 
@@ -265,7 +265,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 82);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(538, 368);
-            this.dataGridView1.TabIndex = 13;
+            this.dataGridView1.TabIndex = 3;
             // 
             // colDateAdded
             // 

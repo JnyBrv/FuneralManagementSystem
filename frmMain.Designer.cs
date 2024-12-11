@@ -79,7 +79,7 @@
             this.btnEmployees.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmployees.ForeColor = System.Drawing.Color.Gold;
             this.btnEmployees.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployees.Location = new System.Drawing.Point(46, 548);
+            this.btnEmployees.Location = new System.Drawing.Point(47, 592);
             this.btnEmployees.Name = "btnEmployees";
             this.btnEmployees.Size = new System.Drawing.Size(178, 39);
             this.btnEmployees.TabIndex = 6;
@@ -97,7 +97,7 @@
             this.btnClient.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClient.ForeColor = System.Drawing.Color.Gold;
             this.btnClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClient.Location = new System.Drawing.Point(0, 503);
+            this.btnClient.Location = new System.Drawing.Point(1, 547);
             this.btnClient.Name = "btnClient";
             this.btnClient.Size = new System.Drawing.Size(230, 39);
             this.btnClient.TabIndex = 5;
@@ -170,7 +170,7 @@
             this.btnArchive.ForeColor = System.Drawing.Color.Gold;
             this.btnArchive.Image = global::FuneralManagementSystem.Properties.Resources.archive_color;
             this.btnArchive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnArchive.Location = new System.Drawing.Point(-1, 443);
+            this.btnArchive.Location = new System.Drawing.Point(0, 487);
             this.btnArchive.Name = "btnArchive";
             this.btnArchive.Size = new System.Drawing.Size(231, 54);
             this.btnArchive.TabIndex = 1;

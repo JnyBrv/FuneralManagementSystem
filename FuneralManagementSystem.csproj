@@ -74,12 +74,6 @@
     <Compile Include="frmArchivedClients.Designer.cs">
       <DependentUpon>frmArchivedClients.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAvail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAvail.Designer.cs">
-      <DependentUpon>frmAvail.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmClientContractForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,9 +147,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmArchivedClients.resx">
       <DependentUpon>frmArchivedClients.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAvail.resx">
-      <DependentUpon>frmAvail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmClientContractForm.resx">
       <DependentUpon>frmClientContractForm.cs</DependentUpon>
