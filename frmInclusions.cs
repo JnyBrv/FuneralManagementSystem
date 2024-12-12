@@ -146,8 +146,8 @@ namespace FuneralManagementSystem
 
             inclusions.Close();
 
-            frmAvail frmAvl = new frmAvail();
-            frmAvl.Close();
+            //frmAvail frmAvl = new frmAvail();
+            //frmAvl.Close();
         }
 
         private void txtAddPayment_KeyPress(object sender, KeyPressEventArgs e)
