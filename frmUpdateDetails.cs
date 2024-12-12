@@ -744,41 +744,92 @@ namespace FuneralManagementSystem
             }
         }
 
-            private void btnConfirmPayment_Click(object sender, EventArgs e)
+        private void btnConfirmPayment_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtPayment.Text))
             {
-            getRecords();
-            int pitems = countPay(-1);
-            String paymentID = client + "-" + pitems;
+                if (!string.IsNullOrEmpty(txtDescription.Text))
+                {
+                    DialogResult result = MessageBox.Show("Confirm Payment and Print Receipt?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            DateTime today = DateTime.Today;
-            String date = today.ToString("yyyy-MM-dd");
+                    if (result == DialogResult.Yes)
+                    {
+                        getRecords();
+                        int pitems = countPay(-1);
+                        String paymentID = client + "-" + pitems;
 
-            
+                        DateTime today = DateTime.Today;
+                        String date = today.ToString("yyyy-MM-dd");
 
-            String desc = txtDescription.Text;
-            float payamount = float.Parse(txtPayment.Text);
-            float newbal = balance - payamount;
-            try
-            {
-                con.Open();
 
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "UPDATE CLIENT SET balance = '" + newbal + "' WHERE clientID = " + client +
-                    "INSERT INTO PAYMENT (paymentID, payAmount, payDescription, paydate, archive, clientID) VALUES('" + paymentID + "'," + payamount + ", '" + desc + "', '" + date + "',0, " + client + "); ";
-                cmd.ExecuteNonQuery();
 
-                con.Close();
+                        String desc = txtDescription.Text;
+                        float payamount = float.Parse(txtPayment.Text);
+                        float newbal = balance - payamount;
+                        try
+                        {
+                            con.Open();
 
-                MessageBox.Show("Payment saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtDescription.Text = "";
-                txtPayment.Text = "";
-                getRecords();
-                paymentDetails();
+                            SqlCommand cmd = con.CreateCommand();
+                            cmd.CommandType = CommandType.Text;
+                            cmd.CommandText = "UPDATE CLIENT SET balance = '" + newbal + "' WHERE clientID = " + client +
+                                "INSERT INTO PAYMENT (paymentID, payAmount, payDescription, paydate, archive, clientID) VALUES('" + paymentID + "'," + payamount + ", '" + desc + "', '" + date + "',0, " + client + "); ";
+                            cmd.ExecuteNonQuery();
+
+                            con.Close();
+
+                            MessageBox.Show("Payment saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtDescription.Text = "";
+                            txtPayment.Text = "";
+                            getRecords();
+                            paymentDetails();
+
+
+                            //receipt
+                            String fname = txtClientFirstname.Text;
+                            String mname = txtClientMiddlename.Text;
+                            String lname = txtClientLastname.Text;
+                            String num = txtContactno.Text;
+
+
+                            main = (frmMain)Application.OpenForms["frmMain"];
+                            frmReceipt rec = new frmReceipt();
+                            rec.clientName = fname + " " + mname + " " + lname;
+                            rec.contact = "+639" + num;
+                            rec.date = date;
+                            rec.description = desc;
+                            rec.amount = payamount.ToString();
+                            rec.rbal = newbal.ToString();
+                            rec.client = client;
+
+                            main.OpenChildForm(rec);
+
+                            txtDescription.Text = "";
+                            txtPayment.Text = "";
+                        }
+                        catch (Exception ee)
+                        {
+                            MessageBox.Show(ee.ToString());
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cancelled payment.", "Payment failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtDescription.Text = "";
+                        txtPayment.Text = "";
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please enter description before we proceed.", "Empty description", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ee)
+            else
             {
-                MessageBox.Show(ee.ToString());
+                MessageBox.Show("Please enter payment before we proceed.", "Empty payment", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                main = (frmMain)Application.OpenForms["frmMain"];
+                main.OpenChildForm(new FrmPackages());
+                main.panelTitleBar.Visible = false;
             }
 
         }
@@ -807,6 +858,71 @@ namespace FuneralManagementSystem
                 con.Close();
             }
             return count;
+        }
+
+        private void btnCompleteTransaction_Click(object sender, EventArgs e)
+        {
+            decimal bal = decimal.Parse(lblBalance.Text);
+            if (bal > 0)
+            {
+                DialogResult res = MessageBox.Show("There are still remaining balances to be paid. Are you sure you still want to complete the transaction?", "Remaining balance", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (res == DialogResult.Yes)
+                {
+                    try
+                    {
+                        con.Open();
+
+                        SqlCommand cmd = con.CreateCommand();
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "UPDATE CLIENT SET archive = 3 WHERE clientID = " + client +
+                                        "UPDATE DECEASED SET archive = 3 WHERE deceasedID = " + client +
+                                        "UPDATE PAYMENT SET archive = 3 WHERE clientID = " + client;
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("Changes saved successfully!",
+                    "Complete Transaction Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        main = (frmMain)Application.OpenForms["frmMain"];
+                        main.OpenChildForm(new FrmClients());
+                        main.panelTitleBar.Visible = false;
+                    }
+                    catch (Exception ee)
+                    {
+                        MessageBox.Show(ee.ToString());
+                    }
+                }
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to complete the transaction? This record will now be archived.",
+                    "Complete Transaction Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        con.Open();
+
+                        SqlCommand cmd = con.CreateCommand();
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "UPDATE CLIENT SET archive = 3 WHERE clientID = " + client +
+                                        "UPDATE DECEASED SET archive = 3 WHERE deceasedID = " + client +
+                                        "UPDATE PAYMENT SET archive = 3 WHERE clientID = " + client;
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("Changes saved successfully!",
+                    "Complete Transaction Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        main = (frmMain)Application.OpenForms["frmMain"];
+                        main.OpenChildForm(new FrmClients());
+                        main.panelTitleBar.Visible = false;
+                    }
+                    catch (Exception ee)
+                    {
+                        MessageBox.Show(ee.ToString());
+                    }
+                }
+            }
+
         }
 
         private void btnUpdateInclusions_Click(object sender, EventArgs e)
@@ -839,6 +955,42 @@ namespace FuneralManagementSystem
             {
                 MessageBox.Show(ee.ToString());
             }
+        }
+
+        private void txtPayment_TextChanged(object sender, EventArgs e)
+        {
+            calculate();
+        }
+
+        public void calculate()
+        {
+            decimal  num2, num3, result;
+
+
+            if (string.IsNullOrEmpty(txtPayment.Text))
+            {
+                num2 = 0;
+            }
+            else
+            {
+                num2 = decimal.Parse(txtPayment.Text);
+            }
+
+            num3 = decimal.Parse(lblBalance.Text);
+
+
+            result = num3 - num2;
+
+            if (result < 0)
+            {
+                MessageBox.Show("You've entered an exceeding amount.", "Payment error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtPayment.Text = "";
+            }
+            else
+            {
+                result = Math.Round(result, 2);
+            }
+
         }
     }
 }

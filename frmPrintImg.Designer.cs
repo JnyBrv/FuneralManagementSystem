@@ -148,9 +148,9 @@ namespace FuneralManagementSystem
             // 
             // pboxAttachments
             // 
-            this.pboxAttachments.Location = new System.Drawing.Point(276, 128);
+            this.pboxAttachments.Location = new System.Drawing.Point(207, 128);
             this.pboxAttachments.Name = "pboxAttachments";
-            this.pboxAttachments.Size = new System.Drawing.Size(1161, 997);
+            this.pboxAttachments.Size = new System.Drawing.Size(1284, 997);
             this.pboxAttachments.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pboxAttachments.TabIndex = 80;
             this.pboxAttachments.TabStop = false;

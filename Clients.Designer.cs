@@ -40,6 +40,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlPreview = new System.Windows.Forms.Panel();
+            this.btnCompleteService = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.lblPlace = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridClient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPackage)).BeginInit();
             this.panel4.SuspendLayout();
@@ -215,7 +215,7 @@
             // pnlPreview
             // 
             this.pnlPreview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.pnlPreview.Controls.Add(this.button1);
+            this.pnlPreview.Controls.Add(this.btnCompleteService);
             this.pnlPreview.Controls.Add(this.btnDelete);
             this.pnlPreview.Controls.Add(this.lblPlace);
             this.pnlPreview.Controls.Add(this.lblDate);
@@ -234,6 +234,21 @@
             this.pnlPreview.Name = "pnlPreview";
             this.pnlPreview.Size = new System.Drawing.Size(446, 955);
             this.pnlPreview.TabIndex = 7;
+            // 
+            // btnCompleteService
+            // 
+            this.btnCompleteService.BackColor = System.Drawing.Color.Gold;
+            this.btnCompleteService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompleteService.Font = new System.Drawing.Font("Georgia", 13F);
+            this.btnCompleteService.ForeColor = System.Drawing.Color.Black;
+            this.btnCompleteService.Location = new System.Drawing.Point(46, 856);
+            this.btnCompleteService.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCompleteService.Name = "btnCompleteService";
+            this.btnCompleteService.Size = new System.Drawing.Size(364, 41);
+            this.btnCompleteService.TabIndex = 27;
+            this.btnCompleteService.Text = "Complete Service";
+            this.btnCompleteService.UseVisualStyleBackColor = false;
+            this.btnCompleteService.Click += new System.EventHandler(this.btnCompleteService_Click);
             // 
             // btnDelete
             // 
@@ -368,20 +383,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Decedent Name:";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Gold;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Georgia", 13F);
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(46, 856);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(364, 41);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Complete Service";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // FrmClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -433,6 +434,6 @@
         private System.Windows.Forms.Label lblClient;
         private System.Windows.Forms.Button btnDelete;
         public System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCompleteService;
     }
 }

@@ -197,14 +197,36 @@ namespace FuneralManagementSystem
             
         }
 
+        String item, inclusionTotal;
         private void btnPayment_Click_1(object sender, EventArgs e)
         {
             try
             {
                 id = getCount(-1);
-                String item = txtAddInclusions.Text;
+                
+                if (string.IsNullOrEmpty(txtAddInclusions.Text))
+                {
+                    txtAddInclusions.Text = "";
+                    item = txtAddInclusions.Text;
+                }
+                else
+                {
+                    item = txtAddInclusions.Text;
+                }
+
                 float bal = float.Parse(lblTotal.Text);
-                String inclusionTotal = txtAddPayment.Text;
+
+                if (string.IsNullOrEmpty(txtAddPayment.Text))
+                {
+                    txtAddPayment.Text = "0";
+                    inclusionTotal = txtAddPayment.Text;
+                }
+                else
+                {
+                    inclusionTotal = txtAddPayment.Text;
+                }
+                
+
                 con.Open();
 
                 SqlCommand cmd = con.CreateCommand();

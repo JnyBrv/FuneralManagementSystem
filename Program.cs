@@ -22,5 +22,13 @@ namespace FuneralManagementSystem
             Application.Run(new frmMain());
             
         }
+
+        /* Notes
+         * archive in CLIENT Table
+         * 0 - active clients
+         * 1 - deleted
+         * 2 - paying clients
+         * 3 - completed transactions
+         */
     }
 }

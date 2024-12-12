@@ -87,12 +87,20 @@ namespace FuneralManagementSystem
 
         public void cellDisplay()
         {
-            DataGridViewRow row = dataGridClient.Rows[0];
+
+            if (dataGridClient.Rows.Count == 0)
+            {
+                MessageBox.Show("There's no on service client listed.",
+                        "On service client", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                DataGridViewRow row = dataGridClient.Rows[0];
 
                 selectedUser = row.Cells[0].Value.ToString();
 
                 user = Convert.ToInt32(selectedUser);
-            try
+                try
                 {
                     String query = " SELECT CONCAT(CLIENT.clientFname, ' ', CLIENT.clientMname, ' ', CLIENT.clientLname) AS ClientName, " +
                                 "CONCAT(DECEASED.deceasedFname, ' ', DECEASED.deceasedMname, ' ', DECEASED.deceasedLname) AS DeceasedName, " +
@@ -117,20 +125,20 @@ namespace FuneralManagementSystem
                             lblDate.Text = word[0];
                             lblPlace.Text = read[4].ToString();
                             String package = read[5].ToString();
-                            
+
                             if (package.Equals("Package A"))
                             {
                                 Image image = Properties.Resources.package1Image;
 
                                 picPackage.Image = image;
                             }
-                            else if(package.Equals("Package B"))
+                            else if (package.Equals("Package B"))
                             {
                                 Image image = Properties.Resources.package2Image;
 
                                 picPackage.Image = image;
                             }
-                    }
+                        }
                         else
                         {
                             con.Close();
@@ -146,7 +154,7 @@ namespace FuneralManagementSystem
                     MessageBox.Show(ee.ToString());
                 }
 
-         
+            }
         }
         private void dataGridClient_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -309,6 +317,39 @@ namespace FuneralManagementSystem
             updateForm.client = user;
             main.OpenChildForm(updateForm);
 
+
+
+        }
+
+        private void btnCompleteService_Click(object sender, EventArgs e)
+        {
+            txtSearch.Text = "";
+            DialogResult result = MessageBox.Show("The client will then be directed to paying form.",
+                "Complete Service Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    con.Open();
+
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "UPDATE CLIENT SET archive = 2 WHERE clientID = " + user +
+                                    "UPDATE DECEASED SET archive = 2 WHERE deceasedID = " + user +
+                                    "UPDATE PAYMENT SET archive = 2 WHERE clientID = " + user;
+                    cmd.ExecuteNonQuery();
+
+                    con.Close();
+                    loadTable();
+                    cellDisplay();
+                    MessageBox.Show("Changes saved successfully.",
+                "Success", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                }
+                catch (Exception ee)
+                {
+                    MessageBox.Show(ee.ToString());
+                }
+            }
 
 
         }

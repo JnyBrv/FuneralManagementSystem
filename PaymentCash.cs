@@ -29,7 +29,7 @@ namespace FuneralManagementSystem
             loadElements();
 
         }
-
+        String fname, mname, lname, num;
         public void loadElements()
         {
             try
@@ -48,11 +48,12 @@ namespace FuneralManagementSystem
 
                     if (read.HasRows)
                     {
-                        String fname = read[0].ToString();
-                        String mname = read[1].ToString();
-                        String lname = read[2].ToString();
+                        fname = read[0].ToString();
+                        mname = read[1].ToString();
+                        lname = read[2].ToString();
+                        num = read[3].ToString();
                         lblClient.Text = fname + " " + mname + " " + lname;
-                        lblContactNo.Text = read[3].ToString();
+                        lblContactNo.Text = num;
                         lblAddress.Text = read[4].ToString();
                         lblClientNo.Text = id.ToString();
                         txtTotalAmount.Text = read[5].ToString();
@@ -221,40 +222,85 @@ namespace FuneralManagementSystem
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
-            id = Convert.ToInt32(lblClientNo.Text);
-            int pitems = countPay(-1);
-            String paymentID = id + "-" + pitems;
-            String newbal = lblTotal.Text;
-
-            DateTime today = DateTime.Today;
-            String date = today.ToString("yyyy-MM-dd");
-
-            String desc= txtDescription.Text;
-
-            try
+            if (!string.IsNullOrEmpty(txtDiscount.Text) || !string.IsNullOrEmpty(txtPayment.Text))
             {
-                con.Open();
+                if (!string.IsNullOrEmpty(txtDescription.Text))
+                {
+                    DialogResult result = MessageBox.Show("Confirm Payment and Print Receipt?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        id = Convert.ToInt32(lblClientNo.Text);
+                        int pitems = countPay(-1);
+                        String paymentID = id + "-" + pitems;
+                        String newbal = lblTotal.Text;
 
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "UPDATE CLIENT SET balance = '" + newbal + "' WHERE clientID = " + id +
-                    "INSERT INTO PAYMENT (paymentID, payAmount, payDescription, paydate, archive, clientID) VALUES('" + paymentID + "'," + payamount + ", '" + desc + "', '" + date + "',0, " + id + "); ";
-                cmd.ExecuteNonQuery();
+                        DateTime today = DateTime.Today;
+                        String date = today.ToString("yyyy-MM-dd");
 
-                con.Close();
+                        String desc = txtDescription.Text;
 
+                        try
+                        {
+                            con.Open();
+
+                            SqlCommand cmd = con.CreateCommand();
+                            cmd.CommandType = CommandType.Text;
+                            cmd.CommandText = "UPDATE CLIENT SET balance = '" + newbal + "' WHERE clientID = " + id +
+                                "INSERT INTO PAYMENT (paymentID, payAmount, payDescription, paydate, archive, clientID) VALUES('" + paymentID + "'," + payamount + ", '" + desc + "', '" + date + "',0, " + id + "); ";
+                            cmd.ExecuteNonQuery();
+
+                            con.Close();
+
+                            MessageBox.Show("Record saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            main = (frmMain)Application.OpenForms["frmMain"];
+                            main.OpenChildForm(new FrmPackages());
+                            main.panelTitleBar.Visible = false;
+
+                            //receipt
+
+
+                            main = (frmMain)Application.OpenForms["frmMain"];
+                            frmReceipt rec = new frmReceipt();
+                            rec.clientName = fname + " " + mname + " " + lname;
+                            rec.contact = num;
+                            rec.date = date;
+                            rec.description = desc;
+                            rec.amount = payamount.ToString();
+                            rec.rbal = newbal.ToString();
+                            rec.client = id;
+
+                            main.OpenChildForm(rec);
+
+                            txtDescription.Text = "";
+                            txtPayment.Text = "";
+                            txtDiscount.Text = "";
+
+                        }
+                        catch (Exception ee)
+                        {
+                            MessageBox.Show(ee.ToString());
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cancelled payment.", "Payment failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtDescription.Text = "";
+                        txtPayment.Text = "";
+                        txtDiscount.Text = "";
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please enter description before we proceed.", "Empty description", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
                 MessageBox.Show("Record saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 main = (frmMain)Application.OpenForms["frmMain"];
                 main.OpenChildForm(new FrmPackages());
                 main.panelTitleBar.Visible = false;
-
             }
-            catch (Exception ee)
-            {
-                MessageBox.Show(ee.ToString());
-            }
-
-
         }
 
         public int countPay(int count)
