@@ -62,6 +62,12 @@
     <Compile Include="frmPrintImg.Designer.cs">
       <DependentUpon>frmPrintImg.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReceipt.Designer.cs">
+      <DependentUpon>frmReceipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUpdateDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrintImg.resx">
       <DependentUpon>frmPrintImg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReceipt.resx">
+      <DependentUpon>frmReceipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUpdateDetails.resx">
       <DependentUpon>frmUpdateDetails.cs</DependentUpon>

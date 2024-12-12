@@ -139,15 +139,7 @@ namespace FuneralManagementSystem
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
-            PaymentCash frmPmt = new PaymentCash();
-            frmPmt.Show();
-
-            frmInclusions inclusions = new frmInclusions();
-
-            inclusions.Close();
-
-            frmAvail frmAvl = new frmAvail();
-            frmAvl.Close();
+           
         }
 
         private void txtAddPayment_KeyPress(object sender, KeyPressEventArgs e)
