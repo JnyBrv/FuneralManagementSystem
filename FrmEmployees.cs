@@ -26,5 +26,10 @@ namespace FuneralManagementSystem
         {
 
         }
+
+        private void pnlPreview_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
