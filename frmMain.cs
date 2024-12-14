@@ -50,22 +50,6 @@ namespace FuneralManagementSystem
 
         }
 
-        //private void OpenTitleChildForm(Form titleChildForm)
-        //{
-        //    if (currentTitleChildForm != null)
-        //    {
-        //        currentTitleChildForm.Close();
-        //    }
-        //    currentChildForm = titleChildForm;
-        //    titleChildForm.TopLevel = false;
-        //    titleChildForm.FormBorderStyle = FormBorderStyle.None;
-        //    titleChildForm.Dock = DockStyle.Fill;
-        //    panelMainMenu.Controls.Add(titleChildForm);
-        //    panelMainMenu.Tag = titleChildForm;
-        //    titleChildForm.BringToFront();
-        //    titleChildForm.Show();
-
-        //}
 
 
         private void fillSpaceForIcon()

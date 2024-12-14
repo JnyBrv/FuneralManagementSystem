@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPackages));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbExit = new System.Windows.Forms.PictureBox();
             this.btnAddClient = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,16 +53,6 @@
             this.panel2.Size = new System.Drawing.Size(1305, 81);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Georgia", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(101, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(238, 43);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "PACKAGES";
             // 
             // pictureBox1
             // 
@@ -105,6 +95,16 @@
             this.btnAddClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddClient.UseVisualStyleBackColor = false;
             this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Georgia", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(101, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(238, 43);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "PACKAGES";
             // 
             // flowLayoutPanel1
             // 

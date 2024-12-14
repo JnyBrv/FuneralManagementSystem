@@ -38,6 +38,7 @@ namespace FuneralManagementSystem
             parentForm = parent;
         }
         frmMain main;
+      
         frmClientContractForm ccf;
 
         private void btnAddClient_Click(object sender, EventArgs e)
