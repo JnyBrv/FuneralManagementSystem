@@ -16,5 +16,10 @@ namespace FuneralManagementSystem
         {
             InitializeComponent();
         }
+
+        private void PackagesCopy_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

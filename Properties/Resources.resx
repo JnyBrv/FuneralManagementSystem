@@ -121,14 +121,14 @@
   <data name="coffin package 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coffin package 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="employeesIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\employeesIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="package1Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\package1Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="coffin package 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coffin package 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="addBoxIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addBoxIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="curveflip" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\curveflip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,8 +136,14 @@
   <data name="backIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="addblack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addblack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="arrowDownYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrowDownYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngwing.com" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngwing.com.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cruzlogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cruzlogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,8 +160,14 @@
   <data name="clientIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clientIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="package2Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\package2Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="archive color" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\archive color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="employeesIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\employeesIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="package black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\package black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,19 +181,22 @@
   <data name="archive black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\archive black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="inputimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inputimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="curves" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\curves.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="homeIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\homeIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="addBoxIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\addBoxIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="coffin package 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coffin package 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="package1Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\package1Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="goldEdge2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\goldEdge2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="package2Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\package2Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="goldEdge1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\goldEdge1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -200,6 +200,7 @@
             this.Controls.Add(this.panelPackage1);
             this.Name = "PackagesCopy";
             this.Text = "PackagesCopy";
+            this.Load += new System.EventHandler(this.PackagesCopy_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPackage2)).EndInit();

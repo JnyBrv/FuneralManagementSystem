@@ -199,6 +199,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPackages.resx">
       <DependentUpon>FrmPackages.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPaying.resx">
       <DependentUpon>frmPaying.cs</DependentUpon>
@@ -303,6 +304,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\package2Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inputimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addblack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goldEdge2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goldEdge1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

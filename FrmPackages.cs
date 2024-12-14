@@ -48,13 +48,19 @@ namespace FuneralManagementSystem
 
             if (frm != null)
             {
+                
                 AddPanel();
             }
 
         }
 
         public void AddPanel() {
+
+           
+
             flowLayoutPanel1.Controls.Add(new Package());
+
+            
         }
 
         private void pbExit_Click(object sender, EventArgs e)
@@ -111,6 +117,11 @@ namespace FuneralManagementSystem
             ccf = (frmClientContractForm)Application.OpenForms["frmClientContractForm"];
             ccf.package = 1;
             main.panelTitleBar.Visible = false;
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
