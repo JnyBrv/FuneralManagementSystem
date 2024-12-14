@@ -13,12 +13,11 @@ namespace FuneralManagementSystem
     public partial class FrmPackages : Form
     {
         private Form parentForm;
-
+        
         public FrmPackages()
         {
             InitializeComponent();
 
-            
 
         }
 
@@ -40,12 +39,21 @@ namespace FuneralManagementSystem
         }
         frmMain main;
         frmClientContractForm ccf;
+
         private void btnAddClient_Click(object sender, EventArgs e)
         {
-            //main = (frmMain)Application.OpenForms["frmMain"];
-            //main.OpenChildForm(new frmClientContractForm());
-            //main.panelTitleBar.Visible = false;
+            frmAddPackage frm = new frmAddPackage();
+            frm.ShowDialog();
 
+            if (frm != null)
+            {
+                AddPanel();
+            }
+
+        }
+
+        public void AddPanel() {
+            flowLayoutPanel1.Controls.Add(new Package());
         }
 
         private void pbExit_Click(object sender, EventArgs e)

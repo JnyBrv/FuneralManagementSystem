@@ -50,11 +50,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPackageClass.cs" />
     <Compile Include="Clients.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Clients.Designer.cs">
       <DependentUpon>Clients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddPackage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddPackage.Designer.cs">
+      <DependentUpon>frmAddPackage.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrintImg.cs">
       <SubType>Form</SubType>
@@ -134,6 +141,18 @@
     <Compile Include="FrmSearchBox.Designer.cs">
       <DependentUpon>FrmSearchBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Package.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Package.Designer.cs">
+      <DependentUpon>Package.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackagesCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackagesCopy.Designer.cs">
+      <DependentUpon>PackagesCopy.cs</DependentUpon>
+    </Compile>
     <Compile Include="PaymentCash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +163,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Clients.resx">
       <DependentUpon>Clients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddPackage.resx">
+      <DependentUpon>frmAddPackage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrintImg.resx">
       <DependentUpon>frmPrintImg.cs</DependentUpon>
@@ -183,6 +205,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSearchBox.resx">
       <DependentUpon>FrmSearchBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Package.resx">
+      <DependentUpon>Package.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackagesCopy.resx">
+      <DependentUpon>PackagesCopy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PaymentCash.resx">
       <DependentUpon>PaymentCash.cs</DependentUpon>
