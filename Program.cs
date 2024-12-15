@@ -19,7 +19,7 @@ namespace FuneralManagementSystem
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
          
-            Application.Run(new FrmPackages());
+            Application.Run(new frmLogIn());
             
         }
 
