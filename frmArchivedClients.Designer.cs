@@ -34,7 +34,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlPreview = new System.Windows.Forms.Panel();
             this.btnCompleteService = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.lblPlace = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblContact = new System.Windows.Forms.Label();
@@ -48,22 +47,22 @@
             this.picPackage = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.dataGridClient = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnDSearch = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtDSearch = new System.Windows.Forms.TextBox();
+            this.dataGridDeleted = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnCSearch = new System.Windows.Forms.Button();
+            this.txtCSearch = new System.Windows.Forms.TextBox();
+            this.dataGridCompleted = new System.Windows.Forms.DataGridView();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlPreview.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPackage)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridClient)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDeleted)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCompleted)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -91,6 +90,7 @@
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbExit.TabIndex = 20;
             this.pbExit.TabStop = false;
+            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
             // 
             // label9
             // 
@@ -120,7 +120,6 @@
             // 
             this.pnlPreview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.pnlPreview.Controls.Add(this.btnCompleteService);
-            this.pnlPreview.Controls.Add(this.btnDelete);
             this.pnlPreview.Controls.Add(this.lblPlace);
             this.pnlPreview.Controls.Add(this.lblDate);
             this.pnlPreview.Controls.Add(this.lblContact);
@@ -145,27 +144,14 @@
             this.btnCompleteService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompleteService.Font = new System.Drawing.Font("Georgia", 13F);
             this.btnCompleteService.ForeColor = System.Drawing.Color.Black;
-            this.btnCompleteService.Location = new System.Drawing.Point(46, 856);
+            this.btnCompleteService.Location = new System.Drawing.Point(46, 795);
             this.btnCompleteService.Margin = new System.Windows.Forms.Padding(4);
             this.btnCompleteService.Name = "btnCompleteService";
             this.btnCompleteService.Size = new System.Drawing.Size(364, 41);
             this.btnCompleteService.TabIndex = 27;
-            this.btnCompleteService.Text = "Complete Service";
+            this.btnCompleteService.Text = "Restore (Active Client)";
             this.btnCompleteService.UseVisualStyleBackColor = false;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Gold;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Georgia", 13F);
-            this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(46, 785);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(364, 41);
-            this.btnDelete.TabIndex = 26;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnCompleteService.Click += new System.EventHandler(this.btnCompleteService_Click);
             // 
             // lblPlace
             // 
@@ -235,6 +221,7 @@
             this.btnUpdate.TabIndex = 20;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label12
             // 
@@ -315,73 +302,34 @@
             this.panel4.AutoScroll = true;
             this.panel4.AutoSize = true;
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.btnDSearch);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Controls.Add(this.txtDSearch);
+            this.panel4.Controls.Add(this.dataGridDeleted);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.btnSearch);
-            this.panel4.Controls.Add(this.txtSearch);
-            this.panel4.Controls.Add(this.dataGridClient);
+            this.panel4.Controls.Add(this.btnCSearch);
+            this.panel4.Controls.Add(this.txtCSearch);
+            this.panel4.Controls.Add(this.dataGridCompleted);
             this.panel4.Location = new System.Drawing.Point(0, 100);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1287, 955);
             this.panel4.TabIndex = 9;
             // 
-            // btnSearch
+            // btnDSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.Gold;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Georgia", 13F);
-            this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.Location = new System.Drawing.Point(1002, 67);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(225, 41);
-            this.btnSearch.TabIndex = 19;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearch.Font = new System.Drawing.Font("Georgia", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(53, 69);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(882, 36);
-            this.txtSearch.TabIndex = 4;
-            // 
-            // dataGridClient
-            // 
-            this.dataGridClient.AllowUserToAddRows = false;
-            this.dataGridClient.AllowUserToDeleteRows = false;
-            this.dataGridClient.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridClient.GridColor = System.Drawing.Color.DimGray;
-            this.dataGridClient.Location = new System.Drawing.Point(53, 116);
-            this.dataGridClient.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridClient.Name = "dataGridClient";
-            this.dataGridClient.ReadOnly = true;
-            this.dataGridClient.RowHeadersWidth = 51;
-            this.dataGridClient.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridClient.Size = new System.Drawing.Size(1174, 295);
-            this.dataGridClient.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Georgia", 20F);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(46, 26);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(498, 39);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "COMPLETED TRANSACTIONS";
+            this.btnDSearch.BackColor = System.Drawing.Color.Gold;
+            this.btnDSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDSearch.Font = new System.Drawing.Font("Georgia", 13F);
+            this.btnDSearch.ForeColor = System.Drawing.Color.Black;
+            this.btnDSearch.Location = new System.Drawing.Point(1002, 475);
+            this.btnDSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDSearch.Name = "btnDSearch";
+            this.btnDSearch.Size = new System.Drawing.Size(225, 41);
+            this.btnDSearch.TabIndex = 24;
+            this.btnDSearch.Text = "Search";
+            this.btnDSearch.UseVisualStyleBackColor = false;
+            this.btnDSearch.Click += new System.EventHandler(this.btnDSearch_Click);
             // 
             // label3
             // 
@@ -396,46 +344,91 @@
             this.label3.TabIndex = 23;
             this.label3.Text = "DELETED CLIENTS";
             // 
-            // textBox1
+            // txtDSearch
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Georgia", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(53, 477);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(882, 36);
-            this.textBox1.TabIndex = 22;
+            this.txtDSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDSearch.Font = new System.Drawing.Font("Georgia", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDSearch.Location = new System.Drawing.Point(53, 477);
+            this.txtDSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDSearch.Name = "txtDSearch";
+            this.txtDSearch.Size = new System.Drawing.Size(882, 36);
+            this.txtDSearch.TabIndex = 22;
+            this.txtDSearch.TextChanged += new System.EventHandler(this.txtDSearch_TextChanged);
             // 
-            // dataGridView1
+            // dataGridDeleted
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.DimGray;
-            this.dataGridView1.Location = new System.Drawing.Point(53, 524);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1174, 295);
-            this.dataGridView1.TabIndex = 21;
+            this.dataGridDeleted.AllowUserToAddRows = false;
+            this.dataGridDeleted.AllowUserToDeleteRows = false;
+            this.dataGridDeleted.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridDeleted.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridDeleted.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridDeleted.GridColor = System.Drawing.Color.DimGray;
+            this.dataGridDeleted.Location = new System.Drawing.Point(53, 524);
+            this.dataGridDeleted.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridDeleted.Name = "dataGridDeleted";
+            this.dataGridDeleted.ReadOnly = true;
+            this.dataGridDeleted.RowHeadersWidth = 51;
+            this.dataGridDeleted.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridDeleted.Size = new System.Drawing.Size(1174, 295);
+            this.dataGridDeleted.TabIndex = 21;
+            this.dataGridDeleted.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridDeleted_CellClick);
             // 
-            // button1
+            // label2
             // 
-            this.button1.BackColor = System.Drawing.Color.Gold;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Georgia", 13F);
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(1002, 475);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(225, 41);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = false;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Georgia", 20F);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(46, 26);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(498, 39);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "COMPLETED TRANSACTIONS";
+            // 
+            // btnCSearch
+            // 
+            this.btnCSearch.BackColor = System.Drawing.Color.Gold;
+            this.btnCSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCSearch.Font = new System.Drawing.Font("Georgia", 13F);
+            this.btnCSearch.ForeColor = System.Drawing.Color.Black;
+            this.btnCSearch.Location = new System.Drawing.Point(1002, 67);
+            this.btnCSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCSearch.Name = "btnCSearch";
+            this.btnCSearch.Size = new System.Drawing.Size(225, 41);
+            this.btnCSearch.TabIndex = 19;
+            this.btnCSearch.Text = "Search";
+            this.btnCSearch.UseVisualStyleBackColor = false;
+            this.btnCSearch.Click += new System.EventHandler(this.btnCSearch_Click);
+            // 
+            // txtCSearch
+            // 
+            this.txtCSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCSearch.Font = new System.Drawing.Font("Georgia", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCSearch.Location = new System.Drawing.Point(53, 69);
+            this.txtCSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCSearch.Name = "txtCSearch";
+            this.txtCSearch.Size = new System.Drawing.Size(882, 36);
+            this.txtCSearch.TabIndex = 4;
+            this.txtCSearch.TextChanged += new System.EventHandler(this.txtCSearch_TextChanged);
+            // 
+            // dataGridCompleted
+            // 
+            this.dataGridCompleted.AllowUserToAddRows = false;
+            this.dataGridCompleted.AllowUserToDeleteRows = false;
+            this.dataGridCompleted.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridCompleted.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridCompleted.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCompleted.GridColor = System.Drawing.Color.DimGray;
+            this.dataGridCompleted.Location = new System.Drawing.Point(53, 116);
+            this.dataGridCompleted.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridCompleted.Name = "dataGridCompleted";
+            this.dataGridCompleted.ReadOnly = true;
+            this.dataGridCompleted.RowHeadersWidth = 51;
+            this.dataGridCompleted.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridCompleted.Size = new System.Drawing.Size(1174, 295);
+            this.dataGridCompleted.TabIndex = 0;
+            this.dataGridCompleted.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCompleted_CellClick);
             // 
             // frmArchivedClients
             // 
@@ -446,7 +439,7 @@
             this.Controls.Add(this.pnlPreview);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmArchivedClients";
             this.Text = "frmArchivedClients";
             this.panel3.ResumeLayout(false);
@@ -458,8 +451,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picPackage)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridClient)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDeleted)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCompleted)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -473,7 +466,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel pnlPreview;
         private System.Windows.Forms.Button btnCompleteService;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label lblPlace;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblContact;
@@ -487,13 +479,13 @@
         private System.Windows.Forms.PictureBox picPackage;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDSearch;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtDSearch;
+        private System.Windows.Forms.DataGridView dataGridDeleted;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.DataGridView dataGridClient;
+        private System.Windows.Forms.Button btnCSearch;
+        private System.Windows.Forms.TextBox txtCSearch;
+        private System.Windows.Forms.DataGridView dataGridCompleted;
     }
 }

@@ -145,7 +145,7 @@
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1740, 100);
             this.panel3.TabIndex = 7;
@@ -197,7 +197,7 @@
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = global::FuneralManagementSystem.Properties.Resources.clientIcon;
             this.pictureBox2.Location = new System.Drawing.Point(27, 14);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(85, 70);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -292,7 +292,7 @@
             this.dateOfPurchase.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateOfPurchase.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateOfPurchase.Location = new System.Drawing.Point(1033, 118);
-            this.dateOfPurchase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateOfPurchase.Margin = new System.Windows.Forms.Padding(4);
             this.dateOfPurchase.Name = "dateOfPurchase";
             this.dateOfPurchase.Size = new System.Drawing.Size(457, 34);
             this.dateOfPurchase.TabIndex = 6;
@@ -346,7 +346,7 @@
             // 
             this.txtClientProvince.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientProvince.Location = new System.Drawing.Point(1145, 235);
-            this.txtClientProvince.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtClientProvince.Margin = new System.Windows.Forms.Padding(4);
             this.txtClientProvince.Name = "txtClientProvince";
             this.txtClientProvince.Size = new System.Drawing.Size(345, 34);
             this.txtClientProvince.TabIndex = 10;
@@ -356,7 +356,7 @@
             // 
             this.txtClientLastname.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientLastname.Location = new System.Drawing.Point(9, 39);
-            this.txtClientLastname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtClientLastname.Margin = new System.Windows.Forms.Padding(4);
             this.txtClientLastname.Name = "txtClientLastname";
             this.txtClientLastname.Size = new System.Drawing.Size(457, 34);
             this.txtClientLastname.TabIndex = 1;
@@ -366,7 +366,7 @@
             // 
             this.txtClientCity.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientCity.Location = new System.Drawing.Point(769, 235);
-            this.txtClientCity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtClientCity.Margin = new System.Windows.Forms.Padding(4);
             this.txtClientCity.Name = "txtClientCity";
             this.txtClientCity.Size = new System.Drawing.Size(345, 34);
             this.txtClientCity.TabIndex = 9;
@@ -376,7 +376,7 @@
             // 
             this.txtClientFirstname.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientFirstname.Location = new System.Drawing.Point(521, 39);
-            this.txtClientFirstname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtClientFirstname.Margin = new System.Windows.Forms.Padding(4);
             this.txtClientFirstname.Name = "txtClientFirstname";
             this.txtClientFirstname.Size = new System.Drawing.Size(457, 34);
             this.txtClientFirstname.TabIndex = 2;
@@ -386,7 +386,7 @@
             // 
             this.txtClientBrgy.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientBrgy.Location = new System.Drawing.Point(392, 235);
-            this.txtClientBrgy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtClientBrgy.Margin = new System.Windows.Forms.Padding(4);
             this.txtClientBrgy.Name = "txtClientBrgy";
             this.txtClientBrgy.Size = new System.Drawing.Size(345, 34);
             this.txtClientBrgy.TabIndex = 8;
@@ -396,7 +396,7 @@
             // 
             this.txtClientMiddlename.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientMiddlename.Location = new System.Drawing.Point(1033, 39);
-            this.txtClientMiddlename.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtClientMiddlename.Margin = new System.Windows.Forms.Padding(4);
             this.txtClientMiddlename.Name = "txtClientMiddlename";
             this.txtClientMiddlename.Size = new System.Drawing.Size(457, 34);
             this.txtClientMiddlename.TabIndex = 3;
@@ -406,7 +406,7 @@
             // 
             this.txtClientHouseStreet.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientHouseStreet.Location = new System.Drawing.Point(9, 235);
-            this.txtClientHouseStreet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtClientHouseStreet.Margin = new System.Windows.Forms.Padding(4);
             this.txtClientHouseStreet.Name = "txtClientHouseStreet";
             this.txtClientHouseStreet.Size = new System.Drawing.Size(345, 34);
             this.txtClientHouseStreet.TabIndex = 7;
@@ -470,7 +470,7 @@
             // 
             this.txtRelation.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRelation.Location = new System.Drawing.Point(9, 114);
-            this.txtRelation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRelation.Margin = new System.Windows.Forms.Padding(4);
             this.txtRelation.Name = "txtRelation";
             this.txtRelation.Size = new System.Drawing.Size(457, 34);
             this.txtRelation.TabIndex = 4;
@@ -491,7 +491,7 @@
             // 
             this.txtContactno.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContactno.Location = new System.Drawing.Point(597, 114);
-            this.txtContactno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContactno.Margin = new System.Windows.Forms.Padding(4);
             this.txtContactno.Name = "txtContactno";
             this.txtContactno.Size = new System.Drawing.Size(381, 34);
             this.txtContactno.TabIndex = 5;
@@ -594,7 +594,7 @@
             // 
             this.txtInternmentCity.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInternmentCity.Location = new System.Drawing.Point(765, 251);
-            this.txtInternmentCity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtInternmentCity.Margin = new System.Windows.Forms.Padding(4);
             this.txtInternmentCity.Name = "txtInternmentCity";
             this.txtInternmentCity.Size = new System.Drawing.Size(345, 34);
             this.txtInternmentCity.TabIndex = 19;
@@ -627,7 +627,7 @@
             this.datepickDateofInternment.Font = new System.Drawing.Font("Arial", 14.25F);
             this.datepickDateofInternment.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.datepickDateofInternment.Location = new System.Drawing.Point(5, 331);
-            this.datepickDateofInternment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.datepickDateofInternment.Margin = new System.Windows.Forms.Padding(4);
             this.datepickDateofInternment.Name = "datepickDateofInternment";
             this.datepickDateofInternment.Size = new System.Drawing.Size(457, 35);
             this.datepickDateofInternment.TabIndex = 21;
@@ -658,7 +658,7 @@
             // 
             this.txtDeceasedLastName.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDeceasedLastName.Location = new System.Drawing.Point(9, 34);
-            this.txtDeceasedLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDeceasedLastName.Margin = new System.Windows.Forms.Padding(4);
             this.txtDeceasedLastName.Name = "txtDeceasedLastName";
             this.txtDeceasedLastName.Size = new System.Drawing.Size(457, 34);
             this.txtDeceasedLastName.TabIndex = 12;
@@ -679,7 +679,7 @@
             // 
             this.txtDeceasedFirstName.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDeceasedFirstName.Location = new System.Drawing.Point(517, 34);
-            this.txtDeceasedFirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDeceasedFirstName.Margin = new System.Windows.Forms.Padding(4);
             this.txtDeceasedFirstName.Name = "txtDeceasedFirstName";
             this.txtDeceasedFirstName.Size = new System.Drawing.Size(457, 34);
             this.txtDeceasedFirstName.TabIndex = 13;
@@ -694,7 +694,7 @@
             "Male",
             "Female"});
             this.cmbSex.Location = new System.Drawing.Point(521, 114);
-            this.cmbSex.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbSex.Margin = new System.Windows.Forms.Padding(4);
             this.cmbSex.Name = "cmbSex";
             this.cmbSex.Size = new System.Drawing.Size(459, 37);
             this.cmbSex.TabIndex = 16;
@@ -703,7 +703,7 @@
             // 
             this.txtDeceasedMiddleName.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDeceasedMiddleName.Location = new System.Drawing.Point(1029, 34);
-            this.txtDeceasedMiddleName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDeceasedMiddleName.Margin = new System.Windows.Forms.Padding(4);
             this.txtDeceasedMiddleName.Name = "txtDeceasedMiddleName";
             this.txtDeceasedMiddleName.Size = new System.Drawing.Size(457, 34);
             this.txtDeceasedMiddleName.TabIndex = 14;
@@ -724,7 +724,7 @@
             // 
             this.txtInternmentProvince.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInternmentProvince.Location = new System.Drawing.Point(1141, 251);
-            this.txtInternmentProvince.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtInternmentProvince.Margin = new System.Windows.Forms.Padding(4);
             this.txtInternmentProvince.Name = "txtInternmentProvince";
             this.txtInternmentProvince.Size = new System.Drawing.Size(345, 34);
             this.txtInternmentProvince.TabIndex = 20;
@@ -745,7 +745,7 @@
             // 
             this.datepickDateofDeath.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datepickDateofDeath.Location = new System.Drawing.Point(11, 117);
-            this.datepickDateofDeath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.datepickDateofDeath.Margin = new System.Windows.Forms.Padding(4);
             this.datepickDateofDeath.Name = "datepickDateofDeath";
             this.datepickDateofDeath.Size = new System.Drawing.Size(457, 34);
             this.datepickDateofDeath.TabIndex = 15;
@@ -754,7 +754,7 @@
             // 
             this.txtInternmentBrgy.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInternmentBrgy.Location = new System.Drawing.Point(389, 251);
-            this.txtInternmentBrgy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtInternmentBrgy.Margin = new System.Windows.Forms.Padding(4);
             this.txtInternmentBrgy.Name = "txtInternmentBrgy";
             this.txtInternmentBrgy.Size = new System.Drawing.Size(345, 34);
             this.txtInternmentBrgy.TabIndex = 18;
@@ -775,7 +775,7 @@
             // 
             this.txtInternmentStreet.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInternmentStreet.Location = new System.Drawing.Point(5, 251);
-            this.txtInternmentStreet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtInternmentStreet.Margin = new System.Windows.Forms.Padding(4);
             this.txtInternmentStreet.Name = "txtInternmentStreet";
             this.txtInternmentStreet.Size = new System.Drawing.Size(345, 34);
             this.txtInternmentStreet.TabIndex = 17;
@@ -899,7 +899,7 @@
             // 
             this.txtFileName.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFileName.Location = new System.Drawing.Point(109, 374);
-            this.txtFileName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFileName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.Size = new System.Drawing.Size(471, 34);
             this.txtFileName.TabIndex = 76;
@@ -966,7 +966,7 @@
             this.dataGridAttachments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridAttachments.GridColor = System.Drawing.Color.DimGray;
             this.dataGridAttachments.Location = new System.Drawing.Point(629, 73);
-            this.dataGridAttachments.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridAttachments.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridAttachments.Name = "dataGridAttachments";
             this.dataGridAttachments.ReadOnly = true;
             this.dataGridAttachments.RowHeadersWidth = 51;
@@ -1053,7 +1053,7 @@
             this.dataGridPayments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridPayments.GridColor = System.Drawing.Color.DimGray;
             this.dataGridPayments.Location = new System.Drawing.Point(107, 777);
-            this.dataGridPayments.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridPayments.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridPayments.Name = "dataGridPayments";
             this.dataGridPayments.ReadOnly = true;
             this.dataGridPayments.RowHeadersWidth = 51;
@@ -1281,7 +1281,7 @@
             this.ClientSize = new System.Drawing.Size(1740, 1055);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel3);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmUpdateDetails";
             this.Text = "frmActiveClient";
             this.Load += new System.EventHandler(this.frmUpdateDetails_Load);
@@ -1401,8 +1401,8 @@
         private System.Windows.Forms.Button btnSaveDeceased;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label lblBalance;
-        private System.Windows.Forms.Button btnCompleteTransaction;
         private System.Windows.Forms.DataGridView dataGridPayments;
         private System.Windows.Forms.Label label;
+        public System.Windows.Forms.Button btnCompleteTransaction;
     }
 }

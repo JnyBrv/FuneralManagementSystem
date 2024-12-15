@@ -48,6 +48,8 @@ namespace FuneralManagementSystem
             {
                 main = (frmMain)Application.OpenForms["frmMain"];
                 main.Close();
+                frmLogIn log = (frmLogIn)Application.OpenForms["frmLogIn"];
+                log.Close();
                 Close();
             }
         }
@@ -247,7 +249,7 @@ namespace FuneralManagementSystem
                                 "CONCAT(DECEASED.deceasedFname, ' ', DECEASED.deceasedMname, ' ', DECEASED.deceasedLname) AS 'Decedent Name', " +
                                 "PACKAGE.packageName AS 'Package Type', CLIENT.dateOfPurchase AS 'Date of Purchase' FROM DECEASED INNER JOIN CLIENT ON CLIENT.deceasedID = DECEASED.deceasedID " +
                                 "INNER JOIN PACKAGE ON CLIENT.packageID = PACKAGE.packageID " +
-                                "WHERE (CLIENT.archive = 0) AND (CLIENT.clientFname LIKE '%" + keyword + "%' OR CLIENT.clientMname LIKE '%" + keyword + "%' " +
+                                "WHERE (CLIENT.archive = 2) AND (CLIENT.clientFname LIKE '%" + keyword + "%' OR CLIENT.clientMname LIKE '%" + keyword + "%' " +
                                 "OR CLIENT.clientLname LIKE '%" + keyword + "%' OR DECEASED.deceasedFname LIKE '%" + keyword + "%' " +
                                 "OR DECEASED.deceasedMname LIKE '%" + keyword + "%' OR DECEASED.deceasedLname LIKE '%" + keyword + "%' " +
                                 "OR CLIENT.clientContactNo LIKE '%" + keyword + "%' OR DECEASED.dateOfInternment LIKE '%" + keyword + "%' " +
@@ -313,6 +315,7 @@ namespace FuneralManagementSystem
             main = (frmMain)Application.OpenForms["frmMain"];
             frmUpdateDetails updateForm = new frmUpdateDetails();
             updateForm.client = user;
+            updateForm.back = 2;
             main.OpenChildForm(updateForm);
 
         }

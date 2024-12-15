@@ -17,10 +17,13 @@ namespace FuneralManagementSystem
     {
         frmMain main;
 
+
         //SQL Connection
         SqlConnection con = new SqlConnection(@"Data Source=JIANNESANTOS\SQLEXPRESS;Initial Catalog=FuneralManagementSystem;Integrated Security=True");
 
         public int client { get; set; }
+
+        public int back { get; set; }
         public frmUpdateDetails()
         {
             InitializeComponent();
@@ -235,13 +238,28 @@ namespace FuneralManagementSystem
         private void btnBack_Click(object sender, EventArgs e)
         {
             main = (frmMain)Application.OpenForms["frmMain"];
-            main.OpenChildForm(new FrmClients());
-            main.panelTitleBar.Visible = false;
+
+            if (back == 1)
+            {
+                main.OpenChildForm(new frmArchivedClients());
+                main.panelTitleBar.Visible = false;
+            }
+            else if (back == 0)
+            {
+                main.OpenChildForm(new FrmClients());
+                main.panelTitleBar.Visible = false;
+            }else if(back == 2)
+            {
+                main.OpenChildForm(new frmPaying());
+                main.panelTitleBar.Visible = false;
+            }
+            
+
         }
 
         private void txtClientLastname_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -249,7 +267,7 @@ namespace FuneralManagementSystem
 
         private void txtClientFirstname_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -257,7 +275,7 @@ namespace FuneralManagementSystem
 
         private void txtClientMiddlename_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -297,7 +315,7 @@ namespace FuneralManagementSystem
 
         private void txtDeceasedLastName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -305,7 +323,7 @@ namespace FuneralManagementSystem
 
         private void txtDeceasedFirstName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -313,7 +331,7 @@ namespace FuneralManagementSystem
 
         private void txtDeceasedMiddleName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }

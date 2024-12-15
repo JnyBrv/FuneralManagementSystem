@@ -25,10 +25,12 @@ namespace FuneralManagementSystem
         private Form currentTitleChildForm;
         public frmMain()
         {
+            
             InitializeComponent();
             OpenChildForm(new FrmPackages());
             btnPackages.BackColor = Color.Gold;
             btnPackages.ForeColor = Color.Black;
+
 
         }
 

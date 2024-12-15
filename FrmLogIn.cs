@@ -14,6 +14,7 @@ namespace FuneralManagementSystem
 {
     public partial class frmLogIn : Form
     {
+        String status;
         public frmLogIn()
         {
             InitializeComponent();
@@ -55,10 +56,7 @@ namespace FuneralManagementSystem
 
                 if (dt.Rows.Count > 0)
                 {
-                    //Open Home form
-                    frmMain sysar = new frmMain();
-                    sysar.Show();
-                    this.Hide();
+                   
 
                     //Login History
                     String log = "LoginHistory.txt";
@@ -66,7 +64,7 @@ namespace FuneralManagementSystem
                     SqlCommand cmd = new SqlCommand();
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = con;
-                    cmd.CommandText = "SELECT userId FROM ACCOUNTS WHERE userName = '" + username +
+                    cmd.CommandText = "SELECT userId, hierarchy FROM ACCOUNTS WHERE userName = '" + username +
                                             "' AND userPassword = '" + password + "' ";
 
                     SqlDataReader read = cmd.ExecuteReader();
@@ -75,6 +73,18 @@ namespace FuneralManagementSystem
                         StreamWriter write = File.AppendText(log);
                         write.WriteLine("ID: " + read[0] + ", NAME: " + username + ", DATE: " + DateTime.Now.ToString());
                         write.Close();
+                        status = read[1].ToString();
+
+                        //Open Home form
+                        frmMain sysar = new frmMain();
+
+                        if(status == "Staff")
+                        {
+                            sysar.btnArchive.Visible = false;
+                        }
+
+                        sysar.Show();
+                        this.Hide();
                     }
                 }
                 else
@@ -110,8 +120,8 @@ namespace FuneralManagementSystem
             if (result == DialogResult.Yes)
             {
                 Close();
-                frmMain main = (frmMain)Application.OpenForms["frmMain"];
-                main.Close();
+                frmLogIn log = (frmLogIn)Application.OpenForms["frmLogIn"];
+                log.Close();
             }
         }
 

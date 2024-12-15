@@ -98,6 +98,8 @@ namespace FuneralManagementSystem
             {
                 main = (frmMain)Application.OpenForms["frmMain"];
                 main.Close();
+                frmLogIn log = (frmLogIn)Application.OpenForms["frmLogIn"];
+                log.Close();
                 Close();
             }
         }

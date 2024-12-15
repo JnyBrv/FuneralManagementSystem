@@ -76,6 +76,9 @@ namespace FuneralManagementSystem
             {
                 main = (frmMain)Application.OpenForms["frmMain"];
                 main.Close();
+                frmLogIn log = (frmLogIn)Application.OpenForms["frmLogIn"];
+                log.Close();
+
                 Close();
             }
         }
@@ -315,6 +318,7 @@ namespace FuneralManagementSystem
             main = (frmMain)Application.OpenForms["frmMain"];
             frmUpdateDetails updateForm = new frmUpdateDetails();
             updateForm.client = user;
+            updateForm.back = 0;
             main.OpenChildForm(updateForm);
 
 
