@@ -49,17 +49,17 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.btnpackageB);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblDetailsPackage2);
             this.panel1.Controls.Add(this.lblPackage2);
             this.panel1.Controls.Add(this.pbPackage2);
-            this.panel1.Location = new System.Drawing.Point(785, 108);
+            this.panel1.Location = new System.Drawing.Point(784, 108);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(552, 691);
-            this.panel1.TabIndex = 7;
+            this.panel1.TabIndex = 11;
             // 
             // btnpackageB
             // 
@@ -77,35 +77,35 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(147, 612);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 29);
+            this.label1.Size = new System.Drawing.Size(141, 29);
             this.label1.TabIndex = 5;
             this.label1.Text = "₱ 65,000.00";
             // 
             // lblDetailsPackage2
             // 
-            this.lblDetailsPackage2.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDetailsPackage2.Font = new System.Drawing.Font("Georgia", 10.5F);
             this.lblDetailsPackage2.ForeColor = System.Drawing.Color.Black;
             this.lblDetailsPackage2.Location = new System.Drawing.Point(49, 254);
             this.lblDetailsPackage2.Name = "lblDetailsPackage2";
-            this.lblDetailsPackage2.Size = new System.Drawing.Size(469, 353);
+            this.lblDetailsPackage2.Size = new System.Drawing.Size(469, 337);
             this.lblDetailsPackage2.TabIndex = 2;
             this.lblDetailsPackage2.Text = resources.GetString("lblDetailsPackage2.Text");
             // 
             // lblPackage2
             // 
             this.lblPackage2.AutoSize = true;
-            this.lblPackage2.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblPackage2.BackColor = System.Drawing.Color.Transparent;
             this.lblPackage2.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPackage2.ForeColor = System.Drawing.Color.White;
+            this.lblPackage2.ForeColor = System.Drawing.Color.Black;
             this.lblPackage2.Location = new System.Drawing.Point(196, 12);
             this.lblPackage2.Name = "lblPackage2";
-            this.lblPackage2.Size = new System.Drawing.Size(160, 29);
+            this.lblPackage2.Size = new System.Drawing.Size(163, 29);
             this.lblPackage2.TabIndex = 0;
-            this.lblPackage2.Text = "PACKAGE 2";
+            this.lblPackage2.Text = "PACKAGE B";
             this.lblPackage2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pbPackage2
@@ -121,21 +121,21 @@
             // 
             // panelPackage1
             // 
-            this.panelPackage1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panelPackage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panelPackage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelPackage1.Controls.Add(this.lblDetailsPackage1);
             this.panelPackage1.Controls.Add(this.lblPackage1Title);
             this.panelPackage1.Controls.Add(this.btnOmsAvail);
             this.panelPackage1.Controls.Add(this.pbPackage1);
             this.panelPackage1.Controls.Add(this.lblPricePackage1);
-            this.panelPackage1.Location = new System.Drawing.Point(169, 108);
+            this.panelPackage1.Location = new System.Drawing.Point(170, 108);
             this.panelPackage1.Name = "panelPackage1";
             this.panelPackage1.Size = new System.Drawing.Size(552, 691);
-            this.panelPackage1.TabIndex = 6;
+            this.panelPackage1.TabIndex = 10;
             // 
             // lblDetailsPackage1
             // 
-            this.lblDetailsPackage1.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDetailsPackage1.Font = new System.Drawing.Font("Georgia", 10.5F);
             this.lblDetailsPackage1.ForeColor = System.Drawing.Color.Black;
             this.lblDetailsPackage1.Location = new System.Drawing.Point(42, 254);
             this.lblDetailsPackage1.Name = "lblDetailsPackage1";
@@ -146,14 +146,14 @@
             // lblPackage1Title
             // 
             this.lblPackage1Title.AutoSize = true;
-            this.lblPackage1Title.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblPackage1Title.BackColor = System.Drawing.Color.Transparent;
             this.lblPackage1Title.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPackage1Title.ForeColor = System.Drawing.Color.White;
+            this.lblPackage1Title.ForeColor = System.Drawing.Color.Black;
             this.lblPackage1Title.Location = new System.Drawing.Point(196, 12);
             this.lblPackage1Title.Name = "lblPackage1Title";
-            this.lblPackage1Title.Size = new System.Drawing.Size(157, 29);
+            this.lblPackage1Title.Size = new System.Drawing.Size(163, 29);
             this.lblPackage1Title.TabIndex = 0;
-            this.lblPackage1Title.Text = "PACKAGE 1";
+            this.lblPackage1Title.Text = "PACKAGE A";
             this.lblPackage1Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnOmsAvail
@@ -183,11 +183,11 @@
             // lblPricePackage1
             // 
             this.lblPricePackage1.AutoSize = true;
-            this.lblPricePackage1.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPricePackage1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.lblPricePackage1.ForeColor = System.Drawing.Color.Black;
             this.lblPricePackage1.Location = new System.Drawing.Point(154, 613);
             this.lblPricePackage1.Name = "lblPricePackage1";
-            this.lblPricePackage1.Size = new System.Drawing.Size(167, 29);
+            this.lblPricePackage1.Size = new System.Drawing.Size(141, 29);
             this.lblPricePackage1.TabIndex = 3;
             this.lblPricePackage1.Text = "₱ 45,000.00";
             // 

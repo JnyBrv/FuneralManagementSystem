@@ -56,11 +56,11 @@ namespace FuneralManagementSystem
 
         public void AddPanel() {
 
-           
 
-            //flowLayoutPanel1.Controls.Add(new Package());
 
-            
+            flowLayoutPanel1.Controls.Add(new Package());
+
+
         }
 
         private void pbExit_Click(object sender, EventArgs e)

@@ -120,52 +120,10 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnAddClient.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAJVJREFUeF7t
-        1EEKhDAQRNEc1ZvNUcfKtgnICJOgeQ/+Rly0tbABAAAATHKkb6k/24YBkgFKBkjbMEAyQMkAaRsGSAYo
-        GSA9Uj/81z6pDtCfjd69arn6IbNbbnTUzJYbHTWz5UZHzWy50Y/pqlf9BO/oh9cBHvsxdxggGaBkgLQN
-        AyQDlAyQtmGAZICSARIAAADAn7V2Aj0JGJy2B6BcAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="lblDetailsPackage2.Text" xml:space="preserve">
-    <value>FUNERAL SERVICES  :
-
-- Retrieval Embalming
-- OMS Metal Casket Full Cup
-- Padamit
-- Pauna
-- 1/2 Cavan of Rice
-- 2 Candles
-- 10 Water with Water Dispenser
-- 70 Chairs
-- 5 Tables
-- 6 Pcs Flowers 1 Small Tent
-- 1 18x10 Frame with Photo
-- 1 3x4 Tarpaulin
-- 1 8x10 Alaala with Frame
-- 3 Game Cards
-- 1 Booklet and Ballpen
-- Document Processing Assistance
-- Hearse Expedition</value>
-  </data>
-  <data name="lblDetailsPackage1.Text" xml:space="preserve">
-    <value>   FUNERAL SERVICES  :
-
-- Retrieval embalming
-- OMS wood casket full cup
-- Padamit
-- Pauna
-- 1/2 cavan of rice
-- 2 Candles
-- 10 Water with water dispenser
-- 50 Chairs
-- 5 Tables
-- 4 pcs Flowers
-- 1 Small tent
-- 1 8x10 frame with photo 11.5x2 tarpaulin
-- 1 8x10 Alaala 
-- 3 Game cards
-- 1 Booklet and ballpen document assistance
-- Hearse-expedition
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAIRJREFUeF7t
+        1LENgDAMRUGPymaMCkprUYQUtiB30m8QhXkFEQAAAAA1joi40sazbQgggAACCCCAAAIIIIAA3w8wDn+7
+        8yHAeJbfm1m7/CHVa5cPql67fFD12uWDqtcu/5Rm9quf4IpxeA7w2Y9ZIYAAAggggAACCCCAAALsGQAA
+        AADocwM9CRictdxKQQAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>
