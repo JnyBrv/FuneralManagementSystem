@@ -320,5 +320,8 @@
   <ItemGroup>
     <None Include="Resources\goldEdge1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Upload%27.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

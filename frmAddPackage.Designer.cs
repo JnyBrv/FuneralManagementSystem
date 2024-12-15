@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddPackage));
             this.lblPrice = new System.Windows.Forms.Label();
             this.txtInclusions = new System.Windows.Forms.TextBox();
             this.lblInclusions = new System.Windows.Forms.Label();
@@ -51,7 +52,7 @@
             // 
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Gadugi", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(86, 641);
+            this.lblPrice.Location = new System.Drawing.Point(50, 638);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(68, 24);
             this.lblPrice.TabIndex = 16;
@@ -60,7 +61,7 @@
             // 
             // txtInclusions
             // 
-            this.txtInclusions.Location = new System.Drawing.Point(91, 383);
+            this.txtInclusions.Location = new System.Drawing.Point(52, 383);
             this.txtInclusions.Multiline = true;
             this.txtInclusions.Name = "txtInclusions";
             this.txtInclusions.Size = new System.Drawing.Size(405, 237);
@@ -71,7 +72,7 @@
             // 
             this.lblInclusions.AutoSize = true;
             this.lblInclusions.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInclusions.Location = new System.Drawing.Point(90, 361);
+            this.lblInclusions.Location = new System.Drawing.Point(51, 361);
             this.lblInclusions.Name = "lblInclusions";
             this.lblInclusions.Size = new System.Drawing.Size(110, 19);
             this.lblInclusions.TabIndex = 16;
@@ -84,9 +85,9 @@
             this.btnPackage.FlatAppearance.BorderSize = 0;
             this.btnPackage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPackage.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPackage.Location = new System.Drawing.Point(383, 685);
+            this.btnPackage.Location = new System.Drawing.Point(339, 634);
             this.btnPackage.Name = "btnPackage";
-            this.btnPackage.Size = new System.Drawing.Size(137, 42);
+            this.btnPackage.Size = new System.Drawing.Size(118, 28);
             this.btnPackage.TabIndex = 17;
             this.btnPackage.Text = "Add";
             this.btnPackage.UseVisualStyleBackColor = false;
@@ -95,7 +96,7 @@
             // txtPackageName
             // 
             this.txtPackageName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPackageName.Location = new System.Drawing.Point(94, 304);
+            this.txtPackageName.Location = new System.Drawing.Point(55, 304);
             this.txtPackageName.Name = "txtPackageName";
             this.txtPackageName.Size = new System.Drawing.Size(206, 30);
             this.txtPackageName.TabIndex = 18;
@@ -105,7 +106,7 @@
             // 
             this.lblCurrency.AutoSize = true;
             this.lblCurrency.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurrency.Location = new System.Drawing.Point(159, 641);
+            this.lblCurrency.Location = new System.Drawing.Point(123, 636);
             this.lblCurrency.Name = "lblCurrency";
             this.lblCurrency.Size = new System.Drawing.Size(27, 25);
             this.lblCurrency.TabIndex = 16;
@@ -116,7 +117,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(316, 284);
+            this.label1.Location = new System.Drawing.Point(277, 284);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 19);
             this.label1.TabIndex = 20;
@@ -126,7 +127,7 @@
             // txtPackageId
             // 
             this.txtPackageId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPackageId.Location = new System.Drawing.Point(320, 306);
+            this.txtPackageId.Location = new System.Drawing.Point(281, 306);
             this.txtPackageId.Multiline = true;
             this.txtPackageId.Name = "txtPackageId";
             this.txtPackageId.Size = new System.Drawing.Size(176, 28);
@@ -138,7 +139,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(90, 282);
+            this.label2.Location = new System.Drawing.Point(51, 282);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 19);
             this.label2.TabIndex = 16;
@@ -146,18 +147,20 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(190, 646);
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Location = new System.Drawing.Point(156, 635);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(210, 20);
+            this.txtPrice.Size = new System.Drawing.Size(173, 30);
             this.txtPrice.TabIndex = 22;
             this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged_1);
             // 
             // btnAddPicture
             // 
-            this.btnAddPicture.Image = global::FuneralManagementSystem.Properties.Resources.addblack;
-            this.btnAddPicture.Location = new System.Drawing.Point(455, 56);
+            this.btnAddPicture.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAddPicture.Image = ((System.Drawing.Image)(resources.GetObject("btnAddPicture.Image")));
+            this.btnAddPicture.Location = new System.Drawing.Point(418, 56);
             this.btnAddPicture.Name = "btnAddPicture";
-            this.btnAddPicture.Size = new System.Drawing.Size(41, 38);
+            this.btnAddPicture.Size = new System.Drawing.Size(39, 41);
             this.btnAddPicture.TabIndex = 19;
             this.btnAddPicture.UseVisualStyleBackColor = true;
             this.btnAddPicture.Click += new System.EventHandler(this.btnAddPicture_Click);
@@ -167,7 +170,7 @@
             this.pbPackage.BackColor = System.Drawing.Color.White;
             this.pbPackage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbPackage.Image = global::FuneralManagementSystem.Properties.Resources.inputimage;
-            this.pbPackage.Location = new System.Drawing.Point(94, 56);
+            this.pbPackage.Location = new System.Drawing.Point(55, 56);
             this.pbPackage.Name = "pbPackage";
             this.pbPackage.Size = new System.Drawing.Size(402, 196);
             this.pbPackage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -186,8 +189,9 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::FuneralManagementSystem.Properties.Resources.goldEdge2;
-            this.pictureBox2.Location = new System.Drawing.Point(349, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(268, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(239, 252);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -199,7 +203,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(588, 769);
+            this.ClientSize = new System.Drawing.Size(507, 679);
             this.Controls.Add(this.btnAddPicture);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtPackageId);

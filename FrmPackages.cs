@@ -58,7 +58,7 @@ namespace FuneralManagementSystem
 
            
 
-            flowLayoutPanel1.Controls.Add(new Package());
+            //flowLayoutPanel1.Controls.Add(new Package());
 
             
         }
@@ -96,7 +96,18 @@ namespace FuneralManagementSystem
 
         }
 
-        private void btnBuyPackage1_Click(object sender, EventArgs e)
+        private void btnOmsAvail_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnOmsAvail_Click_1(object sender, EventArgs e)
         {
             main = (frmMain)Application.OpenForms["frmMain"];
             main.OpenChildForm(new frmClientContractForm());
@@ -104,24 +115,14 @@ namespace FuneralManagementSystem
             ccf.package = 0;
             main.panelTitleBar.Visible = false;
         }
-        private void btnOmsAvail_Click(object sender, EventArgs e)
+
+        private void btnpackageB_Click_1(object sender, EventArgs e)
         {
-            
-        }
-
-
-        private void btnpackageB_Click(object sender, EventArgs e)
-        {   
             main = (frmMain)Application.OpenForms["frmMain"];
             main.OpenChildForm(new frmClientContractForm());
             ccf = (frmClientContractForm)Application.OpenForms["frmClientContractForm"];
             ccf.package = 1;
             main.panelTitleBar.Visible = false;
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
