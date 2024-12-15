@@ -71,7 +71,7 @@ namespace FuneralManagementSystem
             if (result == DialogResult.Yes)
             {
                 main = (frmMain)Application.OpenForms["frmMain"];
-                main.Close();
+                this.Close();
                 frmLogIn log = (frmLogIn)Application.OpenForms["frmLogIn"];
                 log.Close();
                 Close();

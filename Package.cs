@@ -89,6 +89,11 @@ namespace FuneralManagementSystem
 
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
         public Package()
       
         {

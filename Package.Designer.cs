@@ -35,6 +35,7 @@
             this.lblPrice2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbPackage1 = new System.Windows.Forms.PictureBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPackage1)).BeginInit();
             this.SuspendLayout();
@@ -130,11 +131,22 @@
             this.pbPackage1.TabIndex = 6;
             this.pbPackage1.TabStop = false;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(307, 9);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 14;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // Package
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.lblPrice2);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.txtInclusions);
@@ -161,5 +173,6 @@
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label lblPrice2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
