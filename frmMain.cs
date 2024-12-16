@@ -416,6 +416,7 @@ namespace FuneralManagementSystem
 
         private void btnBill_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new frmPaying());
 
         }
     }

@@ -12,6 +12,8 @@ namespace FuneralManagementSystem
 {
     public partial class frmBill : Form
     {
+        public int client { get; set; }
+        public int back { get; set; }
         public frmBill()
         {
             InitializeComponent();

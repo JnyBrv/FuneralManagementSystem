@@ -107,8 +107,7 @@ namespace FuneralManagementSystem
                 try
                 {
                     String query = " SELECT CONCAT(CLIENT.clientFname, ' ', CLIENT.clientMname, ' ', CLIENT.clientLname) AS ClientName, " +
-                                "CONCAT(DECEASED.deceasedFname, ' ', DECEASED.deceasedMname, ' ', DECEASED.deceasedLname) AS DeceasedName, " +
-                                "CLIENT.clientContactNo, DECEASED.dateOfInternment, DECEASED.placeOfInternment, PACKAGE.packageName FROM DECEASED " +
+                                " PACKAGE.packageName FROM DECEASED " +
                                 "INNER JOIN CLIENT ON CLIENT.deceasedID = DECEASED.deceasedID INNER JOIN PACKAGE ON CLIENT.packageID = " +
                                 "PACKAGE.packageID  WHERE CLIENT.clientID = " + user;
                     if (con.State != ConnectionState.Open)
@@ -122,26 +121,8 @@ namespace FuneralManagementSystem
                         if (read.HasRows)
                         {
                             lblClient.Text = read[0].ToString();
-                            lblDeceased.Text = read[1].ToString();
-                            lblContact.Text = read[2].ToString();
-                            String d = read[3].ToString();
-                            string[] word = d.Split(' ');
-                            lblDate.Text = word[0];
-                            lblPlace.Text = read[4].ToString();
-                            String package = read[5].ToString();
-
-                            if (package.Equals("Package A"))
-                            {
-                                Image image = Properties.Resources.package1Image;
-
-                                picPackage.Image = image;
-                            }
-                            else if (package.Equals("Package B"))
-                            {
-                                Image image = Properties.Resources.package2Image;
-
-                                picPackage.Image = image;
-                            }
+                            lblPackage.Text = read[1].ToString();
+                           
                         }
                         else
                         {
@@ -173,8 +154,7 @@ namespace FuneralManagementSystem
                 try
                 {
                     String query = " SELECT CONCAT(CLIENT.clientFname, ' ', CLIENT.clientMname, ' ', CLIENT.clientLname) AS ClientName, " +
-                                "CONCAT(DECEASED.deceasedFname, ' ', DECEASED.deceasedMname, ' ', DECEASED.deceasedLname) AS DeceasedName, " +
-                                "CLIENT.clientContactNo, DECEASED.dateOfInternment, DECEASED.placeOfInternment, PACKAGE.packageName FROM DECEASED " +
+                                " PACKAGE.packageName FROM DECEASED " +
                                 "INNER JOIN CLIENT ON CLIENT.deceasedID = DECEASED.deceasedID INNER JOIN PACKAGE ON CLIENT.packageID = " +
                                 "PACKAGE.packageID  WHERE CLIENT.clientID = " + user;
                     if (con.State != ConnectionState.Open)
@@ -188,25 +168,8 @@ namespace FuneralManagementSystem
                         if (read.HasRows)
                         {
                             lblClient.Text = read[0].ToString();
-                            lblDeceased.Text = read[1].ToString();
-                            lblContact.Text = read[2].ToString();
-                            String d = read[3].ToString();
-                            string[] word = d.Split(' ');
-                            lblDate.Text = word[0];
-                            lblPlace.Text = read[4].ToString();
-
-                            String package = read[5].ToString();
-
-                            if (package.Equals("Package A"))
-                            {
-                                Image image = Properties.Resources.package1Image;
-                                picPackage.Image = image;
-                            }
-                            else if (package.Equals("Package B"))
-                            {
-                                Image image = Properties.Resources.package2Image;
-                                picPackage.Image = image;
-                            }
+                            lblPackage.Text = read[1].ToString();
+                           
                         }
                         else
                         {
@@ -283,31 +246,11 @@ namespace FuneralManagementSystem
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            txtSearch.Text = "";
-            DialogResult result = MessageBox.Show("Are you sure you want to delete this client? ",
-                "Delete Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                try
-                {
-                    con.Open();
-
-                    SqlCommand cmd = con.CreateCommand();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "UPDATE CLIENT SET archive = 1 WHERE clientID = " + user +
-                                    "UPDATE DECEASED SET archive = 1 WHERE deceasedID = " + user +
-                                    "UPDATE PAYMENT SET archive = 1 WHERE clientID = " + user;
-                    cmd.ExecuteNonQuery();
-
-                    con.Close();
-                    loadTable();
-                    cellDisplay();
-                }
-                catch (Exception ee)
-                {
-                    MessageBox.Show(ee.ToString());
-                }
-            }
+            main = (frmMain)Application.OpenForms["frmMain"];
+            frmBill fb = new frmBill();
+            fb.client = user;
+            fb.back = 2;
+            main.OpenChildForm(fb);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -318,6 +261,73 @@ namespace FuneralManagementSystem
             updateForm.back = 2;
             main.OpenChildForm(updateForm);
 
+        }
+
+        private void dataGridPaying_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pnlPreview_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void rbInstallment_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbInstallment.Checked)
+            {
+                rbFullPayment.Checked = false;
+                txtYears.Enabled = true;
+                txtDiscount.Enabled = true;
+                cbMonths.Enabled = true;
+
+            }
+        }
+
+        private void rbFullPayment_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbFullPayment.Checked)
+            {
+                txtYears.Enabled = false;
+                rbInstallment.Checked = false;
+                txtDiscount.Enabled = false;
+                cbMonths.Enabled = false;
+
+            }
+        }
+
+        private void txtYears_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            // Limit to 2 digits
+            if (txtDiscount.Text.Length >= 2 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            // Limit to 2 digits
+            if (txtDiscount.Text.Length >= 3 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
