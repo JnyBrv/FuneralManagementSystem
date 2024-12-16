@@ -35,6 +35,16 @@ namespace FuneralManagementSystem
             this.pbExit = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.pnlReceipt = new System.Windows.Forms.Panel();
+            this.txtReceivedBy = new System.Windows.Forms.TextBox();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.lblNumber = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblBalance = new System.Windows.Forms.Label();
+            this.lblAmount = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -50,16 +60,6 @@ namespace FuneralManagementSystem
             this.btnPrint = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.lblAmount = new System.Windows.Forms.Label();
-            this.lblBalance = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblNumber = new System.Windows.Forms.Label();
-            this.lblDescription = new System.Windows.Forms.Label();
-            this.txtReceivedBy = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             this.pnlReceipt.SuspendLayout();
@@ -68,28 +68,27 @@ namespace FuneralManagementSystem
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
             this.panel3.Controls.Add(this.btnBack);
             this.panel3.Controls.Add(this.pbExit);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1740, 100);
+            this.panel3.Size = new System.Drawing.Size(1305, 81);
             this.panel3.TabIndex = 8;
             // 
             // btnBack
             // 
             this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBack.BackColor = System.Drawing.Color.Black;
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.Gold;
-            this.btnBack.Location = new System.Drawing.Point(1540, 37);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBack.Location = new System.Drawing.Point(1155, 30);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(125, 46);
+            this.btnBack.Size = new System.Drawing.Size(94, 37);
             this.btnBack.TabIndex = 24;
             this.btnBack.Text = "← Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -100,10 +99,10 @@ namespace FuneralManagementSystem
             this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbExit.BackColor = System.Drawing.Color.Transparent;
             this.pbExit.Image = global::FuneralManagementSystem.Properties.Resources.exit;
-            this.pbExit.Location = new System.Drawing.Point(1689, 0);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbExit.Location = new System.Drawing.Point(1267, 0);
+            this.pbExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(51, 50);
+            this.pbExit.Size = new System.Drawing.Size(38, 41);
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbExit.TabIndex = 20;
             this.pbExit.TabStop = false;
@@ -114,10 +113,9 @@ namespace FuneralManagementSystem
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Georgia", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(135, 23);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(101, 19);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 54);
+            this.label9.Size = new System.Drawing.Size(0, 43);
             this.label9.TabIndex = 18;
             // 
             // pnlReceipt
@@ -144,10 +142,126 @@ namespace FuneralManagementSystem
             this.pnlReceipt.Controls.Add(this.label2);
             this.pnlReceipt.Controls.Add(this.pictureBox1);
             this.pnlReceipt.Controls.Add(this.label1);
-            this.pnlReceipt.Location = new System.Drawing.Point(349, 107);
+            this.pnlReceipt.Location = new System.Drawing.Point(262, 87);
+            this.pnlReceipt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlReceipt.Name = "pnlReceipt";
-            this.pnlReceipt.Size = new System.Drawing.Size(997, 878);
+            this.pnlReceipt.Size = new System.Drawing.Size(748, 713);
             this.pnlReceipt.TabIndex = 9;
+            // 
+            // txtReceivedBy
+            // 
+            this.txtReceivedBy.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtReceivedBy.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReceivedBy.Location = new System.Drawing.Point(230, 618);
+            this.txtReceivedBy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtReceivedBy.Name = "txtReceivedBy";
+            this.txtReceivedBy.Size = new System.Drawing.Size(389, 30);
+            this.txtReceivedBy.TabIndex = 73;
+            this.txtReceivedBy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtReceivedBy_KeyPress);
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Font = new System.Drawing.Font("Georgia", 20F);
+            this.lblDescription.ForeColor = System.Drawing.Color.Black;
+            this.lblDescription.Location = new System.Drawing.Point(227, 453);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(172, 31);
+            this.lblDescription.TabIndex = 72;
+            this.lblDescription.Text = "Client Name:";
+            // 
+            // lblNumber
+            // 
+            this.lblNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblNumber.AutoSize = true;
+            this.lblNumber.Font = new System.Drawing.Font("Georgia", 20F);
+            this.lblNumber.ForeColor = System.Drawing.Color.Black;
+            this.lblNumber.Location = new System.Drawing.Point(303, 344);
+            this.lblNumber.Name = "lblNumber";
+            this.lblNumber.Size = new System.Drawing.Size(172, 31);
+            this.lblNumber.TabIndex = 71;
+            this.lblNumber.Text = "Client Name:";
+            // 
+            // lblName
+            // 
+            this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Georgia", 20F);
+            this.lblName.ForeColor = System.Drawing.Color.Black;
+            this.lblName.Location = new System.Drawing.Point(239, 288);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(172, 31);
+            this.lblName.TabIndex = 70;
+            this.lblName.Text = "Client Name:";
+            // 
+            // lblBalance
+            // 
+            this.lblBalance.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblBalance.AutoSize = true;
+            this.lblBalance.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBalance.ForeColor = System.Drawing.Color.Black;
+            this.lblBalance.Location = new System.Drawing.Point(359, 559);
+            this.lblBalance.Name = "lblBalance";
+            this.lblBalance.Size = new System.Drawing.Size(150, 32);
+            this.lblBalance.TabIndex = 69;
+            this.lblBalance.Text = "00/00/0000";
+            // 
+            // lblAmount
+            // 
+            this.lblAmount.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblAmount.AutoSize = true;
+            this.lblAmount.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmount.ForeColor = System.Drawing.Color.Black;
+            this.lblAmount.Location = new System.Drawing.Point(219, 505);
+            this.lblAmount.Name = "lblAmount";
+            this.lblAmount.Size = new System.Drawing.Size(150, 32);
+            this.lblAmount.TabIndex = 68;
+            this.lblAmount.Text = "00/00/0000";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Georgia", 22F);
+            this.label15.Location = new System.Drawing.Point(320, 556);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(32, 35);
+            this.label15.TabIndex = 67;
+            this.label15.Text = "₱";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Georgia", 22F);
+            this.label30.Location = new System.Drawing.Point(188, 501);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(32, 35);
+            this.label30.TabIndex = 66;
+            this.label30.Text = "₱";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Georgia", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(238, 56);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(482, 39);
+            this.label14.TabIndex = 39;
+            this.label14.Text = "CRUZ FUNERAL SERVICE";
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Georgia", 20F);
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(70, 671);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(138, 31);
+            this.label13.TabIndex = 38;
+            this.label13.Text = "Signature:";
             // 
             // label12
             // 
@@ -155,10 +269,9 @@ namespace FuneralManagementSystem
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Georgia", 20F);
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(93, 760);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(70, 618);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(206, 39);
+            this.label12.Size = new System.Drawing.Size(164, 31);
             this.label12.TabIndex = 37;
             this.label12.Text = "Received by:";
             // 
@@ -168,10 +281,9 @@ namespace FuneralManagementSystem
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Georgia", 20F);
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(93, 689);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(70, 560);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(317, 39);
+            this.label11.Size = new System.Drawing.Size(256, 31);
             this.label11.TabIndex = 36;
             this.label11.Text = "Remaining Balance:";
             // 
@@ -181,10 +293,9 @@ namespace FuneralManagementSystem
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Georgia", 20F);
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(92, 621);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(69, 505);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(150, 39);
+            this.label10.Size = new System.Drawing.Size(120, 31);
             this.label10.TabIndex = 35;
             this.label10.Text = "Amount:";
             // 
@@ -194,10 +305,9 @@ namespace FuneralManagementSystem
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Georgia", 20F);
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(93, 557);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(70, 453);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(202, 39);
+            this.label8.Size = new System.Drawing.Size(161, 31);
             this.label8.TabIndex = 34;
             this.label8.Text = "Description:";
             // 
@@ -207,10 +317,9 @@ namespace FuneralManagementSystem
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(93, 491);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(70, 399);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(388, 38);
+            this.label7.Size = new System.Drawing.Size(316, 31);
             this.label7.TabIndex = 33;
             this.label7.Text = "Payment Information";
             // 
@@ -220,10 +329,9 @@ namespace FuneralManagementSystem
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(93, 287);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(70, 233);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(339, 38);
+            this.label6.Size = new System.Drawing.Size(277, 31);
             this.label6.TabIndex = 32;
             this.label6.Text = "Client Information";
             // 
@@ -233,10 +341,9 @@ namespace FuneralManagementSystem
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Georgia", 20F);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(93, 424);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(70, 344);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(303, 39);
+            this.label5.Size = new System.Drawing.Size(242, 31);
             this.label5.TabIndex = 31;
             this.label5.Text = "Client Contact No.:";
             // 
@@ -246,10 +353,9 @@ namespace FuneralManagementSystem
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Georgia", 20F);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(93, 354);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(70, 288);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(215, 39);
+            this.label4.Size = new System.Drawing.Size(172, 31);
             this.label4.TabIndex = 30;
             this.label4.Text = "Client Name:";
             // 
@@ -259,10 +365,9 @@ namespace FuneralManagementSystem
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.Black;
-            this.lblDate.Location = new System.Drawing.Point(425, 209);
-            this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDate.Location = new System.Drawing.Point(319, 170);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(179, 38);
+            this.lblDate.Size = new System.Drawing.Size(150, 32);
             this.lblDate.TabIndex = 29;
             this.lblDate.Text = "00/00/0000";
             // 
@@ -272,19 +377,19 @@ namespace FuneralManagementSystem
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Georgia", 20F);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(319, 209);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(239, 170);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 39);
+            this.label2.Size = new System.Drawing.Size(78, 31);
             this.label2.TabIndex = 28;
             this.label2.Text = "Date:";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FuneralManagementSystem.Properties.Resources.cruzlogocircle;
-            this.pictureBox1.Location = new System.Drawing.Point(72, 69);
+            this.pictureBox1.Location = new System.Drawing.Point(54, 56);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(222, 179);
+            this.pictureBox1.Size = new System.Drawing.Size(166, 145);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
@@ -295,10 +400,9 @@ namespace FuneralManagementSystem
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Georgia", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(317, 133);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(238, 108);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(396, 49);
+            this.label1.Size = new System.Drawing.Size(311, 39);
             this.label1.TabIndex = 26;
             this.label1.Text = "Payment Receipt";
             // 
@@ -307,9 +411,10 @@ namespace FuneralManagementSystem
             this.btnPrint.BackColor = System.Drawing.Color.Gold;
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Font = new System.Drawing.Font("Georgia", 13F);
-            this.btnPrint.Location = new System.Drawing.Point(1411, 128);
+            this.btnPrint.Location = new System.Drawing.Point(1058, 104);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(254, 40);
+            this.btnPrint.Size = new System.Drawing.Size(190, 32);
             this.btnPrint.TabIndex = 80;
             this.btnPrint.Text = "Print";
             this.btnPrint.UseVisualStyleBackColor = false;
@@ -325,138 +430,16 @@ namespace FuneralManagementSystem
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // label13
-            // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Georgia", 20F);
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(93, 826);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(172, 39);
-            this.label13.TabIndex = 38;
-            this.label13.Text = "Signature:";
-            // 
-            // label14
-            // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Georgia", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(317, 69);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(610, 49);
-            this.label14.TabIndex = 39;
-            this.label14.Text = "CRUZ FUNERAL SERVICE";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Georgia", 22F);
-            this.label30.Location = new System.Drawing.Point(250, 617);
-            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(44, 43);
-            this.label30.TabIndex = 66;
-            this.label30.Text = "₱";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Georgia", 22F);
-            this.label15.Location = new System.Drawing.Point(427, 684);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(44, 43);
-            this.label15.TabIndex = 67;
-            this.label15.Text = "₱";
-            // 
-            // lblAmount
-            // 
-            this.lblAmount.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblAmount.AutoSize = true;
-            this.lblAmount.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmount.ForeColor = System.Drawing.Color.Black;
-            this.lblAmount.Location = new System.Drawing.Point(292, 621);
-            this.lblAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblAmount.Name = "lblAmount";
-            this.lblAmount.Size = new System.Drawing.Size(179, 38);
-            this.lblAmount.TabIndex = 68;
-            this.lblAmount.Text = "00/00/0000";
-            // 
-            // lblBalance
-            // 
-            this.lblBalance.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblBalance.AutoSize = true;
-            this.lblBalance.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBalance.ForeColor = System.Drawing.Color.Black;
-            this.lblBalance.Location = new System.Drawing.Point(479, 688);
-            this.lblBalance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblBalance.Name = "lblBalance";
-            this.lblBalance.Size = new System.Drawing.Size(179, 38);
-            this.lblBalance.TabIndex = 69;
-            this.lblBalance.Text = "00/00/0000";
-            // 
-            // lblName
-            // 
-            this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Georgia", 20F);
-            this.lblName.ForeColor = System.Drawing.Color.Black;
-            this.lblName.Location = new System.Drawing.Point(319, 354);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(215, 39);
-            this.lblName.TabIndex = 70;
-            this.lblName.Text = "Client Name:";
-            // 
-            // lblNumber
-            // 
-            this.lblNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblNumber.AutoSize = true;
-            this.lblNumber.Font = new System.Drawing.Font("Georgia", 20F);
-            this.lblNumber.ForeColor = System.Drawing.Color.Black;
-            this.lblNumber.Location = new System.Drawing.Point(404, 424);
-            this.lblNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNumber.Name = "lblNumber";
-            this.lblNumber.Size = new System.Drawing.Size(215, 39);
-            this.lblNumber.TabIndex = 71;
-            this.lblNumber.Text = "Client Name:";
-            // 
-            // lblDescription
-            // 
-            this.lblDescription.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.Font = new System.Drawing.Font("Georgia", 20F);
-            this.lblDescription.ForeColor = System.Drawing.Color.Black;
-            this.lblDescription.Location = new System.Drawing.Point(303, 557);
-            this.lblDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(215, 39);
-            this.lblDescription.TabIndex = 72;
-            this.lblDescription.Text = "Client Name:";
-            // 
-            // txtReceivedBy
-            // 
-            this.txtReceivedBy.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtReceivedBy.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReceivedBy.Location = new System.Drawing.Point(307, 760);
-            this.txtReceivedBy.Name = "txtReceivedBy";
-            this.txtReceivedBy.Size = new System.Drawing.Size(519, 38);
-            this.txtReceivedBy.TabIndex = 73;
-            this.txtReceivedBy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtReceivedBy_KeyPress);
-            // 
             // frmReceipt
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1740, 1055);
+            this.ClientSize = new System.Drawing.Size(1305, 857);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.pnlReceipt);
             this.Controls.Add(this.panel3);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmReceipt";
             this.Text = "frmReceipt";
             this.Load += new System.EventHandler(this.frmReceipt_Load);

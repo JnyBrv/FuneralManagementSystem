@@ -33,8 +33,10 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dataGridPaying = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pbExit = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnlPreview = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
             this.lblPlace = new System.Windows.Forms.Label();
@@ -47,17 +49,15 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.picPackage = new System.Windows.Forms.PictureBox();
-            this.pbExit = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPaying)).BeginInit();
             this.panel3.SuspendLayout();
-            this.pnlPreview.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPackage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.pnlPreview.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPackage)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -117,7 +117,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
             this.panel3.Controls.Add(this.pbExit);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label10);
@@ -127,6 +127,20 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1305, 76);
             this.panel3.TabIndex = 9;
+            // 
+            // pbExit
+            // 
+            this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbExit.BackColor = System.Drawing.Color.Transparent;
+            this.pbExit.Image = global::FuneralManagementSystem.Properties.Resources.exit;
+            this.pbExit.Location = new System.Drawing.Point(1267, 0);
+            this.pbExit.Margin = new System.Windows.Forms.Padding(2);
+            this.pbExit.Name = "pbExit";
+            this.pbExit.Size = new System.Drawing.Size(38, 41);
+            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbExit.TabIndex = 22;
+            this.pbExit.TabStop = false;
+            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
             // 
             // label9
             // 
@@ -152,6 +166,17 @@
             this.label10.TabIndex = 19;
             this.label10.Text = "Paying";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox3.Image = global::FuneralManagementSystem.Properties.Resources.clientIcon;
+            this.pictureBox3.Location = new System.Drawing.Point(20, 11);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(64, 57);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 20;
+            this.pictureBox3.TabStop = false;
+            // 
             // pnlPreview
             // 
             this.pnlPreview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -170,7 +195,7 @@
             this.pnlPreview.Controls.Add(this.label8);
             this.pnlPreview.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlPreview.Location = new System.Drawing.Point(971, 76);
-            this.pnlPreview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlPreview.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPreview.Name = "pnlPreview";
             this.pnlPreview.Size = new System.Drawing.Size(334, 781);
             this.pnlPreview.TabIndex = 10;
@@ -297,17 +322,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Decedent Name:";
             // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(31, 242);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(124, 23);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Client Name:";
-            // 
             // picPackage
             // 
             this.picPackage.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -318,30 +332,16 @@
             this.picPackage.TabIndex = 0;
             this.picPackage.TabStop = false;
             // 
-            // pbExit
+            // label8
             // 
-            this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbExit.BackColor = System.Drawing.Color.Transparent;
-            this.pbExit.Image = global::FuneralManagementSystem.Properties.Resources.exit;
-            this.pbExit.Location = new System.Drawing.Point(1267, 0);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(2);
-            this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(38, 41);
-            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbExit.TabIndex = 22;
-            this.pbExit.TabStop = false;
-            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox3.Image = global::FuneralManagementSystem.Properties.Resources.clientIcon;
-            this.pictureBox3.Location = new System.Drawing.Point(20, 11);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(64, 57);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 20;
-            this.pictureBox3.TabStop = false;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(31, 242);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(124, 23);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Client Name:";
             // 
             // frmPaying
             // 
@@ -359,11 +359,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPaying)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnlPreview.ResumeLayout(false);
             this.pnlPreview.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPackage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -165,6 +165,12 @@
     <Compile Include="PackagesCopy.Designer.cs">
       <DependentUpon>PackagesCopy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
     <Compile Include="PaymentCash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PackagesCopy.resx">
       <DependentUpon>PackagesCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PaymentCash.resx">
       <DependentUpon>PaymentCash.cs</DependentUpon>
@@ -349,6 +358,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logoWithoutBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paymentYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NEWarchiveYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NEWarchiveBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchBlack.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

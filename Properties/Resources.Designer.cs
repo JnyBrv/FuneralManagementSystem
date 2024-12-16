@@ -83,6 +83,16 @@ namespace FuneralManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap addYellow {
+            get {
+                object obj = ResourceManager.GetObject("addYellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap archive_black {
             get {
                 object obj = ResourceManager.GetObject("archive black", resourceCulture);
@@ -303,6 +313,26 @@ namespace FuneralManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap NEWarchiveBlack {
+            get {
+                object obj = ResourceManager.GetObject("NEWarchiveBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NEWarchiveYellow {
+            get {
+                object obj = ResourceManager.GetObject("NEWarchiveYellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap package_black {
             get {
                 object obj = ResourceManager.GetObject("package black", resourceCulture);
@@ -343,6 +373,16 @@ namespace FuneralManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap paymentYellow {
+            get {
+                object obj = ResourceManager.GetObject("paymentYellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngwing_com {
             get {
                 object obj = ResourceManager.GetObject("pngwing.com", resourceCulture);
@@ -356,6 +396,16 @@ namespace FuneralManagementSystem.Properties {
         internal static System.Drawing.Bitmap receiptYellow {
             get {
                 object obj = ResourceManager.GetObject("receiptYellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap searchBlack {
+            get {
+                object obj = ResourceManager.GetObject("searchBlack", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

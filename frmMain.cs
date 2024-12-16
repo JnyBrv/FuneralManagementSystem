@@ -84,10 +84,10 @@ namespace FuneralManagementSystem
 
             //clicked colors
             btnPackages.BackColor = Color.Gold;
-            btnPackages.ForeColor = Color.Black;
-            btnClients.BackColor = Color.Black;
+            btnPackages.ForeColor = Color.FromArgb(40, 40, 40);
+            btnClients.BackColor = Color.FromArgb(40, 40, 40);
             btnClients.ForeColor = Color.Gold;
-            btnArchive.BackColor = Color.Black;
+            btnArchive.BackColor = Color.FromArgb(40, 40, 40);
             btnArchive.ForeColor = Color.Gold;
 
             //clicked image color
@@ -98,7 +98,7 @@ namespace FuneralManagementSystem
 
             // change the other buttons to yellow
             btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 40, 40);
-            btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 30, 30);
+            btnArchive.Image = resizeIcon(Properties.Resources.NEWarchiveYellow, 35, 35);
 
 
 
@@ -106,26 +106,7 @@ namespace FuneralManagementSystem
 
        
 
-        //pang reset ng icon
-        //private void clientIconDropdown()
-        //{
-        //    if (isClientsExpanded)
-        //    {
-        //        btnOnService.Visible = false;
-        //        btnPaying.Visible = false;
-        //        btnClients.Text = "       Clients         ▲"; 
-        //    }
-        //    else
-        //    {
-                
-        //        btnOnService.Visible = true;
-        //        btnPaying.Visible = true;
-        //        btnClients.Text = "       Clients         ▼"; 
-        //    }
-
-        //    isClientsIcon = !isClientsIcon;
-        //}
-
+    
 
         private void btnClients_Click(object sender, EventArgs e)
         {
@@ -141,7 +122,7 @@ namespace FuneralManagementSystem
 
             // change the other buttons to yellow
             btnPackages.Image = resizeIcon(Properties.Resources.packageIcon, 30, 30);
-            btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 30, 30);
+            btnArchive.Image = resizeIcon(Properties.Resources.NEWarchiveYellow, 35, 35);
 
             //dropdown
             if (!isClientsExpanded)
@@ -165,20 +146,20 @@ namespace FuneralManagementSystem
             
 
             //clicked colors
-            btnPackages.BackColor = Color.Black;
+            btnPackages.BackColor = Color.FromArgb(40, 40, 40);
             btnPackages.ForeColor = Color.Gold;
             btnClients.BackColor = Color.Gold;
-            btnClients.ForeColor = Color.Black;
-            btnArchive.BackColor = Color.Black;
+            btnClients.ForeColor = Color.FromArgb(40, 40, 40);
+            btnArchive.BackColor = Color.FromArgb(40, 40, 40);
             btnArchive.ForeColor = Color.Gold;
 
-            btnOnService.BackColor = Color.Black;
+            btnOnService.BackColor = Color.FromArgb(40, 40, 40);
             btnOnService.ForeColor = Color.Gold;
-            btnPaying.BackColor = Color.Black;
+            btnPaying.BackColor = Color.FromArgb(40, 40, 40);
             btnPaying.ForeColor = Color.Gold;
-            btnClient.BackColor = Color.Black;
+            btnClient.BackColor = Color.FromArgb(40, 40, 40);
             btnClient.ForeColor = Color.Gold;
-            btnEmployees.BackColor = Color.Black;
+            btnEmployees.BackColor = Color.FromArgb(40, 40, 40);
             btnEmployees.ForeColor = Color.Gold;
 
         }
@@ -198,7 +179,7 @@ namespace FuneralManagementSystem
             //clicled image color
             fillSpaceForIcon();
        
-            btnArchive.Image = resizeIcon(Properties.Resources.archive_black, 30, 30);
+            btnArchive.Image = resizeIcon(Properties.Resources.NEWarchiveBlack, 35, 35);
             btnArchive.ImageAlign = ContentAlignment.MiddleLeft;
             btnArchive.TextAlign = ContentAlignment.MiddleCenter;
 
@@ -230,20 +211,20 @@ namespace FuneralManagementSystem
 
 
             //clicked colors
-            btnPackages.BackColor = Color.Black;
+            btnPackages.BackColor = Color.FromArgb(40, 40, 40);
             btnPackages.ForeColor = Color.Gold;
-            btnClients.BackColor = Color.Black;
+            btnClients.BackColor = Color.FromArgb(40, 40, 40);
             btnClients.ForeColor = Color.Gold;
             btnArchive.BackColor = Color.Gold;
-            btnArchive.ForeColor = Color.Black;
+            btnArchive.ForeColor = Color.FromArgb(40, 40, 40);
 
-            btnOnService.BackColor = Color.Black;
+            btnOnService.BackColor = Color.FromArgb(40, 40, 40);
             btnOnService.ForeColor = Color.Gold;
-            btnPaying.BackColor = Color.Black;
+            btnPaying.BackColor = Color.FromArgb(40, 40, 40);
             btnPaying.ForeColor = Color.Gold;
-            btnClient.BackColor = Color.Black;
+            btnClient.BackColor = Color.FromArgb(40, 40, 40);
             btnClient.ForeColor = Color.Gold;
-            btnEmployees.BackColor = Color.Black;
+            btnEmployees.BackColor = Color.FromArgb(40, 40, 40);
             btnEmployees.ForeColor = Color.Gold;
 
         }
@@ -256,7 +237,7 @@ namespace FuneralManagementSystem
 
             btnPackages.Image = resizeIcon(Properties.Resources.package_black, 30, 30);
             btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 40, 40);
-            btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 30, 30);
+            btnArchive.Image = resizeIcon(Properties.Resources.NEWarchiveYellow, 35, 35);
 
             btnPackages.ImageAlign = ContentAlignment.MiddleLeft;
             btnClients.ImageAlign = ContentAlignment.MiddleLeft;
@@ -268,19 +249,19 @@ namespace FuneralManagementSystem
 
             // Apply initial button styles
             btnPackages.BackColor = Color.Gold;
-            btnPackages.ForeColor = Color.Black;
-            btnClients.BackColor = Color.Black;
+            btnPackages.ForeColor = Color.FromArgb(40, 40, 40);
+            btnClients.BackColor = Color.FromArgb(40, 40, 40);
             btnClients.ForeColor = Color.Gold;
-            btnArchive.BackColor = Color.Black;
+            btnArchive.BackColor = Color.FromArgb(40, 40, 40);
             btnArchive.ForeColor = Color.Gold;
 
-            btnOnService.BackColor = Color.Black;
+            btnOnService.BackColor = Color.FromArgb(40, 40, 40);
             btnOnService.ForeColor = Color.Gold;
-            btnPaying.BackColor = Color.Black;
+            btnPaying.BackColor = Color.FromArgb(40, 40, 40);
             btnPaying.ForeColor = Color.Gold;
-            btnClient.BackColor = Color.Black;
+            btnClient.BackColor = Color.FromArgb(40, 40, 40);
             btnClient.ForeColor = Color.Gold;
-            btnEmployees.BackColor = Color.Black;
+            btnEmployees.BackColor = Color.FromArgb(40, 40, 40);
             btnEmployees.ForeColor = Color.Gold;
 
 
@@ -291,17 +272,12 @@ namespace FuneralManagementSystem
 
         private void ResetButtonIcons()
         {
-            //// Reset all main button icons to yellow
-            //btnPackages.Image = resizeIcon(Properties.Resources.packageIcon, 30, 30);
-            //btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 30, 30);
-            //btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 30, 30);
-
-
+      
 
 
             btnPackages.Image = resizeIcon(Properties.Resources.packageIcon, 30, 30);
             btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 40, 40);
-            btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 30, 30);
+            btnArchive.Image = resizeIcon(Properties.Resources.NEWarchiveYellow, 35, 35);
 
             btnPackages.ImageAlign = ContentAlignment.MiddleLeft;
             btnClients.ImageAlign = ContentAlignment.MiddleLeft;
@@ -317,12 +293,7 @@ namespace FuneralManagementSystem
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            //System.Drawing.Rectangle workingRectangle = Screen.PrimaryScreen.WorkingArea;
-
-            //this.Size = new System.Drawing.Size(Convert.ToInt32(0.5 * workingRectangle.Width),
-            //    Convert.ToInt32(0.4 * workingRectangle.Height));
-
-            //this.Location = new System.Drawing.Point(230, 0);
+          
         }
 
         private void pbExit_Click(object sender, EventArgs e)
@@ -375,17 +346,17 @@ namespace FuneralManagementSystem
             // change the color of icon sa dropdown
 
             btnPackages.BackColor = Color.Gold;
-            btnPackages.ForeColor = Color.Black;
-            btnClients.BackColor = Color.Black;
+            btnPackages.ForeColor = Color.FromArgb(40, 40, 40);
+            btnClients.BackColor = Color.FromArgb(40, 40, 40);
             btnClients.ForeColor = Color.Gold;
-            btnArchive.BackColor = Color.Black;
+            btnArchive.BackColor = Color.FromArgb(40, 40, 40);
             btnArchive.ForeColor = Color.Gold;
 
             fillSpaceForIcon();
 
             btnPackages.Image = resizeIcon(Properties.Resources.package_black, 30, 30);
             btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 40, 40);
-            btnArchive.Image = resizeIcon(Properties.Resources.archive_color, 30, 30);
+            btnArchive.Image = resizeIcon(Properties.Resources.NEWarchiveYellow, 35, 35);
 
             btnPackages.ImageAlign = ContentAlignment.MiddleLeft;
             btnClients.ImageAlign = ContentAlignment.MiddleLeft;

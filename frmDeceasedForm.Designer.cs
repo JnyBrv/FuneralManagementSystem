@@ -239,7 +239,8 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Black;
+            this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
+            this.label24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label24.Font = new System.Drawing.Font("Georgia", 25F);
             this.label24.ForeColor = System.Drawing.Color.Gold;
             this.label24.Location = new System.Drawing.Point(32, 21);
@@ -305,12 +306,12 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
             this.panel1.Controls.Add(this.pbExit);
             this.panel1.Controls.Add(this.label24);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1305, 81);
             this.panel1.TabIndex = 54;
@@ -320,7 +321,7 @@
             this.pbExit.BackColor = System.Drawing.Color.Transparent;
             this.pbExit.Image = global::FuneralManagementSystem.Properties.Resources.exit;
             this.pbExit.Location = new System.Drawing.Point(1268, 0);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbExit.Margin = new System.Windows.Forms.Padding(2);
             this.pbExit.Name = "pbExit";
             this.pbExit.Size = new System.Drawing.Size(38, 41);
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -335,7 +336,7 @@
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.Location = new System.Drawing.Point(1105, 696);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(166, 37);
             this.btnNext.TabIndex = 55;
@@ -374,7 +375,7 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(79, 138);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1120, 363);
             this.panel2.TabIndex = 56;

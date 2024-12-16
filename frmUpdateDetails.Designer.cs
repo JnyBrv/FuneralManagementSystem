@@ -138,7 +138,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
             this.panel3.Controls.Add(this.btnBack);
             this.panel3.Controls.Add(this.pbExit);
             this.panel3.Controls.Add(this.label9);
@@ -152,12 +152,12 @@
             // btnBack
             // 
             this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBack.BackColor = System.Drawing.Color.Black;
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.Gold;
             this.btnBack.Location = new System.Drawing.Point(1155, 30);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(94, 37);
             this.btnBack.TabIndex = 24;
@@ -171,7 +171,7 @@
             this.pbExit.BackColor = System.Drawing.Color.Transparent;
             this.pbExit.Image = global::FuneralManagementSystem.Properties.Resources.exit;
             this.pbExit.Location = new System.Drawing.Point(1267, 0);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbExit.Margin = new System.Windows.Forms.Padding(2);
             this.pbExit.Name = "pbExit";
             this.pbExit.Size = new System.Drawing.Size(38, 41);
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -211,7 +211,7 @@
             this.flowLayoutPanel1.Controls.Add(this.panel7);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 81);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1305, 776);
             this.flowLayoutPanel1.TabIndex = 8;
@@ -222,7 +222,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1285, 410);
             this.panel1.TabIndex = 0;
@@ -233,7 +233,7 @@
             this.btnSaveClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveClient.Font = new System.Drawing.Font("Georgia", 13F);
             this.btnSaveClient.Location = new System.Drawing.Point(1017, 347);
-            this.btnSaveClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSaveClient.Margin = new System.Windows.Forms.Padding(2);
             this.btnSaveClient.Name = "btnSaveClient";
             this.btnSaveClient.Size = new System.Drawing.Size(190, 32);
             this.btnSaveClient.TabIndex = 11;
@@ -268,7 +268,7 @@
             this.panel2.Controls.Add(this.txtContactno);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Location = new System.Drawing.Point(83, 95);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1124, 228);
             this.panel2.TabIndex = 26;
@@ -501,7 +501,7 @@
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(2, 416);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1285, 429);
             this.panel4.TabIndex = 1;
@@ -512,7 +512,7 @@
             this.btnSaveDeceased.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveDeceased.Font = new System.Drawing.Font("Georgia", 13F);
             this.btnSaveDeceased.Location = new System.Drawing.Point(1017, 388);
-            this.btnSaveDeceased.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSaveDeceased.Margin = new System.Windows.Forms.Padding(2);
             this.btnSaveDeceased.Name = "btnSaveDeceased";
             this.btnSaveDeceased.Size = new System.Drawing.Size(190, 32);
             this.btnSaveDeceased.TabIndex = 79;
@@ -547,7 +547,7 @@
             this.panel5.Controls.Add(this.label25);
             this.panel5.Controls.Add(this.label26);
             this.panel5.Location = new System.Drawing.Point(83, 46);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1124, 335);
             this.panel5.TabIndex = 59;
@@ -557,7 +557,7 @@
             this.timeOfInternment.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeOfInternment.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.timeOfInternment.Location = new System.Drawing.Point(388, 290);
-            this.timeOfInternment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.timeOfInternment.Margin = new System.Windows.Forms.Padding(2);
             this.timeOfInternment.Name = "timeOfInternment";
             this.timeOfInternment.ShowUpDown = true;
             this.timeOfInternment.Size = new System.Drawing.Size(344, 29);
@@ -803,7 +803,7 @@
             this.panel6.Controls.Add(this.btnBrowse);
             this.panel6.Controls.Add(this.label28);
             this.panel6.Location = new System.Drawing.Point(2, 849);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1285, 436);
             this.panel6.TabIndex = 2;
@@ -814,7 +814,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Georgia", 13F);
             this.btnDelete.Location = new System.Drawing.Point(657, 362);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(161, 32);
             this.btnDelete.TabIndex = 79;
@@ -825,7 +825,7 @@
             // pboxAttachments
             // 
             this.pboxAttachments.Location = new System.Drawing.Point(871, 43);
-            this.pboxAttachments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pboxAttachments.Margin = new System.Windows.Forms.Padding(2);
             this.pboxAttachments.Name = "pboxAttachments";
             this.pboxAttachments.Size = new System.Drawing.Size(327, 352);
             this.pboxAttachments.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -838,7 +838,7 @@
             this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpen.Font = new System.Drawing.Font("Georgia", 13F);
             this.btnOpen.Location = new System.Drawing.Point(471, 362);
-            this.btnOpen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOpen.Margin = new System.Windows.Forms.Padding(2);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(163, 32);
             this.btnOpen.TabIndex = 77;
@@ -872,7 +872,7 @@
             this.btnSaveFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveFile.Font = new System.Drawing.Font("Georgia", 13F);
             this.btnSaveFile.Location = new System.Drawing.Point(82, 362);
-            this.btnSaveFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSaveFile.Margin = new System.Windows.Forms.Padding(2);
             this.btnSaveFile.Name = "btnSaveFile";
             this.btnSaveFile.Size = new System.Drawing.Size(351, 32);
             this.btnSaveFile.TabIndex = 74;
@@ -935,7 +935,7 @@
             this.btnBrowse.Font = new System.Drawing.Font("Georgia", 13F);
             this.btnBrowse.ForeColor = System.Drawing.Color.Orange;
             this.btnBrowse.Location = new System.Drawing.Point(82, 110);
-            this.btnBrowse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBrowse.Margin = new System.Windows.Forms.Padding(2);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(352, 32);
             this.btnBrowse.TabIndex = 60;
@@ -978,7 +978,7 @@
             this.panel7.Controls.Add(this.label35);
             this.panel7.Controls.Add(this.label29);
             this.panel7.Location = new System.Drawing.Point(2, 1289);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1285, 1044);
             this.panel7.TabIndex = 3;
@@ -1017,7 +1017,7 @@
             this.btnCompleteTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompleteTransaction.Font = new System.Drawing.Font("Georgia", 15F);
             this.btnCompleteTransaction.Location = new System.Drawing.Point(858, 849);
-            this.btnCompleteTransaction.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCompleteTransaction.Margin = new System.Windows.Forms.Padding(2);
             this.btnCompleteTransaction.Name = "btnCompleteTransaction";
             this.btnCompleteTransaction.Size = new System.Drawing.Size(351, 45);
             this.btnCompleteTransaction.TabIndex = 90;
@@ -1063,7 +1063,7 @@
             this.btnConfirmPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmPayment.Font = new System.Drawing.Font("Georgia", 13F);
             this.btnConfirmPayment.Location = new System.Drawing.Point(939, 453);
-            this.btnConfirmPayment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirmPayment.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirmPayment.Name = "btnConfirmPayment";
             this.btnConfirmPayment.Size = new System.Drawing.Size(270, 32);
             this.btnConfirmPayment.TabIndex = 85;
@@ -1085,7 +1085,7 @@
             // 
             this.txtPayment.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPayment.Location = new System.Drawing.Point(310, 396);
-            this.txtPayment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPayment.Margin = new System.Windows.Forms.Padding(2);
             this.txtPayment.Multiline = true;
             this.txtPayment.Name = "txtPayment";
             this.txtPayment.Size = new System.Drawing.Size(900, 32);
@@ -1107,7 +1107,7 @@
             // 
             this.txtDescription.Font = new System.Drawing.Font("Georgia", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.Location = new System.Drawing.Point(281, 337);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(929, 30);
             this.txtDescription.TabIndex = 81;
@@ -1142,7 +1142,7 @@
             this.btnUpdateInclusions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateInclusions.Font = new System.Drawing.Font("Georgia", 13F);
             this.btnUpdateInclusions.Location = new System.Drawing.Point(939, 232);
-            this.btnUpdateInclusions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateInclusions.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateInclusions.Name = "btnUpdateInclusions";
             this.btnUpdateInclusions.Size = new System.Drawing.Size(270, 32);
             this.btnUpdateInclusions.TabIndex = 78;
@@ -1164,7 +1164,7 @@
             // 
             this.txtAddPayment.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddPayment.Location = new System.Drawing.Point(310, 186);
-            this.txtAddPayment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAddPayment.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddPayment.Multiline = true;
             this.txtAddPayment.Name = "txtAddPayment";
             this.txtAddPayment.Size = new System.Drawing.Size(900, 32);
@@ -1185,7 +1185,7 @@
             // 
             this.txtAddInclusions.Font = new System.Drawing.Font("Georgia", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddInclusions.Location = new System.Drawing.Point(292, 76);
-            this.txtAddInclusions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAddInclusions.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddInclusions.Multiline = true;
             this.txtAddInclusions.Name = "txtAddInclusions";
             this.txtAddInclusions.Size = new System.Drawing.Size(918, 78);
