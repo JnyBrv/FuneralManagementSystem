@@ -144,10 +144,7 @@ namespace FuneralManagementSystem
 
 
                     main = (frmMain)Application.OpenForms["frmMain"];
-                    frmInclusions inclu = new frmInclusions();
-                    inclu.id = id;
-                    inclu.package = package;
-                    main.OpenChildForm(inclu);
+                    main.OpenChildForm(new frmInclusions());
                     main.panelTitleBar.Visible = false;
                 }
             }

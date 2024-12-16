@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Globalization;
@@ -17,28 +16,21 @@ namespace FuneralManagementSystem
 {
     public partial class Package : UserControl
     {
-        private DelegateText DelPackage, DelInclustions, DelID;
+        private DelegateText DelPackage, DelInclustions;
         private DelegateNumber DelPrice;
-        private DelegateImage DelImg;
         frmMain main;
         frmClientContractForm ccf;
 
-        //SQL Connection
-        SqlConnection con = new SqlConnection(@"Data Source=JIANNESANTOS\SQLEXPRESS;Initial Catalog=FuneralManagementSystem;Integrated Security=True");
-
-        
-
         private void btnOmsAvail_Click(object sender, EventArgs e)
         {
-            int p = Convert.ToInt32(this.label1.Text);
             main = (frmMain)Application.OpenForms["frmMain"];
             main.OpenChildForm(new frmClientContractForm());
             ccf = (frmClientContractForm)Application.OpenForms["frmClientContractForm"];
-            ccf.package = p;
+            ccf.package = 0;
             main.panelTitleBar.Visible = false;
         }
 
-        
+
         private void applyRoundEdge()
         {
             // PANG ROUND NG EDGESS!!
@@ -101,39 +93,8 @@ namespace FuneralManagementSystem
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            //Confirmation message dialog
-            DialogResult result = MessageBox.Show("Are you sure you want to delete this package? ",
-                "Exit Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                try
-                {
-                    String name = this.lblPackageName.Text;
-
-                    con.Open();
-
-                    SqlCommand cmd = con.CreateCommand();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText =
-                        "UPDATE PACKAGE SET archive = 1 WHERE packageName = '" + name + "'";
-                    cmd.ExecuteNonQuery();
-
-                    con.Close();
-
-                }
-                catch (Exception ee)
-                {
-                    MessageBox.Show(ee.ToString());
-                }
-                this.Dispose();
-                MessageBox.Show("Deleted successfully.",
-                "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-           
-        
-
-    }
+            this.Dispose();
+        }
 
         public Package()
 
@@ -142,8 +103,6 @@ namespace FuneralManagementSystem
             DelPackage = new DelegateText(AddPackageClass.GetPackage);
             DelInclustions = new DelegateText(AddPackageClass.GetInclusions);
             DelPrice = new DelegateNumber(AddPackageClass.GetPrice);
-            DelImg = new DelegateImage(AddPackageClass.GetImage);
-            DelID = new DelegateText(AddPackageClass.getPackageID);
 
             lblPackageName.Text = DelPackage(AddPackageClass.PackageName);
             txtInclusions.Text = DelInclustions(AddPackageClass.Inclusions);

@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,13 +14,7 @@ namespace FuneralManagementSystem
 {
     public partial class frmAddPackage : Form
     {
-        frmMain main;
         FrmPackages package;
-        String imgloc;
-        public int id;
-        //SQL Connection
-        SqlConnection con = new SqlConnection(@"Data Source=JIANNESANTOS\SQLEXPRESS;Initial Catalog=FuneralManagementSystem;Integrated Security=True");
-
         public frmAddPackage()
         {
             InitializeComponent();
@@ -30,56 +22,9 @@ namespace FuneralManagementSystem
 
         private void btnPackage_Click(object sender, EventArgs e)
         {
-
-            try
-            {
-                if (txtPackageName.Text == "" || txtPrice.Text == "" || txtInclusions.Text == "" || pbPackage.Image == null)
-                {
-                    MessageBox.Show("Please fill all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    id = getCount(-1);
-
-                    byte[] images = null;
-                    FileStream stream = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
-                    BinaryReader brs = new BinaryReader(stream);
-                    images = brs.ReadBytes((int)stream.Length);
-
-
-                    String name = txtPackageName.Text;
-                    String price = txtPrice.Text;
-                    String inclu = txtInclusions.Text;
-
-
-                    //insert into database
-                    con.Open();
-
-                    SqlCommand cmd = con.CreateCommand();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText =
-                        "INSERT INTO PACKAGE (packageID, packageName, packageAmount, archive, packageInclusions, packageImg) VALUES (" + id+ ", '" + name + "', '" + price + "', 0, '" + inclu + "' , @images )";
-                    cmd.Parameters.Add(new SqlParameter("@images", images));
-                    cmd.ExecuteNonQuery();
-
-                    con.Close();
-
-
-                    MessageBox.Show("New package added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    main = (frmMain)Application.OpenForms["frmMain"];
-                    main.OpenChildForm(new FrmPackages());
-                }
-            }
-            catch (Exception ee)
-            {
-                MessageBox.Show(ee.ToString());
-            }
-
-
             AddPackageClass.PackageName = txtPackageName.Text;
             AddPackageClass.Inclusions = txtInclusions.Text;
-            AddPackageClass.Price = decimal.Parse(txtPrice.Text + 0.0);
+            AddPackageClass.Price = long.Parse(txtPrice.Text);
 
 
             txtPackageName.Text = " ";
@@ -89,30 +34,6 @@ namespace FuneralManagementSystem
             package = new FrmPackages();
             package.AddPanel();
             this.Close();
-
-        }
-
-        public int getCount(int count)
-        {
-            try
-            {
-                con.Open();
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT COUNT(*) FROM PACKAGE";
-
-                object result = cmd.ExecuteScalar();
-                if (result != null)
-                {
-                    count = Convert.ToInt32(result) + 1;
-                }
-                con.Close();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            return count;
         }
 
         private void btnAddPicture_Click(object sender, EventArgs e)
@@ -128,8 +49,6 @@ namespace FuneralManagementSystem
                     imageLocation = dialog.FileName;
 
                     pbPackage.ImageLocation = imageLocation;
-
-                    imgloc = imageLocation.ToString();
                 }
             }
             catch (Exception)
@@ -182,49 +101,39 @@ namespace FuneralManagementSystem
 
         }
 
-
-
-        private void pbExit_Click(object sender, EventArgs e)
+        private void txtInclusions_TextChanged(object sender, EventArgs e)
         {
-            //Confirmation message dialog
-            DialogResult result = MessageBox.Show("Are you sure you want to close the system? ",
-                "Exit Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                main = (frmMain)Application.OpenForms["frmMain"];
-                this.Close();
-                frmLogIn log = (frmLogIn)Application.OpenForms["frmLogIn"];
-                log.Close();
-                Close();
-            }
+
         }
 
-        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtPrice_TextChanged_1(object sender, EventArgs e)
         {
-            // Allow only digits, backspace, and decimal point
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
-            {
-                e.Handled = true;
-            }
 
-            // Allow only one decimal point
-            if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
-            {
-                e.Handled = true;
-            }
+        }
 
-            // Limit the number of decimal places to 2
-            int decimalIndex = (sender as TextBox).Text.IndexOf('.');
-            if (decimalIndex > -1 && (sender as TextBox).Text.Length - decimalIndex > 2 && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+        private void txtPackageName_TextChanged(object sender, EventArgs e)
+        {
 
-            // Limit the total number of digits to 18
-            if ((sender as TextBox).Text.Length >= 18 && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+        }
+
+        private void txtPackageId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCurrency_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPrice_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

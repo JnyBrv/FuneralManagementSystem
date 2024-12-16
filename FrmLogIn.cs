@@ -119,7 +119,9 @@ namespace FuneralManagementSystem
                 "Exit Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                this.Close();
+                Close();
+                frmLogIn log = (frmLogIn)Application.OpenForms["frmLogIn"];
+                log.Close();
             }
         }
 

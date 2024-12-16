@@ -114,20 +114,6 @@ namespace FuneralManagementSystem
                 SqlCommand command = new SqlCommand(query, con);
                 SqlDataReader reader = command.ExecuteReader();
 
-                while (reader.Read())
-                {
-                    txtPackage.Items.Add(reader[0].ToString());
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
-        }
         public void loadComponents()
         {
 

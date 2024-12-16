@@ -8,20 +8,14 @@ namespace FuneralManagementSystem
 {
     class AddPackageClass
     {
-        public delegate decimal DelegateNumber(decimal number);
+        public delegate long DelegateNumber(long number);
         public delegate String DelegateText(string txt);
-        public delegate byte DelegateImage(byte img);
 
         public static String PackageName = " ";
         public static String Inclusions = " ";
         public static String PackageID = " ";
-        public static decimal Price = 0;
-        public static byte[] PImage;
+        public static long Price = 0;
 
-        public static byte GetImage(byte Image)
-        {
-            return Image;
-        }
         public static String GetPackage(String Package)
         {
             return Package;
@@ -32,7 +26,7 @@ namespace FuneralManagementSystem
             return Inclusions;
         }
 
-        public static decimal GetPrice(decimal Price)
+        public static long GetPrice(long Price)
         {
             return Price;
         }

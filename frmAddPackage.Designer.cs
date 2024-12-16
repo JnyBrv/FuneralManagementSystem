@@ -34,6 +34,8 @@
             this.btnPackage = new System.Windows.Forms.Button();
             this.txtPackageName = new System.Windows.Forms.TextBox();
             this.lblCurrency = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtPackageId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -64,6 +66,7 @@
             this.lblPrice.Size = new System.Drawing.Size(82, 29);
             this.lblPrice.TabIndex = 16;
             this.lblPrice.Text = "Price: ";
+            this.lblPrice.Click += new System.EventHandler(this.lblPrice_Click);
             // 
             // txtInclusions
             // 
@@ -72,6 +75,7 @@
             this.txtInclusions.Name = "txtInclusions";
             this.txtInclusions.Size = new System.Drawing.Size(405, 237);
             this.txtInclusions.TabIndex = 15;
+            this.txtInclusions.TextChanged += new System.EventHandler(this.txtInclusions_TextChanged);
             // 
             // lblInclusions
             // 
@@ -105,6 +109,7 @@
             this.txtPackageName.Name = "txtPackageName";
             this.txtPackageName.Size = new System.Drawing.Size(413, 35);
             this.txtPackageName.TabIndex = 18;
+            this.txtPackageName.TextChanged += new System.EventHandler(this.txtPackageName_TextChanged);
             // 
             // lblCurrency
             // 
@@ -115,6 +120,29 @@
             this.lblCurrency.Size = new System.Drawing.Size(33, 32);
             this.lblCurrency.TabIndex = 16;
             this.lblCurrency.Text = "₱";
+            this.lblCurrency.Click += new System.EventHandler(this.lblCurrency_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(277, 284);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 19);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Package ID :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtPackageId
+            // 
+            this.txtPackageId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPackageId.Location = new System.Drawing.Point(281, 306);
+            this.txtPackageId.Multiline = true;
+            this.txtPackageId.Name = "txtPackageId";
+            this.txtPackageId.Size = new System.Drawing.Size(176, 28);
+            this.txtPackageId.TabIndex = 21;
+            this.txtPackageId.Text = "Auto Generated PackageId";
+            this.txtPackageId.TextChanged += new System.EventHandler(this.txtPackageId_TextChanged);
             // 
             // label2
             // 
@@ -133,7 +161,7 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(215, 35);
             this.txtPrice.TabIndex = 22;
-            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
+            this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged_1);
             // 
             // panel2
             // 
@@ -290,6 +318,8 @@
         private System.Windows.Forms.TextBox txtPackageName;
         private System.Windows.Forms.Label lblCurrency;
         private System.Windows.Forms.Button btnAddPicture;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtPackageId;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.PictureBox pictureBox1;
