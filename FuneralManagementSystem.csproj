@@ -63,6 +63,12 @@
     <Compile Include="frmAddPackage.Designer.cs">
       <DependentUpon>frmAddPackage.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBilling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBilling.Designer.cs">
+      <DependentUpon>frmBilling.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrintImg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddPackage.resx">
       <DependentUpon>frmAddPackage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBilling.resx">
+      <DependentUpon>frmBilling.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrintImg.resx">
       <DependentUpon>frmPrintImg.cs</DependentUpon>

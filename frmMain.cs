@@ -425,6 +425,16 @@ namespace FuneralManagementSystem
         {
 
         }
+
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
