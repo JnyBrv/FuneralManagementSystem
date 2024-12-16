@@ -37,24 +37,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pbExit = new System.Windows.Forms.PictureBox();
+            this.plPackage = new System.Windows.Forms.Panel();
             this.btnAddPicture = new System.Windows.Forms.Button();
             this.pbPackage = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.plPackage = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.plPackage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPackage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.plPackage.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblPrice
@@ -141,7 +139,6 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.pbExit);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -149,6 +146,16 @@
             this.panel2.Size = new System.Drawing.Size(1305, 81);
             this.panel2.TabIndex = 25;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::FuneralManagementSystem.Properties.Resources.packageIcon;
+            this.pictureBox3.Location = new System.Drawing.Point(20, 11);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(65, 58);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 17;
+            this.pictureBox3.TabStop = false;
             // 
             // label3
             // 
@@ -183,29 +190,24 @@
             this.panel1.TabIndex = 27;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // pictureBox3
+            // plPackage
             // 
-            this.pictureBox3.Image = global::FuneralManagementSystem.Properties.Resources.packageIcon;
-            this.pictureBox3.Location = new System.Drawing.Point(20, 11);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(65, 58);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 17;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pbExit
-            // 
-            this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbExit.BackColor = System.Drawing.Color.Transparent;
-            this.pbExit.Image = global::FuneralManagementSystem.Properties.Resources.exit;
-            this.pbExit.Location = new System.Drawing.Point(1267, 0);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(2);
-            this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(38, 41);
-            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbExit.TabIndex = 16;
-            this.pbExit.TabStop = false;
-            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
+            this.plPackage.BackColor = System.Drawing.SystemColors.Control;
+            this.plPackage.Controls.Add(this.btnAddPicture);
+            this.plPackage.Controls.Add(this.txtPrice);
+            this.plPackage.Controls.Add(this.label1);
+            this.plPackage.Controls.Add(this.btnPackage);
+            this.plPackage.Controls.Add(this.pbPackage);
+            this.plPackage.Controls.Add(this.lblInclusions);
+            this.plPackage.Controls.Add(this.label2);
+            this.plPackage.Controls.Add(this.lblCurrency);
+            this.plPackage.Controls.Add(this.txtPackageName);
+            this.plPackage.Controls.Add(this.lblPrice);
+            this.plPackage.Controls.Add(this.txtInclusions);
+            this.plPackage.Location = new System.Drawing.Point(100, 106);
+            this.plPackage.Name = "plPackage";
+            this.plPackage.Size = new System.Drawing.Size(1122, 619);
+            this.plPackage.TabIndex = 25;
             // 
             // btnAddPicture
             // 
@@ -253,25 +255,6 @@
             this.pictureBox2.TabIndex = 24;
             this.pictureBox2.TabStop = false;
             // 
-            // plPackage
-            // 
-            this.plPackage.BackColor = System.Drawing.SystemColors.Control;
-            this.plPackage.Controls.Add(this.btnAddPicture);
-            this.plPackage.Controls.Add(this.txtPrice);
-            this.plPackage.Controls.Add(this.label1);
-            this.plPackage.Controls.Add(this.btnPackage);
-            this.plPackage.Controls.Add(this.pbPackage);
-            this.plPackage.Controls.Add(this.lblInclusions);
-            this.plPackage.Controls.Add(this.label2);
-            this.plPackage.Controls.Add(this.lblCurrency);
-            this.plPackage.Controls.Add(this.txtPackageName);
-            this.plPackage.Controls.Add(this.lblPrice);
-            this.plPackage.Controls.Add(this.txtInclusions);
-            this.plPackage.Location = new System.Drawing.Point(100, 106);
-            this.plPackage.Name = "plPackage";
-            this.plPackage.Size = new System.Drawing.Size(1122, 619);
-            this.plPackage.TabIndex = 25;
-            // 
             // frmAddPackage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,14 +269,13 @@
             this.Load += new System.EventHandler(this.frmAddPackage_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.plPackage.ResumeLayout(false);
+            this.plPackage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPackage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.plPackage.ResumeLayout(false);
-            this.plPackage.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -314,7 +296,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pbExit;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;

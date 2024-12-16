@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmployees));
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlPreview = new System.Windows.Forms.Panel();
             this.btnClear = new System.Windows.Forms.Button();
             this.cmbRank = new System.Windows.Forms.ComboBox();
@@ -46,19 +47,15 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dataGridEmployee = new System.Windows.Forms.DataGridView();
-            this.pbExit = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlPreview.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
-            this.panel3.Controls.Add(this.pbExit);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -78,6 +75,17 @@
             this.label9.TabIndex = 19;
             this.label9.Text = "EMPLOYEE";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(20, 11);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(65, 65);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            // 
             // pnlPreview
             // 
             this.pnlPreview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -94,7 +102,7 @@
             this.pnlPreview.Controls.Add(this.label8);
             this.pnlPreview.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlPreview.Location = new System.Drawing.Point(971, 80);
-            this.pnlPreview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlPreview.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPreview.Name = "pnlPreview";
             this.pnlPreview.Size = new System.Drawing.Size(334, 777);
             this.pnlPreview.TabIndex = 14;
@@ -121,7 +129,7 @@
             "Admin",
             "Staff"});
             this.cmbRank.Location = new System.Drawing.Point(22, 129);
-            this.cmbRank.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbRank.Margin = new System.Windows.Forms.Padding(2);
             this.cmbRank.Name = "cmbRank";
             this.cmbRank.Size = new System.Drawing.Size(294, 29);
             this.cmbRank.TabIndex = 34;
@@ -279,31 +287,6 @@
             this.dataGridEmployee.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridEmployee_CellClick);
             this.dataGridEmployee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridEmployee_CellContentClick);
             // 
-            // pbExit
-            // 
-            this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbExit.BackColor = System.Drawing.Color.Transparent;
-            this.pbExit.Image = global::FuneralManagementSystem.Properties.Resources.exit;
-            this.pbExit.Location = new System.Drawing.Point(1267, 2);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(2);
-            this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(38, 41);
-            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbExit.TabIndex = 21;
-            this.pbExit.TabStop = false;
-            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(20, 11);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(65, 65);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
-            // 
             // FrmEmployees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,11 +302,10 @@
             this.Text = "FrmEmployees";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlPreview.ResumeLayout(false);
             this.pnlPreview.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,7 +318,6 @@
         private System.Windows.Forms.Panel pnlPreview;
         private System.Windows.Forms.Button btnArchive;
         public System.Windows.Forms.Button btnSaveEdit;
-        private System.Windows.Forms.PictureBox pbExit;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnRestore;
         public System.Windows.Forms.Button btnAdd;

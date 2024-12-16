@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaymentCash));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -57,12 +56,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pbExit = new System.Windows.Forms.PictureBox();
             this.label22 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -137,7 +134,7 @@
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Location = new System.Drawing.Point(22, 162);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1127, 215);
             this.panel3.TabIndex = 52;
@@ -195,7 +192,7 @@
             // 
             this.txtPayment.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPayment.Location = new System.Drawing.Point(231, 112);
-            this.txtPayment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPayment.Margin = new System.Windows.Forms.Padding(2);
             this.txtPayment.Multiline = true;
             this.txtPayment.Name = "txtPayment";
             this.txtPayment.Size = new System.Drawing.Size(856, 32);
@@ -207,7 +204,7 @@
             // 
             this.txtDiscount.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiscount.Location = new System.Drawing.Point(231, 66);
-            this.txtDiscount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiscount.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiscount.Multiline = true;
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(856, 32);
@@ -220,7 +217,7 @@
             this.txtTotalAmount.BackColor = System.Drawing.Color.White;
             this.txtTotalAmount.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalAmount.Location = new System.Drawing.Point(231, 18);
-            this.txtTotalAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTotalAmount.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotalAmount.Multiline = true;
             this.txtTotalAmount.Name = "txtTotalAmount";
             this.txtTotalAmount.ReadOnly = true;
@@ -384,37 +381,22 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
-            this.panel2.Controls.Add(this.pbExit);
             this.panel2.Controls.Add(this.label22);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1305, 81);
             this.panel2.TabIndex = 4;
             // 
-            // pbExit
-            // 
-            this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbExit.BackColor = System.Drawing.Color.Transparent;
-            this.pbExit.Image = ((System.Drawing.Image)(resources.GetObject("pbExit.Image")));
-            this.pbExit.Location = new System.Drawing.Point(1267, 0);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(38, 41);
-            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbExit.TabIndex = 38;
-            this.pbExit.TabStop = false;
-            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
-            // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Georgia", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.Gold;
+            this.label22.Font = new System.Drawing.Font("Georgia", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.White;
             this.label22.Location = new System.Drawing.Point(32, 21);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(150, 39);
+            this.label22.Size = new System.Drawing.Size(188, 43);
             this.label22.TabIndex = 37;
             this.label22.Text = "Payment";
             // 
@@ -434,7 +416,6 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -442,7 +423,6 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pbExit;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label10;

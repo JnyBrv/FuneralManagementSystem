@@ -31,7 +31,6 @@ namespace FuneralManagementSystem
         {
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
-            this.pbExit = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnPrint = new System.Windows.Forms.Button();
@@ -39,7 +38,6 @@ namespace FuneralManagementSystem
             this.panel1 = new System.Windows.Forms.Panel();
             this.pboxAttachments = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -50,7 +48,6 @@ namespace FuneralManagementSystem
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
             this.panel3.Controls.Add(this.btnBack);
-            this.panel3.Controls.Add(this.pbExit);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -67,27 +64,13 @@ namespace FuneralManagementSystem
             this.btnBack.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.Gold;
             this.btnBack.Location = new System.Drawing.Point(1155, 30);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(94, 37);
             this.btnBack.TabIndex = 24;
             this.btnBack.Text = "← Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // pbExit
-            // 
-            this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbExit.BackColor = System.Drawing.Color.Transparent;
-            this.pbExit.Image = global::FuneralManagementSystem.Properties.Resources.exit;
-            this.pbExit.Location = new System.Drawing.Point(1267, 0);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(38, 41);
-            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbExit.TabIndex = 20;
-            this.pbExit.TabStop = false;
-            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
             // 
             // label9
             // 
@@ -117,7 +100,7 @@ namespace FuneralManagementSystem
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Font = new System.Drawing.Font("Georgia", 13F);
             this.btnPrint.Location = new System.Drawing.Point(1057, 38);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(190, 32);
             this.btnPrint.TabIndex = 79;
@@ -131,7 +114,7 @@ namespace FuneralManagementSystem
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 81);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1305, 776);
             this.flowLayoutPanel1.TabIndex = 80;
@@ -141,7 +124,7 @@ namespace FuneralManagementSystem
             this.panel1.Controls.Add(this.pboxAttachments);
             this.panel1.Controls.Add(this.btnPrint);
             this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1283, 1108);
             this.panel1.TabIndex = 80;
@@ -149,7 +132,7 @@ namespace FuneralManagementSystem
             // pboxAttachments
             // 
             this.pboxAttachments.Location = new System.Drawing.Point(155, 104);
-            this.pboxAttachments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pboxAttachments.Margin = new System.Windows.Forms.Padding(2);
             this.pboxAttachments.Name = "pboxAttachments";
             this.pboxAttachments.Size = new System.Drawing.Size(963, 810);
             this.pboxAttachments.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -164,13 +147,12 @@ namespace FuneralManagementSystem
             this.ClientSize = new System.Drawing.Size(1305, 857);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPrintImg";
             this.Text = "frmPrintImg";
             this.Load += new System.EventHandler(this.frmPrintImg_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -183,7 +165,6 @@ namespace FuneralManagementSystem
 
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.PictureBox pbExit;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnPrint;

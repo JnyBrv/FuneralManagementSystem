@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pbExit = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlPreview = new System.Windows.Forms.Panel();
@@ -56,7 +55,6 @@
             this.txtCSearch = new System.Windows.Forms.TextBox();
             this.dataGridCompleted = new System.Windows.Forms.DataGridView();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlPreview.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPackage)).BeginInit();
@@ -68,7 +66,6 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
-            this.panel3.Controls.Add(this.pbExit);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -76,20 +73,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1305, 81);
             this.panel3.TabIndex = 7;
-            // 
-            // pbExit
-            // 
-            this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbExit.BackColor = System.Drawing.Color.Transparent;
-            this.pbExit.Image = global::FuneralManagementSystem.Properties.Resources.exit;
-            this.pbExit.Location = new System.Drawing.Point(1267, 0);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(38, 41);
-            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbExit.TabIndex = 20;
-            this.pbExit.TabStop = false;
-            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
             // 
             // label9
             // 
@@ -131,7 +114,7 @@
             this.pnlPreview.Controls.Add(this.label8);
             this.pnlPreview.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlPreview.Location = new System.Drawing.Point(971, 81);
-            this.pnlPreview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlPreview.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPreview.Name = "pnlPreview";
             this.pnlPreview.Size = new System.Drawing.Size(334, 776);
             this.pnlPreview.TabIndex = 8;
@@ -419,7 +402,6 @@
             this.Text = "frmArchivedClients";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlPreview.ResumeLayout(false);
             this.pnlPreview.PerformLayout();
@@ -436,7 +418,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pbExit;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel pnlPreview;

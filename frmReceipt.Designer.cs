@@ -32,7 +32,6 @@ namespace FuneralManagementSystem
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReceipt));
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
-            this.pbExit = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.pnlReceipt = new System.Windows.Forms.Panel();
             this.txtReceivedBy = new System.Windows.Forms.TextBox();
@@ -61,7 +60,6 @@ namespace FuneralManagementSystem
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             this.pnlReceipt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +68,6 @@ namespace FuneralManagementSystem
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
             this.panel3.Controls.Add(this.btnBack);
-            this.panel3.Controls.Add(this.pbExit);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -86,27 +83,13 @@ namespace FuneralManagementSystem
             this.btnBack.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.Gold;
             this.btnBack.Location = new System.Drawing.Point(1155, 30);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(94, 37);
             this.btnBack.TabIndex = 24;
             this.btnBack.Text = "← Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // pbExit
-            // 
-            this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbExit.BackColor = System.Drawing.Color.Transparent;
-            this.pbExit.Image = global::FuneralManagementSystem.Properties.Resources.exit;
-            this.pbExit.Location = new System.Drawing.Point(1267, 0);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(38, 41);
-            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbExit.TabIndex = 20;
-            this.pbExit.TabStop = false;
-            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
             // 
             // label9
             // 
@@ -143,7 +126,7 @@ namespace FuneralManagementSystem
             this.pnlReceipt.Controls.Add(this.pictureBox1);
             this.pnlReceipt.Controls.Add(this.label1);
             this.pnlReceipt.Location = new System.Drawing.Point(262, 87);
-            this.pnlReceipt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlReceipt.Margin = new System.Windows.Forms.Padding(2);
             this.pnlReceipt.Name = "pnlReceipt";
             this.pnlReceipt.Size = new System.Drawing.Size(748, 713);
             this.pnlReceipt.TabIndex = 9;
@@ -153,7 +136,7 @@ namespace FuneralManagementSystem
             this.txtReceivedBy.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtReceivedBy.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReceivedBy.Location = new System.Drawing.Point(230, 618);
-            this.txtReceivedBy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtReceivedBy.Margin = new System.Windows.Forms.Padding(2);
             this.txtReceivedBy.Name = "txtReceivedBy";
             this.txtReceivedBy.Size = new System.Drawing.Size(389, 30);
             this.txtReceivedBy.TabIndex = 73;
@@ -387,7 +370,7 @@ namespace FuneralManagementSystem
             // 
             this.pictureBox1.Image = global::FuneralManagementSystem.Properties.Resources.cruzlogocircle;
             this.pictureBox1.Location = new System.Drawing.Point(54, 56);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(166, 145);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -412,7 +395,7 @@ namespace FuneralManagementSystem
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Font = new System.Drawing.Font("Georgia", 13F);
             this.btnPrint.Location = new System.Drawing.Point(1058, 104);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(190, 32);
             this.btnPrint.TabIndex = 80;
@@ -439,13 +422,12 @@ namespace FuneralManagementSystem
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.pnlReceipt);
             this.Controls.Add(this.panel3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmReceipt";
             this.Text = "frmReceipt";
             this.Load += new System.EventHandler(this.frmReceipt_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             this.pnlReceipt.ResumeLayout(false);
             this.pnlReceipt.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -457,7 +439,6 @@ namespace FuneralManagementSystem
 
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.PictureBox pbExit;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel pnlReceipt;
         private System.Windows.Forms.Label label11;

@@ -113,7 +113,7 @@ namespace FuneralManagementSystem
 
         private void btnClients_Click(object sender, EventArgs e)
         {
-           
+            OpenChildForm(new FrmClients());
             //clientIconDropdown();
 
 
@@ -128,23 +128,9 @@ namespace FuneralManagementSystem
             btnArchive.Image = resizeIcon(Properties.Resources.NEWarchiveYellow2, 35, 35);
 
             //dropdown
-            if (!isClientsExpanded)
-            {
-
-                btnOnService.Visible = true;
-                btnPaying.Visible = true;
-                isClientsExpanded = true;
-                btnClients.Text = "         Clients         ▲";
-            }
-            else
-            {
-                //hide the button
-                btnOnService.Visible = false;
-                btnPaying.Visible = false;
-                isClientsExpanded = false;
-                btnClients.Text = "         Clients         ▼";
-            }
-
+          
+            btnClients.Text = "     Clients         ";
+         
 
             
 
@@ -156,10 +142,8 @@ namespace FuneralManagementSystem
             btnArchive.BackColor = Color.FromArgb(40, 40, 40);
             btnArchive.ForeColor = Color.Gold;
 
-            btnOnService.BackColor = Color.FromArgb(40, 40, 40);
-            btnOnService.ForeColor = Color.Gold;
-            btnPaying.BackColor = Color.FromArgb(40, 40, 40);
-            btnPaying.ForeColor = Color.Gold;
+          
+            
             btnClient.BackColor = Color.FromArgb(40, 40, 40);
             btnClient.ForeColor = Color.Gold;
             btnEmployees.BackColor = Color.FromArgb(40, 40, 40);
@@ -221,10 +205,8 @@ namespace FuneralManagementSystem
             btnArchive.BackColor = Color.Gold;
             btnArchive.ForeColor = Color.FromArgb(40, 40, 40);
 
-            btnOnService.BackColor = Color.FromArgb(40, 40, 40);
-            btnOnService.ForeColor = Color.Gold;
-            btnPaying.BackColor = Color.FromArgb(40, 40, 40);
-            btnPaying.ForeColor = Color.Gold;
+         
+            
             btnClient.BackColor = Color.FromArgb(40, 40, 40);
             btnClient.ForeColor = Color.Gold;
             btnEmployees.BackColor = Color.FromArgb(40, 40, 40);
@@ -264,10 +246,7 @@ namespace FuneralManagementSystem
             btnArchive.BackColor = Color.FromArgb(40, 40, 40);
             btnArchive.ForeColor = Color.Gold;
 
-            btnOnService.BackColor = Color.FromArgb(40, 40, 40);
-            btnOnService.ForeColor = Color.Gold;
-            btnPaying.BackColor = Color.FromArgb(40, 40, 40);
-            btnPaying.ForeColor = Color.Gold;
+         
             btnClient.BackColor = Color.FromArgb(40, 40, 40);
             btnClient.ForeColor = Color.Gold;
             btnEmployees.BackColor = Color.FromArgb(40, 40, 40);
@@ -350,7 +329,7 @@ namespace FuneralManagementSystem
 
         private void btnOnService_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FrmClients());
+            
 
             
 
