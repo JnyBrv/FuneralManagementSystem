@@ -404,5 +404,14 @@
   <ItemGroup>
     <None Include="Resources\cloudUploadBlack.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientsBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paymentBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receieptBlack.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

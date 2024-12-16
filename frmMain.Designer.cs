@@ -30,23 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnPayment = new System.Windows.Forms.Button();
-            this.btnBill = new System.Windows.Forms.Button();
             this.btnEmployees = new System.Windows.Forms.Button();
             this.btnClient = new System.Windows.Forms.Button();
+            this.panelMainMenu = new System.Windows.Forms.Panel();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.pbExit = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnBill = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnArchive = new System.Windows.Forms.Button();
             this.btnClients = new System.Windows.Forms.Button();
             this.btnPackages = new System.Windows.Forms.Button();
-            this.panelMainMenu = new System.Windows.Forms.Panel();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.pbExit = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelMainMenu.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,17 +68,6 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::FuneralManagementSystem.Properties.Resources.cruzlogocircle;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(231, 135);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnPayment
             // 
             this.btnPayment.FlatAppearance.BorderSize = 0;
@@ -93,21 +82,6 @@
             this.btnPayment.Text = "  Payment";
             this.btnPayment.UseVisualStyleBackColor = false;
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
-            // 
-            // btnBill
-            // 
-            this.btnBill.FlatAppearance.BorderSize = 0;
-            this.btnBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBill.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBill.ForeColor = System.Drawing.Color.Gold;
-            this.btnBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBill.Location = new System.Drawing.Point(-1, 361);
-            this.btnBill.Name = "btnBill";
-            this.btnBill.Size = new System.Drawing.Size(230, 42);
-            this.btnBill.TabIndex = 7;
-            this.btnBill.Text = "Invoice";
-            this.btnBill.UseVisualStyleBackColor = false;
-            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
             // btnEmployees
             // 
@@ -144,6 +118,67 @@
             this.btnClient.UseVisualStyleBackColor = false;
             this.btnClient.Visible = false;
             this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
+            // 
+            // panelMainMenu
+            // 
+            this.panelMainMenu.AutoScroll = true;
+            this.panelMainMenu.Controls.Add(this.panelTitleBar);
+            this.panelMainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMainMenu.Location = new System.Drawing.Point(230, 0);
+            this.panelMainMenu.Name = "panelMainMenu";
+            this.panelMainMenu.Size = new System.Drawing.Size(925, 709);
+            this.panelMainMenu.TabIndex = 1;
+            this.panelMainMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMainMenu_Paint);
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
+            this.panelTitleBar.Controls.Add(this.pbExit);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(925, 64);
+            this.panelTitleBar.TabIndex = 0;
+            // 
+            // pbExit
+            // 
+            this.pbExit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pbExit.BackColor = System.Drawing.Color.Black;
+            this.pbExit.Image = global::FuneralManagementSystem.Properties.Resources.exit;
+            this.pbExit.Location = new System.Drawing.Point(1038, 2);
+            this.pbExit.Margin = new System.Windows.Forms.Padding(2);
+            this.pbExit.Name = "pbExit";
+            this.pbExit.Size = new System.Drawing.Size(38, 41);
+            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbExit.TabIndex = 16;
+            this.pbExit.TabStop = false;
+            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::FuneralManagementSystem.Properties.Resources.cruzlogocircle;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(231, 135);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnBill
+            // 
+            this.btnBill.FlatAppearance.BorderSize = 0;
+            this.btnBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBill.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBill.ForeColor = System.Drawing.Color.Gold;
+            this.btnBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBill.Location = new System.Drawing.Point(-1, 361);
+            this.btnBill.Name = "btnBill";
+            this.btnBill.Size = new System.Drawing.Size(230, 42);
+            this.btnBill.TabIndex = 7;
+            this.btnBill.Text = "Invoice";
+            this.btnBill.UseVisualStyleBackColor = false;
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
             // btnLogout
             // 
@@ -219,41 +254,6 @@
             this.btnPackages.UseVisualStyleBackColor = false;
             this.btnPackages.Click += new System.EventHandler(this.button1_Click);
             // 
-            // panelMainMenu
-            // 
-            this.panelMainMenu.AutoScroll = true;
-            this.panelMainMenu.Controls.Add(this.panelTitleBar);
-            this.panelMainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMainMenu.Location = new System.Drawing.Point(230, 0);
-            this.panelMainMenu.Name = "panelMainMenu";
-            this.panelMainMenu.Size = new System.Drawing.Size(925, 709);
-            this.panelMainMenu.TabIndex = 1;
-            this.panelMainMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMainMenu_Paint);
-            // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
-            this.panelTitleBar.Controls.Add(this.pbExit);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(925, 64);
-            this.panelTitleBar.TabIndex = 0;
-            // 
-            // pbExit
-            // 
-            this.pbExit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pbExit.BackColor = System.Drawing.Color.Black;
-            this.pbExit.Image = global::FuneralManagementSystem.Properties.Resources.exit;
-            this.pbExit.Location = new System.Drawing.Point(1038, 2);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(2);
-            this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(38, 41);
-            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbExit.TabIndex = 16;
-            this.pbExit.TabStop = false;
-            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,10 +267,10 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelMainMenu.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
