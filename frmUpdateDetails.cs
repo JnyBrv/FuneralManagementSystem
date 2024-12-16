@@ -16,7 +16,7 @@ namespace FuneralManagementSystem
     public partial class frmUpdateDetails : Form
     {
         frmMain main;
-
+        String formattedSum = "0.0";
 
         //SQL Connection
         SqlConnection con = new SqlConnection(@"Data Source=JIANNESANTOS\SQLEXPRESS;Initial Catalog=FuneralManagementSystem;Integrated Security=True");
@@ -24,6 +24,7 @@ namespace FuneralManagementSystem
         public int client { get; set; }
 
         public int back { get; set; }
+        String addinclu, addcost;
         public frmUpdateDetails()
         {
             InitializeComponent();
@@ -36,7 +37,58 @@ namespace FuneralManagementSystem
             attachmentsDetails();
             displayImg();
             //paymentDetails();
-            getRecords();
+            //getRecords();
+            loadHistory();
+
+            dataGridAddInclu.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridAddInclu.DefaultCellStyle.Font = new Font("Georgia", 12, FontStyle.Regular);
+            dataGridAddInclu.ColumnHeadersDefaultCellStyle.Font = new Font("Georgia", 12, FontStyle.Bold);
+        }
+
+        public void loadHistory()
+        {
+            try
+            {
+                con.Open();
+
+                string query = "SELECT addInclusions, inclusionsTotal FROM CLIENT WHERE clientID = @clientID";
+
+                using (SqlCommand command = new SqlCommand(query, con))
+                {
+                    command.Parameters.AddWithValue("@clientID", client);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string[] addInclusions = reader.GetString(0).Split(',');
+                            string[] inclusionsTotal = reader.GetString(1).Split(',');
+
+                            // Ensure both arrays have the same length
+                            int maxLength = Math.Max(addInclusions.Length, inclusionsTotal.Length);
+
+                            for (int i = 0; i < maxLength; i++)
+                            {
+                                DataGridViewRow row = new DataGridViewRow();
+                                row.Cells.Add(new DataGridViewTextBoxCell() { Value = i < addInclusions.Length ? addInclusions[i] : "" });
+                                row.Cells.Add(new DataGridViewTextBoxCell() { Value = i < inclusionsTotal.Length ? inclusionsTotal[i] : "" });
+                                dataGridAddInclu.Rows.Add(row);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                if (con != null && con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
         }
 
         private void pbExit_Click(object sender, EventArgs e)
@@ -718,49 +770,48 @@ namespace FuneralManagementSystem
         float inctotal, balance;
         decimal value;
 
-        public void getRecords()
-        {
-            String query = "SELECT addInclusions, inclusionsTotal, balance FROM CLIENT WHERE clientID = " + client;
-            if (con.State != ConnectionState.Open)
-            {
-                con.Open();
-                SqlCommand cmd = new SqlCommand(query, con);
+        //public void getRecords()
+        //{
+        //    String query = "SELECT addInclusions, inclusionsTotal, balance FROM CLIENT WHERE clientID = " + client;
+        //    if (con.State != ConnectionState.Open)
+        //    {
+        //        con.Open();
+        //        SqlCommand cmd = new SqlCommand(query, con);
 
-                SqlDataReader read = cmd.ExecuteReader();
-                read.Read();
+        //        SqlDataReader read = cmd.ExecuteReader();
+        //        read.Read();
 
-                if (read.HasRows)
-                {
-                    items = read[0].ToString();
-                    inctotal = float.Parse(read[1].ToString());
-                    balance = float.Parse(read[2].ToString());
+        //        if (read.HasRows)
+        //        {
+        //            items = read[0].ToString();
+        //            balance = float.Parse(read[2].ToString());
 
                     
-                    if (read[2] is decimal)
-                    {
-                        value = (decimal)read[2];
-                    }
-                    else if (read[2] is int || read[2] is long || read[2] is float || read[2] is double)
-                    {
-                        value = Convert.ToDecimal(read[2]);
-                    }
+        //            if (read[2] is decimal)
+        //            {
+        //                value = (decimal)read[2];
+        //            }
+        //            else if (read[2] is int || read[2] is long || read[2] is float || read[2] is double)
+        //            {
+        //                value = Convert.ToDecimal(read[2]);
+        //            }
 
-                    string formattedValue = value.ToString("N2");
+        //            string formattedValue = value.ToString("N2");
 
-                    //lblBalance.Text = formattedValue;
-
-
-                }
-                else
-                {
-                    con.Close();
-                    MessageBox.Show("Data doesn't exist.");
-                }
-                con.Close();
+        //            //lblBalance.Text = formattedValue;
 
 
-            }
-        }
+        //        }
+        //        else
+        //        {
+        //            con.Close();
+        //            MessageBox.Show("Data doesn't exist.");
+        //        }
+        //        con.Close();
+
+
+        //    }
+        //}
 
         //private void btnConfirmPayment_Click(object sender, EventArgs e)
         //{
@@ -876,6 +927,79 @@ namespace FuneralManagementSystem
             return count;
         }
 
+        private void dataGridAddInclu_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            StringBuilder sbLabel1 = new StringBuilder();
+            StringBuilder sbLabel2 = new StringBuilder();
+            decimal sumColumn2 = 0;
+
+            foreach (DataGridViewRow row in dataGridAddInclu.Rows)
+            {
+                if (row.Cells[0].Value != null)
+                {
+                    sbLabel1.Append(row.Cells[0].Value.ToString());
+                    sbLabel1.Append(", ");
+                }
+
+                if (row.Cells[1].Value != null)
+                {
+                    sbLabel2.Append(row.Cells[1].Value.ToString());
+                    sbLabel2.Append(", ");
+
+                    if (decimal.TryParse(row.Cells[1].Value.ToString(), out decimal decimalValue))
+                    {
+                        sumColumn2 += decimalValue;
+
+                        formattedSum = sumColumn2.ToString("N2");
+
+                        addinclu = sbLabel1.ToString();
+                        addcost = sbLabel2.ToString();
+                        lblTotal.Text = formattedSum;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid decimal input in column 2: " + row.Cells[1].Value.ToString());
+                        row.Cells[1].Value = "";
+                    }
+                }
+            }
+        }
+
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                con.Open();
+
+                decimal ttl = decimal.Parse(lblTotal.Text);
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "UPDATE CLIENT SET addInclusions = '" + addinclu + "', inclusionsTotal = '" + addcost + "' WHERE clientID = " + client +
+                    "UPDATE CLIENT SET balance = '" + ttl + "' WHERE clientID = " + client;
+                cmd.ExecuteNonQuery();
+
+                con.Close();
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+            }
+
+            MessageBox.Show("Saved successfully! ",
+                "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            main = (frmMain)Application.OpenForms["frmMain"];
+            main.OpenChildForm(new FrmClients());
+            main.panelTitleBar.Visible = false;
+
+
+           
+        }
+
+        
+
         //private void btnCompleteTransaction_Click(object sender, EventArgs e)
         //{
         //    decimal bal = decimal.Parse(lblBalance.Text);
@@ -946,7 +1070,7 @@ namespace FuneralManagementSystem
         //    getRecords();
         //    try
         //    {
-                
+
         //            String item = txtAddInclusions.Text;
         //            float bal = float.Parse(txtAddPayment.Text);
 

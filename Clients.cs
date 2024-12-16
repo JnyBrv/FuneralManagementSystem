@@ -16,7 +16,7 @@ namespace FuneralManagementSystem
     {
         frmMain main;
         String selectedUser;
-        public int user;
+        public int user { get; set; }
         frmUpdateDetails upd;
         public FrmClients()
         {
@@ -377,10 +377,8 @@ namespace FuneralManagementSystem
             frmInclusions inclu = new frmInclusions();
             inclu.id = user;
             inclu.back = 0;
-            //inclu.edit = 1;
-            //inclu.txtPackage.Enabled = false;
-            //inclu.richTextBox1.Enabled = false;
             main.OpenChildForm(inclu);
+            main.panelTitleBar.Visible = false;
 
         }
     }

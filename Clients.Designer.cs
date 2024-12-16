@@ -52,7 +52,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAddInclu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridClient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPackage)).BeginInit();
             this.panel4.SuspendLayout();
@@ -71,7 +70,7 @@
             this.dataGridClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridClient.GridColor = System.Drawing.Color.DimGray;
             this.dataGridClient.Location = new System.Drawing.Point(53, 135);
-            this.dataGridClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridClient.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridClient.Name = "dataGridClient";
             this.dataGridClient.ReadOnly = true;
             this.dataGridClient.RowHeadersWidth = 51;
@@ -97,7 +96,7 @@
             // 
             this.picPackage.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.picPackage.Location = new System.Drawing.Point(44, 47);
-            this.picPackage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picPackage.Margin = new System.Windows.Forms.Padding(4);
             this.picPackage.Name = "picPackage";
             this.picPackage.Size = new System.Drawing.Size(356, 226);
             this.picPackage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -116,7 +115,7 @@
             this.panel4.Controls.Add(this.txtSearch);
             this.panel4.Controls.Add(this.dataGridClient);
             this.panel4.Location = new System.Drawing.Point(0, 101);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1291, 985);
             this.panel4.TabIndex = 3;
@@ -128,7 +127,7 @@
             this.btnSearch.Font = new System.Drawing.Font("Georgia", 13F);
             this.btnSearch.ForeColor = System.Drawing.Color.Black;
             this.btnSearch.Location = new System.Drawing.Point(1003, 54);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(225, 41);
             this.btnSearch.TabIndex = 19;
@@ -141,7 +140,7 @@
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearch.Font = new System.Drawing.Font("Georgia", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(53, 57);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(882, 36);
             this.txtSearch.TabIndex = 4;
@@ -156,7 +155,7 @@
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1740, 100);
             this.panel3.TabIndex = 6;
@@ -206,7 +205,7 @@
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = global::FuneralManagementSystem.Properties.Resources.clientIcon;
             this.pictureBox2.Location = new System.Drawing.Point(27, 14);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(85, 70);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -216,7 +215,6 @@
             // pnlPreview
             // 
             this.pnlPreview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.pnlPreview.Controls.Add(this.btnAddInclu);
             this.pnlPreview.Controls.Add(this.btnCompleteService);
             this.pnlPreview.Controls.Add(this.btnDelete);
             this.pnlPreview.Controls.Add(this.lblPlace);
@@ -244,8 +242,8 @@
             this.btnCompleteService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompleteService.Font = new System.Drawing.Font("Georgia", 13F);
             this.btnCompleteService.ForeColor = System.Drawing.Color.Black;
-            this.btnCompleteService.Location = new System.Drawing.Point(45, 905);
-            this.btnCompleteService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCompleteService.Location = new System.Drawing.Point(45, 837);
+            this.btnCompleteService.Margin = new System.Windows.Forms.Padding(4);
             this.btnCompleteService.Name = "btnCompleteService";
             this.btnCompleteService.Size = new System.Drawing.Size(364, 41);
             this.btnCompleteService.TabIndex = 27;
@@ -259,8 +257,8 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Georgia", 13F);
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(45, 835);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Location = new System.Drawing.Point(45, 767);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(364, 41);
             this.btnDelete.TabIndex = 26;
@@ -330,7 +328,7 @@
             this.btnUpdate.Font = new System.Drawing.Font("Georgia", 13F);
             this.btnUpdate.ForeColor = System.Drawing.Color.Black;
             this.btnUpdate.Location = new System.Drawing.Point(45, 697);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(364, 41);
             this.btnUpdate.TabIndex = 20;
@@ -386,21 +384,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Decedent Name:";
             // 
-            // btnAddInclu
-            // 
-            this.btnAddInclu.BackColor = System.Drawing.Color.Gold;
-            this.btnAddInclu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddInclu.Font = new System.Drawing.Font("Georgia", 13F);
-            this.btnAddInclu.ForeColor = System.Drawing.Color.Black;
-            this.btnAddInclu.Location = new System.Drawing.Point(44, 768);
-            this.btnAddInclu.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddInclu.Name = "btnAddInclu";
-            this.btnAddInclu.Size = new System.Drawing.Size(364, 41);
-            this.btnAddInclu.TabIndex = 28;
-            this.btnAddInclu.Text = "Add Inclusions";
-            this.btnAddInclu.UseVisualStyleBackColor = false;
-            this.btnAddInclu.Click += new System.EventHandler(this.btnAddInclu_Click);
-            // 
             // FrmClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -409,7 +392,7 @@
             this.Controls.Add(this.pnlPreview);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmClients";
             this.Text = "Clients";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridClient)).EndInit();
@@ -453,6 +436,5 @@
         private System.Windows.Forms.Button btnDelete;
         public System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnCompleteService;
-        public System.Windows.Forms.Button btnAddInclu;
     }
 }
