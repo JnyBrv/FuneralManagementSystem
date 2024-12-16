@@ -244,8 +244,19 @@ namespace FuneralManagementSystem
 
         }
 
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (rbInstallment.Checked)
+            {
+                cbMonths.Text = "";
+            } 
+            else if (rbFullPayment.Checked)
+            {
+
+            }
+
+
             main = (frmMain)Application.OpenForms["frmMain"];
             frmBill fb = new frmBill();
             fb.client = user;

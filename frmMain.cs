@@ -90,8 +90,16 @@ namespace FuneralManagementSystem
             btnPackages.ForeColor = Color.FromArgb(40, 40, 40);
             btnClients.BackColor = Color.FromArgb(40, 40, 40);
             btnClients.ForeColor = Color.Gold;
+            btnBill.BackColor = Color.FromArgb(40, 40, 40);
+            btnBill.ForeColor = Color.Gold;
+            btnPayment.BackColor = Color.FromArgb(40, 40, 40);
+            btnPayment.ForeColor = Color.Gold;
+            btnClient.BackColor = Color.FromArgb(40, 40, 40);
+            btnClient.ForeColor = Color.Gold;
             btnArchive.BackColor = Color.FromArgb(40, 40, 40);
             btnArchive.ForeColor = Color.Gold;
+            btnEmployees.BackColor = Color.FromArgb(40, 40, 40);
+            btnEmployees.ForeColor = Color.Gold;
 
             //clicked image color
             fillSpaceForIcon();
@@ -115,6 +123,24 @@ namespace FuneralManagementSystem
         {
             OpenChildForm(new FrmClients());
             //clientIconDropdown();
+
+            //clicked colors
+            //clicked colors
+            btnPackages.BackColor = Color.FromArgb(40, 40, 40);
+            btnPackages.ForeColor = Color.Gold;
+            btnClients.BackColor = Color.Gold;
+            btnClients.ForeColor = Color.FromArgb(40, 40, 40);
+            btnBill.BackColor = Color.FromArgb(40, 40, 40);
+            btnBill.ForeColor = Color.Gold;
+            btnPayment.BackColor = Color.FromArgb(40, 40, 40);
+            btnPayment.ForeColor = Color.Gold;
+            btnClient.BackColor = Color.FromArgb(40, 40, 40);
+            btnClient.ForeColor = Color.Gold;
+            btnArchive.BackColor = Color.FromArgb(40, 40, 40);
+            btnArchive.ForeColor = Color.Gold;
+            btnEmployees.BackColor = Color.FromArgb(40, 40, 40);
+            btnEmployees.ForeColor = Color.Gold;
+
 
 
             //clicked image color
@@ -390,12 +416,42 @@ namespace FuneralManagementSystem
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
-
+            //clicked colors
+            btnPackages.BackColor = Color.FromArgb(40, 40, 40);
+            btnPackages.ForeColor = Color.Gold;
+            btnClients.BackColor = Color.FromArgb(40, 40, 40); ;
+            btnClients.ForeColor = Color.Gold;
+            btnBill.BackColor = Color.FromArgb(40, 40, 40);
+            btnBill.ForeColor = Color.Gold;
+            btnPayment.BackColor = Color.Gold;
+            btnPayment.ForeColor = Color.FromArgb(40, 40, 40);
+            btnClient.BackColor = Color.FromArgb(40, 40, 40);
+            btnClient.ForeColor = Color.Gold;
+            btnArchive.BackColor = Color.FromArgb(40, 40, 40);
+            btnArchive.ForeColor = Color.Gold;
+            btnEmployees.BackColor = Color.FromArgb(40, 40, 40);
+            btnEmployees.ForeColor = Color.Gold;
         }
 
         private void btnBill_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmPaying());
+
+            //clicked colors
+            btnPackages.BackColor = Color.FromArgb(40, 40, 40);
+            btnPackages.ForeColor = Color.Gold;
+            btnClients.BackColor = Color.FromArgb(40, 40, 40); ;
+            btnClients.ForeColor = Color.Gold;
+            btnBill.BackColor = Color.Gold;
+            btnBill.ForeColor = Color.FromArgb(40, 40, 40);
+            btnPayment.BackColor = Color.FromArgb(40, 40, 40);
+            btnPayment.ForeColor = Color.Gold;
+            btnClient.BackColor = Color.FromArgb(40, 40, 40);
+            btnClient.ForeColor = Color.Gold;
+            btnArchive.BackColor = Color.FromArgb(40, 40, 40);
+            btnArchive.ForeColor = Color.Gold;
+            btnEmployees.BackColor = Color.FromArgb(40, 40, 40);
+            btnEmployees.ForeColor = Color.Gold;
 
         }
     }
