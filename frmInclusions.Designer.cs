@@ -227,6 +227,7 @@
             this.txtPackage.Name = "txtPackage";
             this.txtPackage.Size = new System.Drawing.Size(707, 35);
             this.txtPackage.TabIndex = 1;
+            this.txtPackage.SelectedIndexChanged += new System.EventHandler(this.txtPackage_SelectedIndexChanged_1);
             // 
             // label10
             // 
@@ -356,14 +357,14 @@
         private System.Windows.Forms.DataGridView dataGridAddInclu;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
-        private System.Windows.Forms.ComboBox txtPackage;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbllnclu;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.ComboBox txtPackage;
+        public System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

@@ -20,22 +20,90 @@ namespace FuneralManagementSystem
         String formattedSum = "0.0";
         public int id { get; set; }
         public int package { get; set; }
-        String addinclu;
 
+        public int user;
+        String addinclu, addcost;
+
+
+        public int back { get; set; }
         //SQL Connection
         SqlConnection con = new SqlConnection(@"Data Source=JIANNESANTOS\SQLEXPRESS;Initial Catalog=FuneralManagementSystem;Integrated Security=True");
 
         public frmInclusions()
         {
             InitializeComponent();
+            
             loadComponents();
             //initialBalance();
             populateCmb();
+            
 
             dataGridAddInclu.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridAddInclu.DefaultCellStyle.Font = new Font("Georgia", 12, FontStyle.Regular);
             dataGridAddInclu.ColumnHeadersDefaultCellStyle.Font = new Font("Georgia", 12, FontStyle.Bold);
             addtotal();
+
+            
+        }
+
+        public void loadHistory()
+        {
+            try
+            {
+                con.Open();
+
+                string query = "SELECT addInclusions, inclusionsTotal FROM CLIENT WHERE clientID = @clientID";
+
+                using (SqlCommand command = new SqlCommand(query, con))
+                {
+                    command.Parameters.AddWithValue("@clientID", user);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string addInclusions = reader.GetString(0);
+                            string inclusionsTotal = reader.GetString(1);
+
+                            // Create a single DataGridViewRow
+                            DataGridViewRow row = new DataGridViewRow();
+
+                            // Add cell for addInclusions
+                            row.Cells.Add(new DataGridViewTextBoxCell() { Value = addInclusions });
+
+                            // Add cell for comma-separated inclusionsTotal (optional)
+                            if (inclusionsTotal.Contains(","))
+                            {
+                                // Split and add each value if comma-separated
+                                string[] inclusionValues = inclusionsTotal.Split(',');
+                                foreach (string inclusionValue in inclusionValues)
+                                {
+                                    row.Cells.Add(new DataGridViewTextBoxCell() { Value = inclusionValue });
+                                }
+                            }
+                            else
+                            {
+                                // Add single cell for non-comma-separated inclusionsTotal
+                                row.Cells.Add(new DataGridViewTextBoxCell() { Value = inclusionsTotal });
+                            }
+
+                            // Add the completed row to the DataGridView
+                            dataGridAddInclu.Rows.Add(row);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                if (con != null && con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
         }
         public void populateCmb()
         {
@@ -167,51 +235,6 @@ namespace FuneralManagementSystem
         private void txtPackage_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            string selectedItem = txtPackage.SelectedItem.ToString();
-
-            try
-            {
-                String query = "SELECT packageAmount, packageInclusions, packageID  FROM PACKAGE WHERE packageName = '" + selectedItem + "'; ";
-
-                if (con.State != ConnectionState.Open)
-                {
-                    con.Open();
-                    SqlCommand cmd = new SqlCommand(query, con);
-
-                    SqlDataReader read = cmd.ExecuteReader();
-                    read.Read();
-
-                    if (read.HasRows)
-                    {
-                        richTextBox1.Text = read[1].ToString();
-                        lblPackage.Text = read[0].ToString();
-                        total = read[0].ToString();
-                        newp = read[2].ToString();
-
-                        con.Close();
-
-                        con.Open();
-                        SqlCommand c = con.CreateCommand();
-                        c.CommandType = CommandType.Text;
-                        c.CommandText = "UPDATE CLIENT SET packageID = " + newp + " WHERE clientID = " + id;
-                        c.ExecuteNonQuery();
-                        con.Close();
-
-                        addtotal();
-
-                    }
-                    else
-                    {
-                        con.Close();
-                        MessageBox.Show("Data doesn't exist.");
-                    }
-
-                }
-            }
-            catch (Exception ee)
-            {
-                MessageBox.Show(ee.ToString());
-            }
 
         }
 
@@ -270,7 +293,7 @@ namespace FuneralManagementSystem
                 decimal ttl = decimal.Parse(lblTotal.Text);
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "UPDATE CLIENT SET addInclusions = '" + addinclu + "', inclusionsTotal = '" + inclsn + "' WHERE clientID = " + id +
+                cmd.CommandText = "UPDATE CLIENT SET addInclusions = '" + addinclu + "', inclusionsTotal = '" + addcost + "' WHERE clientID = " + id +
                     "UPDATE CLIENT SET balance = '" + ttl + "' WHERE clientID = " + id;
                 cmd.ExecuteNonQuery();
 
@@ -294,6 +317,7 @@ namespace FuneralManagementSystem
         private void dataGridAddInclu_CellEnter_1(object sender, DataGridViewCellEventArgs e)
         {
             StringBuilder sbLabel1 = new StringBuilder();
+            StringBuilder sbLabel2 = new StringBuilder();
             decimal sumColumn2 = 0;
 
             foreach (DataGridViewRow row in dataGridAddInclu.Rows)
@@ -301,11 +325,14 @@ namespace FuneralManagementSystem
                 if (row.Cells[0].Value != null)
                 {
                     sbLabel1.Append(row.Cells[0].Value.ToString());
-                    sbLabel1.Append(" ");
+                    sbLabel1.Append(", ");
                 }
 
                 if (row.Cells[1].Value != null)
                 {
+                    sbLabel2.Append(row.Cells[1].Value.ToString());
+                    sbLabel2.Append(", ");
+
                     if (decimal.TryParse(row.Cells[1].Value.ToString(), out decimal decimalValue))
                     {
                         sumColumn2 += decimalValue;
@@ -313,6 +340,7 @@ namespace FuneralManagementSystem
                         formattedSum = sumColumn2.ToString("N2");
 
                         addinclu = sbLabel1.ToString();
+                        addcost = sbLabel2.ToString();
                         lbllnclu.Text = formattedSum;
                         addtotal();
 
@@ -323,6 +351,56 @@ namespace FuneralManagementSystem
                         row.Cells[1].Value = "";
                     }
                 }
+            }
+        }
+
+        private void txtPackage_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+            string selectedItem = txtPackage.SelectedItem.ToString();
+
+            try
+            {
+                String query = "SELECT packageAmount, packageInclusions, packageID  FROM PACKAGE WHERE packageName = '" + selectedItem + "'; ";
+
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand(query, con);
+
+                    SqlDataReader read = cmd.ExecuteReader();
+                    read.Read();
+
+                    if (read.HasRows)
+                    {
+                        richTextBox1.Text = read[1].ToString();
+                        lblPackage.Text = read[0].ToString();
+                        total = read[0].ToString();
+                        newp = read[2].ToString();
+
+                        con.Close();
+
+                        con.Open();
+                        SqlCommand c = con.CreateCommand();
+                        c.CommandType = CommandType.Text;
+                        c.CommandText = "UPDATE CLIENT SET packageID = " + newp + " WHERE clientID = " + id;
+                        c.ExecuteNonQuery();
+                        con.Close();
+
+                        addtotal();
+
+                    }
+                    else
+                    {
+                        con.Close();
+                        MessageBox.Show("Data doesn't exist.");
+                    }
+
+                }
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
             }
         }
     }
