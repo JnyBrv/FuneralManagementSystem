@@ -341,6 +341,8 @@ namespace FuneralManagementSystem
                 MessageBox.Show(ee.ToString());
             }
 
+            MessageBox.Show("Saved successfully! ",
+                "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             main = (frmMain)Application.OpenForms["frmMain"];
             main.OpenChildForm(new FrmClients());
             main.panelTitleBar.Visible = false;
