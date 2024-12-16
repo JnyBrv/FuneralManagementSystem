@@ -162,8 +162,8 @@ namespace FuneralManagementSystem
         private void applyRoundEdge()
         {
             // round edge functions
-            roundEdge(btnPackage, 20); 
-          
+            roundEdge(btnPackage, 20);
+            roundEdge(plPackage, 20);
         }
 
         private void roundEdge(Control control, int borderRadius)
@@ -230,6 +230,11 @@ namespace FuneralManagementSystem
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            btnAddPicture.Image = resizeIcon(Properties.Resources.uploadEdit,35,35);
         }
     }
 }

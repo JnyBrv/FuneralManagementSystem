@@ -60,9 +60,12 @@ namespace FuneralManagementSystem
 
             btnPackages.Padding = new Padding(15, 0, 0, 0);
             btnClients.Padding = new Padding(13, 0, 0, 0);
-            btnArchive.Padding = new Padding(18, 0, 0, 0);
+            btnArchive.Padding = new Padding(15, 0, 0, 0);
             btnLogout.Padding = new Padding(15, 0, 0, 0);
-
+            btnClient.Padding = new Padding(15, 0, 0, 0);
+            btnEmployees.Padding = new Padding(15, 0, 0, 0);
+            btnPayment.Padding = new Padding(15,0,0,0);
+            btnBill.Padding = new Padding(13, 0, 0, 0);
         }
 
         private Image resizeIcon(Image image, int width, int height)
@@ -98,7 +101,7 @@ namespace FuneralManagementSystem
 
             // change the other buttons to yellow
             btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 40, 40);
-            btnArchive.Image = resizeIcon(Properties.Resources.NEWarchiveYellow, 35, 35);
+            btnArchive.Image = resizeIcon(Properties.Resources.NEWarchiveYellow2, 35, 35);
 
 
 
@@ -122,7 +125,7 @@ namespace FuneralManagementSystem
 
             // change the other buttons to yellow
             btnPackages.Image = resizeIcon(Properties.Resources.packageIcon, 30, 30);
-            btnArchive.Image = resizeIcon(Properties.Resources.NEWarchiveYellow, 35, 35);
+            btnArchive.Image = resizeIcon(Properties.Resources.NEWarchiveYellow2, 35, 35);
 
             //dropdown
             if (!isClientsExpanded)
@@ -179,7 +182,7 @@ namespace FuneralManagementSystem
             //clicled image color
             fillSpaceForIcon();
        
-            btnArchive.Image = resizeIcon(Properties.Resources.NEWarchiveBlack, 35, 35);
+            btnArchive.Image = resizeIcon(Properties.Resources.NEWarchiveBLACK__2_, 35, 35);
             btnArchive.ImageAlign = ContentAlignment.MiddleLeft;
             btnArchive.TextAlign = ContentAlignment.MiddleCenter;
 
@@ -237,7 +240,13 @@ namespace FuneralManagementSystem
 
             btnPackages.Image = resizeIcon(Properties.Resources.package_black, 30, 30);
             btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 40, 40);
-            btnArchive.Image = resizeIcon(Properties.Resources.NEWarchiveYellow, 35, 35);
+            btnArchive.Image = resizeIcon(Properties.Resources.NEWarchiveYellow2, 35, 35);
+            btnClient.Image = resizeIcon(Properties.Resources.clientYellow, 35, 35);
+            btnEmployees.Image = resizeIcon(Properties.Resources.employeesIcon,35,35);
+            btnPayment.Image = resizeIcon(Properties.Resources.paymentYellow,35,35);
+            btnBill.Image = resizeIcon(Properties.Resources.receiptYellow, 35, 35);
+            btnLogout.Image = resizeIcon(Properties.Resources.backIcon,40, 40);
+
 
             btnPackages.ImageAlign = ContentAlignment.MiddleLeft;
             btnClients.ImageAlign = ContentAlignment.MiddleLeft;
@@ -268,6 +277,9 @@ namespace FuneralManagementSystem
             fillSpaceForIcon();
 
 
+
+
+
         }
 
         private void ResetButtonIcons()
@@ -277,7 +289,7 @@ namespace FuneralManagementSystem
 
             btnPackages.Image = resizeIcon(Properties.Resources.packageIcon, 30, 30);
             btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 40, 40);
-            btnArchive.Image = resizeIcon(Properties.Resources.NEWarchiveYellow, 35, 35);
+            btnArchive.Image = resizeIcon(Properties.Resources.NEWarchiveYellow2, 35, 35);
 
             btnPackages.ImageAlign = ContentAlignment.MiddleLeft;
             btnClients.ImageAlign = ContentAlignment.MiddleLeft;
@@ -356,7 +368,7 @@ namespace FuneralManagementSystem
 
             btnPackages.Image = resizeIcon(Properties.Resources.package_black, 30, 30);
             btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 40, 40);
-            btnArchive.Image = resizeIcon(Properties.Resources.NEWarchiveYellow, 35, 35);
+            btnArchive.Image = resizeIcon(Properties.Resources.NEWarchiveYellow2, 35, 35);
 
             btnPackages.ImageAlign = ContentAlignment.MiddleLeft;
             btnClients.ImageAlign = ContentAlignment.MiddleLeft;

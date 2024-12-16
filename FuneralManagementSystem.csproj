@@ -374,5 +374,35 @@
   <ItemGroup>
     <None Include="Resources\searchBlack.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employeesBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elmployeesBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NEWarchiveYellow2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NEWarchiveBLACK %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elmployeesYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloudUploadYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uploadEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloudUploadBlack.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

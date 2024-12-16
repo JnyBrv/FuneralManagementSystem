@@ -121,8 +121,17 @@
   <data name="cruzlogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cruzlogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="personBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="employeesIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\employeesIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NEWarchiveBLACK (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NEWarchiveBLACK (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NEWarchiveYellow2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NEWarchiveYellow2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,14 +169,23 @@
   <data name="NEWarchiveBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NEWarchiveBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="addYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="receiptYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\receiptYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clientYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clientYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="paymentYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paymentYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NEWarchiveYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NEWarchiveYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cloudUploadYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cloudUploadYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="inputimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\inputimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,8 +196,8 @@
   <data name="goldEdge1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\goldEdge1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="addYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\addYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="elmployeesBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\elmployeesBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="clientIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clientIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,14 +208,17 @@
   <data name="curveflip" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\curveflip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="searchBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\searchBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="client black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\client black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="packageIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\packageIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="elmployeesYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\elmployeesYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="coffin package 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coffin package 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -207,6 +228,9 @@
   </data>
   <data name="curves" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\curves.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="package2Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\package2Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,7 +247,13 @@
   <data name="logoWithoutBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logoWithoutBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="searchBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\searchBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="employeesBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\employeesBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="uploadEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\uploadEdit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cloudUploadBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cloudUploadBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
