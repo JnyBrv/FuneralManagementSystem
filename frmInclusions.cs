@@ -20,8 +20,12 @@ namespace FuneralManagementSystem
         String formattedSum = "0.0";
         public int id { get; set; }
         public int package { get; set; }
+
+        public int user;
         String addinclu;
 
+
+        public int back { get; set; }
         //SQL Connection
         SqlConnection con = new SqlConnection(@"Data Source=JIANNESANTOS\SQLEXPRESS;Initial Catalog=FuneralManagementSystem;Integrated Security=True");
 
@@ -31,11 +35,54 @@ namespace FuneralManagementSystem
             loadComponents();
             //initialBalance();
             populateCmb();
+            loadHistory();
 
             dataGridAddInclu.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridAddInclu.DefaultCellStyle.Font = new Font("Georgia", 12, FontStyle.Regular);
             dataGridAddInclu.ColumnHeadersDefaultCellStyle.Font = new Font("Georgia", 12, FontStyle.Bold);
             addtotal();
+
+            
+        }
+
+        public void loadHistory()
+        {
+            try
+            {
+                con.Open();
+
+                string query = "SELECT addInclusions FROM CLIENT WHERE clientID = @clientID";
+                using (SqlCommand command = new SqlCommand(query, con))
+                {
+                    command.Parameters.AddWithValue("@clientID", user);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string columnValue = reader.GetString(0);
+                            string[] values = columnValue.Split(',');
+
+                            foreach (string value in values)
+                            {
+                                DataGridViewRow row = new DataGridViewRow();
+                                row.Cells.Add(new DataGridViewTextBoxCell() { Value = value });
+                                dataGridAddInclu.Rows.Add(row);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                if (con != null && con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
         }
         public void populateCmb()
         {
@@ -167,51 +214,6 @@ namespace FuneralManagementSystem
         private void txtPackage_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            string selectedItem = txtPackage.SelectedItem.ToString();
-
-            try
-            {
-                String query = "SELECT packageAmount, packageInclusions, packageID  FROM PACKAGE WHERE packageName = '" + selectedItem + "'; ";
-
-                if (con.State != ConnectionState.Open)
-                {
-                    con.Open();
-                    SqlCommand cmd = new SqlCommand(query, con);
-
-                    SqlDataReader read = cmd.ExecuteReader();
-                    read.Read();
-
-                    if (read.HasRows)
-                    {
-                        richTextBox1.Text = read[1].ToString();
-                        lblPackage.Text = read[0].ToString();
-                        total = read[0].ToString();
-                        newp = read[2].ToString();
-
-                        con.Close();
-
-                        con.Open();
-                        SqlCommand c = con.CreateCommand();
-                        c.CommandType = CommandType.Text;
-                        c.CommandText = "UPDATE CLIENT SET packageID = " + newp + " WHERE clientID = " + id;
-                        c.ExecuteNonQuery();
-                        con.Close();
-
-                        addtotal();
-
-                    }
-                    else
-                    {
-                        con.Close();
-                        MessageBox.Show("Data doesn't exist.");
-                    }
-
-                }
-            }
-            catch (Exception ee)
-            {
-                MessageBox.Show(ee.ToString());
-            }
 
         }
 
@@ -301,7 +303,7 @@ namespace FuneralManagementSystem
                 if (row.Cells[0].Value != null)
                 {
                     sbLabel1.Append(row.Cells[0].Value.ToString());
-                    sbLabel1.Append(" ");
+                    sbLabel1.Append(", ");
                 }
 
                 if (row.Cells[1].Value != null)
@@ -323,6 +325,56 @@ namespace FuneralManagementSystem
                         row.Cells[1].Value = "";
                     }
                 }
+            }
+        }
+
+        private void txtPackage_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+            string selectedItem = txtPackage.SelectedItem.ToString();
+
+            try
+            {
+                String query = "SELECT packageAmount, packageInclusions, packageID  FROM PACKAGE WHERE packageName = '" + selectedItem + "'; ";
+
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand(query, con);
+
+                    SqlDataReader read = cmd.ExecuteReader();
+                    read.Read();
+
+                    if (read.HasRows)
+                    {
+                        richTextBox1.Text = read[1].ToString();
+                        lblPackage.Text = read[0].ToString();
+                        total = read[0].ToString();
+                        newp = read[2].ToString();
+
+                        con.Close();
+
+                        con.Open();
+                        SqlCommand c = con.CreateCommand();
+                        c.CommandType = CommandType.Text;
+                        c.CommandText = "UPDATE CLIENT SET packageID = " + newp + " WHERE clientID = " + id;
+                        c.ExecuteNonQuery();
+                        con.Close();
+
+                        addtotal();
+
+                    }
+                    else
+                    {
+                        con.Close();
+                        MessageBox.Show("Data doesn't exist.");
+                    }
+
+                }
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
             }
         }
     }

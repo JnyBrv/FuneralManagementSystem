@@ -47,7 +47,7 @@ namespace FuneralManagementSystem
                 cmd.CommandText = "SELECT CLIENT.clientID AS 'Client ID', CONCAT(CLIENT.clientFname, ' ', CLIENT.clientMname, ' ', CLIENT.clientLname) AS 'Client Name', " +
                             "CONCAT(DECEASED.deceasedFname, ' ', DECEASED.deceasedMname, ' ', DECEASED.deceasedLname) AS 'Decedent Name', " +
                             "PACKAGE.packageName AS 'Package Type', CLIENT.dateOfPurchase AS 'Date of Purchase' FROM DECEASED INNER JOIN CLIENT ON CLIENT.deceasedID = DECEASED.deceasedID " +
-                            "INNER JOIN PACKAGE ON CLIENT.packageID = PACKAGE.packageID WHERE CLIENT.archive = 0";
+                            "INNER JOIN PACKAGE ON CLIENT.packageID = PACKAGE.packageID WHERE CLIENT.archive = 0 ";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -368,6 +368,19 @@ namespace FuneralManagementSystem
                 }
             }
 
+
+        }
+
+        private void btnAddInclu_Click(object sender, EventArgs e)
+        {
+            main = (frmMain)Application.OpenForms["frmMain"];
+            frmInclusions inclu = new frmInclusions();
+            inclu.id = user;
+            inclu.back = 0;
+            //inclu.edit = 1;
+            //inclu.txtPackage.Enabled = false;
+            //inclu.richTextBox1.Enabled = false;
+            main.OpenChildForm(inclu);
 
         }
     }

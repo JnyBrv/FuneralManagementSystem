@@ -513,7 +513,7 @@ namespace FuneralManagementSystem
             frmUpdateDetails updateForm = new frmUpdateDetails();
             updateForm.client = user;
             updateForm.back = 1;
-            updateForm.btnCompleteTransaction.Visible = false;
+            //updateForm.btnCompleteTransaction.Visible = false;
             main.OpenChildForm(updateForm);
         }
 
