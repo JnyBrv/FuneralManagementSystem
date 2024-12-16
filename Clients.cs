@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -107,7 +108,7 @@ namespace FuneralManagementSystem
                 {
                     String query = " SELECT CONCAT(CLIENT.clientFname, ' ', CLIENT.clientMname, ' ', CLIENT.clientLname) AS ClientName, " +
                                 "CONCAT(DECEASED.deceasedFname, ' ', DECEASED.deceasedMname, ' ', DECEASED.deceasedLname) AS DeceasedName, " +
-                                "CLIENT.clientContactNo, DECEASED.dateOfInternment, DECEASED.placeOfInternment, PACKAGE.packageName FROM DECEASED " +
+                                "CLIENT.clientContactNo, DECEASED.dateOfInternment, DECEASED.placeOfInternment, PACKAGE.packageName,  PACKAGE.packageImg FROM DECEASED " +
                                 "INNER JOIN CLIENT ON CLIENT.deceasedID = DECEASED.deceasedID INNER JOIN PACKAGE ON CLIENT.packageID = " +
                                 "PACKAGE.packageID  WHERE CLIENT.clientID = " + user;
                     if (con.State != ConnectionState.Open)
@@ -129,6 +130,11 @@ namespace FuneralManagementSystem
                             lblPlace.Text = read[4].ToString();
                             String package = read[5].ToString();
 
+                            //byte[] imageData = read[6];
+                            //MemoryStream ms = new MemoryStream(imageData);
+                            //Image image = Image.FromStream(ms);
+                            //picPackage.Image = image;
+
                             if (package.Equals("Package A"))
                             {
                                 Image image = Properties.Resources.package1Image;
@@ -141,6 +147,13 @@ namespace FuneralManagementSystem
 
                                 picPackage.Image = image;
                             }
+                            else
+                            {
+                                Image image = Properties.Resources.package2Image;
+
+                                picPackage.Image = image;
+                            }
+
                         }
                         else
                         {

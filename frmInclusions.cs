@@ -15,7 +15,8 @@ namespace FuneralManagementSystem
     {
         frmMain main;
         string total;
-        public int id;
+        public int id { get; set; }
+        public int package { get; set; }
 
         //SQL Connection
         SqlConnection con = new SqlConnection(@"Data Source=JIANNESANTOS\SQLEXPRESS;Initial Catalog=FuneralManagementSystem;Integrated Security=True");
@@ -25,8 +26,31 @@ namespace FuneralManagementSystem
             InitializeComponent();
             loadComponents();
             initialBalance();
+            populateCmb();
         }
+        public void populateCmb()
+        {
+            try
+            {
+                con.Open();
+                string query = "SELECT packageName FROM PACKAGE WHERE archive = 0";
+                SqlCommand command = new SqlCommand(query, con);
+                SqlDataReader reader = command.ExecuteReader();
 
+                while (reader.Read())
+                {
+                    txtPackage.Items.Add(reader[0].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
         public void loadComponents()
         {
 

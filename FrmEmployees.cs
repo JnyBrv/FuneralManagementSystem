@@ -398,6 +398,11 @@ namespace FuneralManagementSystem
 
         }
 
+        private void dataGridEmployee_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void btnArchive_Click(object sender, EventArgs e)
         {
             try
