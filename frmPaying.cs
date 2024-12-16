@@ -17,6 +17,7 @@ namespace FuneralManagementSystem
         String selectedUser;
         public int user;
         frmUpdateDetails upd;
+        public decimal balance;
 
         //SQL Connection
         SqlConnection con = new SqlConnection(@"Data Source=JIANNESANTOS\SQLEXPRESS;Initial Catalog=FuneralManagementSystem;Integrated Security=True");
@@ -122,7 +123,7 @@ namespace FuneralManagementSystem
                         {
                             lblClient.Text = read[0].ToString();
                             lblPackage.Text = read[1].ToString();
-                           
+
                         }
                         else
                         {
@@ -169,7 +170,7 @@ namespace FuneralManagementSystem
                         {
                             lblClient.Text = read[0].ToString();
                             lblPackage.Text = read[1].ToString();
-                           
+
                         }
                         else
                         {
@@ -244,25 +245,82 @@ namespace FuneralManagementSystem
 
         }
 
+        int month = 0, years = 0, discount = 0, totalmonth;
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (rbInstallment.Checked)
             {
-                cbMonths.Text = "";
-            } 
+                try
+                {
+                    String query = " SELECT balance FROM CLIENT  WHERE clientID = " + user;
+                    if (con.State != ConnectionState.Open)
+                    {
+                        con.Open();
+                        SqlCommand cmd = new SqlCommand(query, con);
+
+                        SqlDataReader read = cmd.ExecuteReader();
+                        read.Read();
+
+                        if (read.HasRows)
+                        {
+                            balance = decimal.Parse(read[0].ToString());
+
+
+                        }
+                        else
+                        {
+                            con.Close();
+                            MessageBox.Show("Data doesn't exist.");
+                        }
+                        con.Close();
+
+                    }
+
+                month = Convert.ToInt32(cbMonths.Text);
+                years = Convert.ToInt32(txtYears.Text);
+
+                totalmonth = month + (years * 12); 
+                discount = Convert.ToInt32(txtDiscount.Text);
+
+                //decimal Monthly = balance/month;
+                decimal DiscountedPrice = balance - ((balance / 100) * discount);
+                decimal Monthly = DiscountedPrice / totalmonth; //answer Monthly with discount
+                
+                    main = (frmMain)Application.OpenForms["frmMain"];
+                    frmBill fb = new frmBill();
+                    fb.client = user;
+                    fb.mona = Monthly;
+                    fb.totalmonth = totalmonth;
+                    fb.back = 2;
+                    main.OpenChildForm(fb);
+
+                }
+                catch (Exception ee)
+                {
+                    MessageBox.Show(ee.ToString());
+                }
+
+            }
             else if (rbFullPayment.Checked)
             {
+                //balance;
 
             }
 
 
-            main = (frmMain)Application.OpenForms["frmMain"];
-            frmBill fb = new frmBill();
-            fb.client = user;
-            fb.back = 2;
-            main.OpenChildForm(fb);
+
+
+
+
+           
         }
+
+        //public void Computation()
+        //{
+        //    decimal PackagePrice, Interest, Discount, DiscountedPrice;
+
+        //}
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
