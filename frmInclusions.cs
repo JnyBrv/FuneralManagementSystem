@@ -4,8 +4,10 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,8 +17,10 @@ namespace FuneralManagementSystem
     {
         frmMain main;
         string total;
+        String formattedSum = "0.0";
         public int id { get; set; }
         public int package { get; set; }
+        String addinclu;
 
         //SQL Connection
         SqlConnection con = new SqlConnection(@"Data Source=JIANNESANTOS\SQLEXPRESS;Initial Catalog=FuneralManagementSystem;Integrated Security=True");
@@ -25,8 +29,13 @@ namespace FuneralManagementSystem
         {
             InitializeComponent();
             loadComponents();
-            initialBalance();
+            //initialBalance();
             populateCmb();
+
+            dataGridAddInclu.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridAddInclu.DefaultCellStyle.Font = new Font("Georgia", 12, FontStyle.Regular);
+            dataGridAddInclu.ColumnHeadersDefaultCellStyle.Font = new Font("Georgia", 12, FontStyle.Bold);
+            addtotal();
         }
         public void populateCmb()
         {
@@ -56,9 +65,6 @@ namespace FuneralManagementSystem
 
             try
             {
-                id = getCount(-1);
-                date.Format = DateTimePickerFormat.Custom;
-                date.CustomFormat = "yyyy/MM/dd";
 
                 String query = "SELECT CLIENT.dateOfPurchase, PACKAGE.packageName, PACKAGE.packageInclusions, PACKAGE.packageAmount FROM CLIENT " +
                     "INNER JOIN PACKAGE ON CLIENT.packageID = PACKAGE.packageID WHERE CLIENT.clientID = " + id ;
@@ -73,11 +79,15 @@ namespace FuneralManagementSystem
 
                     if (read.HasRows)
                     {
-                        DateTime dateTimeValue = (DateTime)read[0];
-                        date.Value = dateTimeValue;
                         txtPackage.Text = read[1].ToString();
                         richTextBox1.Text = read[2].ToString();
-                        lblTotal.Text = read[3].ToString();
+                        lblPackage.Text = read[3].ToString();
+
+                        string textBoxValue = read[3].ToString();
+                        decimal decimalValue = decimal.Parse(textBoxValue);
+                        string formattedValue = decimalValue.ToString("N2", CultureInfo.InvariantCulture);
+                        lblPackage.Text = formattedValue; 
+
                         total = read[3].ToString();
                     }
                     else
@@ -100,53 +110,8 @@ namespace FuneralManagementSystem
 
         }
 
-        public int getCount(int count)
-        {
-            try
-            {
-                if (con.State != ConnectionState.Open)
-                {
-                    con.Open();
-                    SqlCommand cmd = con.CreateCommand();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "SELECT COUNT(*) FROM DECEASED";
+       
 
-                    object result = cmd.ExecuteScalar();
-                    if (result != null)
-                    {
-                        count = Convert.ToInt32(result) - 1;
-
-                    }
-                    con.Close();
-                }
-            }
-            catch (Exception ee)
-            {
-                MessageBox.Show("HERE" + ee.Message);
-            }
-            return count;
-        }
-
-        public void initialBalance()
-        {
-            try
-            {
-                id = getCount(-1);
-                String item = txtAddInclusions.Text;
-                float bal = float.Parse(lblTotal.Text);
-
-                con.Open();
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "UPDATE CLIENT SET balance = '" + bal + "' WHERE clientID = " + id;
-                cmd.ExecuteNonQuery();
-                con.Close();
-            }
-            catch (Exception ee)
-            {
-                MessageBox.Show(ee.ToString());
-            }
-        }
 
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
@@ -223,97 +188,93 @@ namespace FuneralManagementSystem
             
         }
 
-        String item, inclusionTotal;
-        private void btnPayment_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                id = getCount(-1);
-                
-                if (string.IsNullOrEmpty(txtAddInclusions.Text))
-                {
-                    txtAddInclusions.Text = "";
-                    item = txtAddInclusions.Text;
-                }
-                else
-                {
-                    item = txtAddInclusions.Text;
-                }
+        //String item, inclusionTotal;
+        //private void btnPayment_Click_1(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (string.IsNullOrEmpty(txtAddInclusions.Text))
+        //        {
+        //            txtAddInclusions.Text = "";
+        //            item = txtAddInclusions.Text;
+        //        }
+        //        else
+        //        {
+        //            item = txtAddInclusions.Text;
+        //        }
 
-                float bal = float.Parse(lblTotal.Text);
+        //        float bal = float.Parse(lblTotal.Text);
 
-                if (string.IsNullOrEmpty(txtAddPayment.Text))
-                {
-                    txtAddPayment.Text = "0";
-                    inclusionTotal = txtAddPayment.Text;
-                }
-                else
-                {
-                    inclusionTotal = txtAddPayment.Text;
-                }
+        //        if (string.IsNullOrEmpty(txtAddPayment.Text))
+        //        {
+        //            txtAddPayment.Text = "0";
+        //            inclusionTotal = txtAddPayment.Text;
+        //        }
+        //        else
+        //        {
+        //            inclusionTotal = txtAddPayment.Text;
+        //        }
                 
 
-                con.Open();
+        //        con.Open();
 
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "UPDATE CLIENT SET addInclusions = '"+ item +"', inclusionsTotal = '" + inclusionTotal + "' WHERE clientID = " + id +
-                    "UPDATE CLIENT SET balance = '" + bal + "' WHERE clientID = " + id;
-                cmd.ExecuteNonQuery();
+        //        SqlCommand cmd = con.CreateCommand();
+        //        cmd.CommandType = CommandType.Text;
+        //        cmd.CommandText = "UPDATE CLIENT SET addInclusions = '"+ item +"', inclusionsTotal = '" + inclusionTotal + "' WHERE clientID = " + id +
+        //            "UPDATE CLIENT SET balance = '" + bal + "' WHERE clientID = " + id;
+        //        cmd.ExecuteNonQuery();
 
-                con.Close();
-            }
-            catch (Exception ee)
-            {
-                MessageBox.Show(ee.ToString());
-            }
+        //        con.Close();
+        //    }
+        //    catch (Exception ee)
+        //    {
+        //        MessageBox.Show(ee.ToString());
+        //    }
 
-            main = (frmMain)Application.OpenForms["frmMain"];
-            main.OpenChildForm(new PaymentCash());
-            main.panelTitleBar.Visible = false;
+        //    main = (frmMain)Application.OpenForms["frmMain"];
+        //    main.OpenChildForm(new PaymentCash());
+        //    main.panelTitleBar.Visible = false;
 
-            frmInclusions inclusions = new frmInclusions();
-            inclusions.Close();
+        //    frmInclusions inclusions = new frmInclusions();
+        //    inclusions.Close();
 
-        }
+        //}
 
-        private void txtAddPayment_TextChanged(object sender, EventArgs e)
-        {
-            lblTotal.Text = total;
-            // Get the value from TextBox1, parsing it as a decimal
-            if (decimal.TryParse(txtAddPayment.Text, out decimal value1))
-            {
-                decimal value2 = decimal.Parse(lblTotal.Text);
+        //private void txtAddPayment_TextChanged(object sender, EventArgs e)
+        //{
+        //    lblTotal.Text = total;
+        //    // Get the value from TextBox1, parsing it as a decimal
+        //    if (decimal.TryParse(txtAddPayment.Text, out decimal value1))
+        //    {
+        //        decimal value2 = decimal.Parse(lblTotal.Text);
 
-                // Perform the calculation, rounding to 2 decimal places
-                decimal result = Math.Round(value1 + value2, 2);
+        //        // Perform the calculation, rounding to 2 decimal places
+        //        decimal result = Math.Round(value1 + value2, 2);
 
-                // Update the result label
-                lblTotal.Text = result.ToString("N2");
-            }
-            else
-            {
-                // Handle invalid input, e.g., clear the result label
-                lblTotal.Text = total;
-            }
-        }
+        //        // Update the result label
+        //        lblTotal.Text = result.ToString("N2");
+        //    }
+        //    else
+        //    {
+        //        // Handle invalid input, e.g., clear the result label
+        //        lblTotal.Text = total;
+        //    }
+        //}
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
+        string newp;
         private void txtPackage_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedItem = txtPackage.SelectedItem.ToString();
-            id = getCount(-1);
 
-            if (selectedItem == "Package A")
-            {
+            string selectedItem = txtPackage.SelectedItem.ToString();
+
                 try
                 {
-                    String query = "SELECT packageAmount, packageInclusions  FROM PACKAGE WHERE packageName = '" + selectedItem + "'; " +
-                                    "UPDATE CLIENT SET packageID = 0 WHERE clientID = " + id ;
+                    String query = "SELECT packageAmount, packageInclusions, packageID  FROM PACKAGE WHERE packageName = '" + selectedItem + "'; ";
 
                     if (con.State != ConnectionState.Open)
                     {
@@ -326,54 +287,133 @@ namespace FuneralManagementSystem
                         if (read.HasRows)
                         {
                             richTextBox1.Text = read[1].ToString();
-                            lblTotal.Text = read[0].ToString();
+                            lblPackage.Text = read[0].ToString();
                             total = read[0].ToString();
+                            newp = read[2].ToString();
+
+                            con.Close();
+
+                            con.Open();
+                            SqlCommand c = con.CreateCommand();
+                            c.CommandType = CommandType.Text;
+                            c.CommandText = "UPDATE CLIENT SET packageID = " + newp + " WHERE clientID = " + id;
+                            c.ExecuteNonQuery();
+                            con.Close();
+
+                        addtotal();
+
                         }
                         else
                         {
                             con.Close();
                             MessageBox.Show("Data doesn't exist.");
                         }
-                        con.Close();
+                        
                     }
                 }
                 catch (Exception ee)
                 {
                     MessageBox.Show(ee.ToString());
                 }
-            }
-            else if (selectedItem == "Package B")
+           
+        }
+
+        private void btnPayment_Click_1(object sender, EventArgs e)
+        {
+            try
             {
-                
-                String query = "SELECT packageAmount, packageInclusions  FROM PACKAGE WHERE packageName = '" + selectedItem + "'; " +
-                            "UPDATE CLIENT SET packageID = 1 WHERE clientID = " + id ;
+               
 
-                if (con.State != ConnectionState.Open)
+                con.Open();
+
+                decimal inclsn = decimal.Parse(lbllnclu.Text);
+                decimal ttl = decimal.Parse(lblTotal.Text);
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "UPDATE CLIENT SET addInclusions = '" + addinclu + "', inclusionsTotal = '" + inclsn + "' WHERE clientID = " + id +
+                    "UPDATE CLIENT SET balance = '" + ttl + "' WHERE clientID = " + id;
+                cmd.ExecuteNonQuery();
+
+                con.Close();
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+            }
+
+            main = (frmMain)Application.OpenForms["frmMain"];
+            main.OpenChildForm(new FrmClients());
+            main.panelTitleBar.Visible = false;
+
+            frmInclusions inclusions = new frmInclusions();
+            inclusions.Close();
+        }
+    
+
+
+        private void dataGridAddInclu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+
+        }
+
+        private void dataGridAddInclu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        public void addtotal()
+        {
+            if (formattedSum == null)
+            {
+                formattedSum = "0.0";
+            }
+            decimal value1 = decimal.Parse(formattedSum);
+            decimal value2 = decimal.Parse(total);
+
+            
+
+            decimal sum = value1 + value2;
+
+            // Format the sum as currency
+            string formatSum = sum.ToString("N2");
+
+            // Display the formatted sum in a label or other control
+            lblTotal.Text = formatSum;
+        }
+
+        private void dataGridAddInclu_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            StringBuilder sbLabel1 = new StringBuilder();
+            decimal sumColumn2 = 0;
+
+            foreach (DataGridViewRow row in dataGridAddInclu.Rows)
+            {
+                if (row.Cells[0].Value != null)
                 {
-                    con.Open();
-                    SqlCommand cmd = new SqlCommand(query, con);
+                    sbLabel1.Append(row.Cells[0].Value.ToString());
+                    sbLabel1.Append(" ");
+                }
 
-                    SqlDataReader read = cmd.ExecuteReader();
-                    read.Read();
-
-                    if (read.HasRows)
+                if (row.Cells[1].Value != null)
+                {
+                    if (decimal.TryParse(row.Cells[1].Value.ToString(), out decimal decimalValue))
                     {
-                        richTextBox1.Text = read[1].ToString();
-                        lblTotal.Text = read[0].ToString();
-                        total = read[0].ToString();
+                        sumColumn2 += decimalValue;
+
+                        formattedSum = sumColumn2.ToString("N2");
+
+                        addinclu = sbLabel1.ToString();
+                        lbllnclu.Text = formattedSum;
+                        addtotal();
+
                     }
                     else
                     {
-                        con.Close();
-                        MessageBox.Show("Data doesn't exist.");
+                        MessageBox.Show("Invalid decimal input in column 2: " + row.Cells[1].Value.ToString());
+                        row.Cells[1].Value = "";
                     }
-                    con.Close();
                 }
-            }
-            else
-            {
-                MessageBox.Show("Invalid package. ",
-                "Package error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

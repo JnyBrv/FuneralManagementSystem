@@ -81,9 +81,9 @@ namespace FuneralManagementSystem
 
             try
             {
-                if (txtClientFirstname.Text == "" || txtClientMiddlename.Text == "" || txtClientLastname.Text == "" || txtRelation.Text == "" || txtContactno.Text == ""
+                if (txtClientFirstname.Text == "" ||  txtClientLastname.Text == "" || txtRelation.Text == "" || txtContactno.Text == ""
                     || txtClientHouseStreet.Text == "" || txtClientBrgy.Text == "" || txtClientCity.Text == "" || txtClientProvince.Text == "" || dateOfPurchase.Text == ""
-                    || txtDeceasedFirstName.Text == "" || txtDeceasedMiddleName.Text == "" || txtDeceasedLastName.Text == "" || datepickDateofDeath.Text == "" || datepickDateofInternment.Text == ""
+                    || txtDeceasedFirstName.Text == "" || txtDeceasedLastName.Text == "" || datepickDateofDeath.Text == "" || datepickDateofInternment.Text == ""
                     || timeOfInternment.Text == "" || cmbSex.Text == "" || txtInternmentStreet.Text == "" || txtInternmentBrgy.Text == "" || txtInternmentCity.Text == "" || txtInternmentProvince.Text == "")
                 {
                     MessageBox.Show("Please fill all text box field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -99,6 +99,11 @@ namespace FuneralManagementSystem
                     //client information
                     String fname = txtClientFirstname.Text;
                     String mname = txtClientMiddlename.Text;
+                    if (txtClientMiddlename.Text == null || txtClientMiddlename.Text.Trim() == "")
+                    {
+                        txtClientMiddlename.Text = "";
+                    }
+
                     String lname = txtClientLastname.Text;
                     String relation = txtRelation.Text;
                     String contact = "+639" + txtContactno.Text;
@@ -110,6 +115,10 @@ namespace FuneralManagementSystem
                     //deceased information
                     String dfname = txtDeceasedFirstName.Text;
                     String dmname = txtDeceasedMiddleName.Text;
+                    if (txtDeceasedMiddleName.Text == null || txtDeceasedMiddleName.Text.Trim() == "")
+                    {
+                        txtDeceasedMiddleName.Text = "";
+                    }
                     String dlname = txtDeceasedLastName.Text;
                     datepickDateofDeath.Format = DateTimePickerFormat.Custom;
                     datepickDateofDeath.CustomFormat = "yyyy/MM/dd";
@@ -155,7 +164,7 @@ namespace FuneralManagementSystem
 
         private void txtClientLastname_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -171,7 +180,7 @@ namespace FuneralManagementSystem
 
         private void txtClientMiddlename_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) )
             {
                 e.Handled = true;
             }
@@ -211,7 +220,7 @@ namespace FuneralManagementSystem
 
         private void txtDeceasedLastName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -227,7 +236,7 @@ namespace FuneralManagementSystem
 
         private void txtDeceasedMiddleName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = true;
             }

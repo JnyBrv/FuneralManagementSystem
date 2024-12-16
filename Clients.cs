@@ -130,29 +130,33 @@ namespace FuneralManagementSystem
                             lblPlace.Text = read[4].ToString();
                             String package = read[5].ToString();
 
-                            //byte[] imageData = read[6];
-                            //MemoryStream ms = new MemoryStream(imageData);
-                            //Image image = Image.FromStream(ms);
-                            //picPackage.Image = image;
+                            byte[] imageData = (byte[])read[6];
 
-                            if (package.Equals("Package A"))
+                            if (imageData != null)
                             {
-                                Image image = Properties.Resources.package1Image;
-
+                                MemoryStream ms = new MemoryStream(imageData);
+                                Image image = Image.FromStream(ms);
                                 picPackage.Image = image;
                             }
-                            else if (package.Equals("Package B"))
-                            {
-                                Image image = Properties.Resources.package2Image;
 
-                                picPackage.Image = image;
-                            }
-                            else
-                            {
-                                Image image = Properties.Resources.package2Image;
+                            //if (package.Equals("Package A"))
+                            //{
+                            //    Image image = Properties.Resources.package1Image;
 
-                                picPackage.Image = image;
-                            }
+                            //    picPackage.Image = image;
+                            //}
+                            //else if (package.Equals("Package B"))
+                            //{
+                            //    Image image = Properties.Resources.package2Image;
+
+                            //    picPackage.Image = image;
+                            //}
+                            //else
+                            //{
+                            //    Image image = Properties.Resources.package2Image;
+
+                            //    picPackage.Image = image;
+                            //}
 
                         }
                         else
@@ -185,7 +189,7 @@ namespace FuneralManagementSystem
                 {
                     String query = " SELECT CONCAT(CLIENT.clientFname, ' ', CLIENT.clientMname, ' ', CLIENT.clientLname) AS ClientName, " +
                                 "CONCAT(DECEASED.deceasedFname, ' ', DECEASED.deceasedMname, ' ', DECEASED.deceasedLname) AS DeceasedName, " +
-                                "CLIENT.clientContactNo, DECEASED.dateOfInternment, DECEASED.placeOfInternment, PACKAGE.packageName FROM DECEASED " +
+                                "CLIENT.clientContactNo, DECEASED.dateOfInternment, DECEASED.placeOfInternment, PACKAGE.packageName, PACKAGE.packageImg FROM DECEASED " +
                                 "INNER JOIN CLIENT ON CLIENT.deceasedID = DECEASED.deceasedID INNER JOIN PACKAGE ON CLIENT.packageID = " +
                                 "PACKAGE.packageID  WHERE CLIENT.clientID = " + user;
                     if (con.State != ConnectionState.Open)
@@ -208,14 +212,12 @@ namespace FuneralManagementSystem
 
                             String package = read[5].ToString();
 
-                            if (package.Equals("Package A"))
+                            byte[] imageData = (byte[])read[6];
+
+                            if (imageData != null)
                             {
-                                Image image = Properties.Resources.package1Image;
-                                picPackage.Image = image;
-                            }
-                            else if (package.Equals("Package B"))
-                            {
-                                Image image = Properties.Resources.package2Image;
+                                MemoryStream ms = new MemoryStream(imageData);
+                                Image image = Image.FromStream(ms);
                                 picPackage.Image = image;
                             }
                         }
