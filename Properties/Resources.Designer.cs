@@ -153,6 +153,16 @@ namespace FuneralManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clientsBlack {
+            get {
+                object obj = ResourceManager.GetObject("clientsBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clientYellow {
             get {
                 object obj = ResourceManager.GetObject("clientYellow", resourceCulture);
@@ -453,6 +463,16 @@ namespace FuneralManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap paymentBlack {
+            get {
+                object obj = ResourceManager.GetObject("paymentBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap paymentYellow {
             get {
                 object obj = ResourceManager.GetObject("paymentYellow", resourceCulture);
@@ -476,6 +496,16 @@ namespace FuneralManagementSystem.Properties {
         internal static System.Drawing.Bitmap pngwing_com {
             get {
                 object obj = ResourceManager.GetObject("pngwing.com", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap receieptBlack {
+            get {
+                object obj = ResourceManager.GetObject("receieptBlack", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

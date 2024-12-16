@@ -143,6 +143,8 @@ namespace FuneralManagementSystem
             btnArchive.ForeColor = Color.Gold;
 
           
+
+
             
             btnClient.BackColor = Color.FromArgb(40, 40, 40);
             btnClient.ForeColor = Color.Gold;
@@ -251,6 +253,9 @@ namespace FuneralManagementSystem
             btnClient.ForeColor = Color.Gold;
             btnEmployees.BackColor = Color.FromArgb(40, 40, 40);
             btnEmployees.ForeColor = Color.Gold;
+
+            
+
 
 
             fillSpaceForIcon();
@@ -396,6 +401,40 @@ namespace FuneralManagementSystem
         private void btnBill_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmPaying());
+
+
+            //clicled image color
+            
+
+            btnBill.Image = resizeIcon(Properties.Resources.receieptBlack, 35, 35);
+     
+            // change the other buttons to yellow
+            btnPackages.Image = resizeIcon(Properties.Resources.packageIcon, 30, 30);
+            btnClients.Image = resizeIcon(Properties.Resources.clientIcon, 40, 40);
+            btnPayment.Image = resizeIcon(Properties.Resources.paymentYellow, 35, 35);
+            btnEmployees.Image = resizeIcon(Properties.Resources.employeesIcon, 35, 35);
+            btnPayment.Image = resizeIcon(Properties.Resources.paymentYellow, 35, 35);
+            btnArchive.Image = resizeIcon(Properties.Resources.NEWarchiveYellow2, 35, 35);
+
+            //clicked colors
+            btnPackages.BackColor = Color.FromArgb(40, 40, 40);
+            btnPackages.ForeColor = Color.Gold;
+            btnClients.BackColor = Color.FromArgb(40, 40, 40);
+            btnClients.ForeColor = Color.Gold;
+            btnArchive.BackColor = Color.FromArgb(40, 40, 40);
+            btnArchive.ForeColor = Color.Gold;
+
+            //naka click
+            btnBill.BackColor = Color.Gold;
+            btnBill.ForeColor = Color.FromArgb(40, 40, 40);
+
+
+            btnPayment.BackColor = Color.FromArgb(40, 40, 40);
+            btnPayment.ForeColor = Color.Gold;
+            btnClient.BackColor = Color.FromArgb(40, 40, 40);
+            btnClient.ForeColor = Color.Gold;
+            btnEmployees.BackColor = Color.FromArgb(40, 40, 40);
+            btnEmployees.ForeColor = Color.Gold;
 
         }
     }
