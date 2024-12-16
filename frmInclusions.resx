@@ -131,4 +131,10 @@
         N4ZB2CbGrjkITU0Eem1hbIvfCUVRFEVRlGnR6/0Ca90G0EnXL7wAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="Description.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Cost.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

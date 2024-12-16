@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -135,7 +136,7 @@ namespace FuneralManagementSystem
     }
 
         public Package()
-      
+
         {
             InitializeComponent();
             DelPackage = new DelegateText(AddPackageClass.GetPackage);
@@ -146,7 +147,12 @@ namespace FuneralManagementSystem
 
             lblPackageName.Text = DelPackage(AddPackageClass.PackageName);
             txtInclusions.Text = DelInclustions(AddPackageClass.Inclusions);
-            lblPrice.Text = DelPrice(AddPackageClass.Price).ToString();
+
+            string textBoxValue = DelPrice(AddPackageClass.Price).ToString();
+            decimal decimalValue = decimal.Parse(textBoxValue);
+            string formattedValue = decimalValue.ToString("N2", CultureInfo.InvariantCulture);
+            lblPrice.Text = formattedValue;
+
             label1.Text = DelID(AddPackageClass.PackageID).ToString();
 
 
